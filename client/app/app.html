@@ -3,9 +3,16 @@
 </layout>
 
 <layout ng-if="vm.isSecuredView">
-  <main-menu></main-menu>
-  <sidebar></sidebar>
-  <ui-view></ui-view>
+  <div layout="column"
+    layout-fill>
+    <main-menu></main-menu>
+    <div layout="row"
+      layout-fill
+      class="main-body">
+      <sidebar></sidebar>
+      <ui-view></ui-view>
+    </div>
+  </div>
   <billy-intercom></billy-intercom>
 </layout>
 

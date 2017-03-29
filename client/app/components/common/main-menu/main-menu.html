@@ -55,8 +55,7 @@
     <!-- FAQ BUTTON -->
     <div class="bm-toolbar-element hide-xs"
       aria-label="FAQ"
-      ng-click="vm.openFAQ()"
-    >
+      ng-click="vm.openFAQ()">
       <div class="element-content">
         <md-icon class="content-icon"
           aria-label="live-help">live_help
@@ -82,31 +81,11 @@
       <md-menu-content width="4"
         class="main-menu-content">
         <md-menu-item>
-          <md-button ng-click="vm.settings()">
-            <div layout="row"
-              class="account-settings-menu"
-              flex>
-              <md-icon>settings</md-icon>
-              <p flex>{{:: 'shared.sidebar.accountSettings' | translate }}</p>
-            </div>
-          </md-button>
-        </md-menu-item>
-        <md-menu-item>
-          <md-button ng-click="vm.billing()">
-            <div layout="row"
-              class="billing-menu"
-              flex>
-              <md-icon>attach_money</md-icon>
-              <p flex>{{:: 'shared.sidebar.billing' | translate }}</p>
-            </div>
-          </md-button>
-        </md-menu-item>
-        <md-menu-item>
           <md-button ng-click="vm.logout()">
             <div layout="row"
               flex>
               <md-icon>exit_to_app</md-icon>
-              <p flex>{{:: 'shared.sidebar.logout' | translate }}</p>
+              <p flex>{{:: 'sidebar.logout' | translate }}</p>
             </div>
           </md-button>
         </md-menu-item>
@@ -115,7 +94,7 @@
 
     <md-button class="bm-btn success login-button btn-right"
       ng-if="!vm.isAuth"
-      ng-click="vm.login()">{{:: 'shared.sidebar.signupButton' | translate}}
+      ng-click="vm.login()">{{:: 'sidebar.signupButton' | translate}}
     </md-button>
 
   </div>

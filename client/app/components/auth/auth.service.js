@@ -176,7 +176,7 @@ const AuthService = (translateService, localStorage, UserService,
   const logout = () => {
     return $http.post(`${API_URL}/auth/logout`)
       .then(() => {
-      return true;
+
         UserService.invalidateUser(false);
         IntercomService.shutdown();
         bmMixpanel.async('reset')
@@ -184,7 +184,7 @@ const AuthService = (translateService, localStorage, UserService,
             bmMixpanel.reset();
           });
         BigLoaderService.setState('show',
-          {message: $filter('translate')('shared.auth.loggingOut')});
+          {message: $filter('translate')('auth.loggingOut')});
         $timeout(() => {
           //$window.location.href = '/auth';
         }, 1000);

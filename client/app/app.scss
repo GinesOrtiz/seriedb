@@ -28,6 +28,12 @@ ui-view, [ui-view], layout {
   height: 100%;
 }
 
+.main-body {
+  height: calc(100% - 56px);
+  min-height: calc(100% - 56px);
+  background: rgba($color-secondary, .08);
+}
+
 .animation {
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);

@@ -281,12 +281,12 @@ class authComponentController {
     this.formContent.hash = this.$stateParams.hash;
     this.formContent.userType = this.$stateParams.userType;
     if (this.formContent.newPassword !== this.formContent.confirmationPassword) {
-      this.showError(this.$filter('translate')('shared.auth.errorNoMatch'));
+      this.showError(this.$filter('translate')('auth.errorNoMatch'));
       this.BigLoaderService.setState('hide');
       return;
     }
     if (this.formContent.newPassword.length < 6) {
-      this.showError(this.$filter('translate')('shared.auth.minlength'));
+      this.showError(this.$filter('translate')('auth.minlength'));
       this.BigLoaderService.setState('hide');
       return;
     }
@@ -296,7 +296,7 @@ class authComponentController {
         this.$state.go('billy.auth');
         this.BigLoaderService.setState('hide');
       }, () => {
-        this.showError(this.$filter('translate')('shared.auth.error'));
+        this.showError(this.$filter('translate')('auth.error'));
         this.BigLoaderService.setState('hide');
       });
   }

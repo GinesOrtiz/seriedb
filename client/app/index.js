@@ -68,7 +68,12 @@ export const app = angular
     $stateProvider
       .state('billy', {
         abstract: true,
-        template: '<app></app>'
+        template: '<app></app>',
+        resolve: {
+          user: (AuthService) => {
+            return AuthService.whoami();
+          }
+        }
       });
   })
   .run(appRun);

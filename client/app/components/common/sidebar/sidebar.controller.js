@@ -1,28 +1,40 @@
 class SideBarController {
-  constructor(AuthService, UserService, LoginPopupService, $mdSidenav, $filter, $window, $state,
-              $timeout) {
-    this.smallSideBar = $window.innerWidth < 1440 && $window.innerWidth > 960;
-    this.AuthService = AuthService;
-    this.sidenav = $mdSidenav;
-    this.isAuthUser = UserService.isAuth();
+  constructor(UserService, LoginPopupService) {
     this.LoginPopupService = LoginPopupService;
-    this.$state = $state;
-    this.$filter = $filter;
-    this.user = UserService.getState();
+    let isAuthUser = UserService.isAuth();
 
-    /**
-     * This will trigger a window size change so we can force the sidebar to be small if the user
-     * is resizing the window
-     */
-    let resizeTimeout;
-    this.smallSideBar = $window.innerWidth > 959;
-    $(window)
-      .on('resize', ()=> {
-        $timeout.cancel(resizeTimeout);
-        resizeTimeout = $timeout(()=> {
-          this.smallSideBar = $window.innerWidth > 959;
-        }, 200);
-      });
+    let sidebarConfig = [
+      // When not logged
+      [
+        {
+          icon: 'extension',
+          state: 'billy.auth.signin',
+          label: 'sidebar.demo',
+          isNew: true
+        }
+      ],
+      // When logged
+      [
+        {
+          icon: 'extension',
+          state: 'billy.auth.signin',
+          label: 'sidebar.demo',
+          isNew: true
+        },
+        {
+          icon: 'https',
+          state: 'billy.auth.signin',
+          label: 'sidebar.demo'
+        },
+        {
+          icon: 'work',
+          state: 'billy.auth.signin',
+          label: 'sidebar.demo'
+        }
+      ]
+    ];
+
+    this.sidebarConfig = sidebarConfig[isAuthUser ? 1 : 0];
   }
 
   login() {
@@ -36,14 +48,8 @@ class SideBarController {
 
 
 SideBarController.$inject = [
-  'AuthService',
   'UserService',
-  'LoginPopupService',
-  '$mdSidenav',
-  '$filter',
-  '$window',
-  '$state',
-  '$timeout'
+  'LoginPopupService'
 ];
 
 export {SideBarController};

@@ -38,9 +38,7 @@ class BMMainMenu {
   }
 
   clickLogo() {
-    //let isMA = this.UserService.getState().marketplaceAllowed;
-    //this.$state.go(isMA ? 'billy.marketplace' : 'billy.myCampaigns');
-    this.$state.go('billy.myCampaigns');
+    this.$state.go('billy.void');
   }
 
   openSideNav() {
@@ -51,18 +49,6 @@ class BMMainMenu {
   logout() {
     this.BackgroundUpdateService.update('logout');
     this.AuthService.logout();
-  }
-
-  settings() {
-    this.$state.go('billy.settings');
-  }
-
-  setup() {
-    this.$state.go('billy.setup');
-  }
-
-  billing() {
-    this.$state.go('billy.billing');
   }
 
   openFAQ() {

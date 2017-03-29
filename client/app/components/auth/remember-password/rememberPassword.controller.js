@@ -20,9 +20,9 @@ class rememberPasswordController {
     this.titleSuccess = this.$filter('translate')('auth.passwordRemember.titleSuccess');
     this.description = this.$filter('translate')('auth.passwordRemember.description');
     this.descriptionSuccess = this.$filter('translate')('auth.passwordRemember.descriptionSuccess');
-    this.submit = this.$filter('translate')('shared.auth.submit');
+    this.submit = this.$filter('translate')('auth.submit');
     this.backTo = this.$filter('translate')('auth.passwordRemember.backTo');
-    this.signIn = this.$filter('translate')('shared.auth.signIn');
+    this.signIn = this.$filter('translate')('auth.signIn');
     this.passwordRememberError = this.$filter('translate')('auth.passwordRemember.error');
   }
 

@@ -1,13 +1,6 @@
 @import "../../../shared/variables";
 
-#sidebar.small + md-content.main-body-stage {
-  .buttons-zone {
-    width: calc(100% - 56px);
-    margin: 0 auto;
-  }
-}
-
-#sidebar {
+sidebar {
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   -ms-transition: all .3s;
@@ -23,15 +16,18 @@
     }
     md-list {
       button, a {
-        padding: 0;
-        min-width: 72px;
+        padding: 0 !important;
+        margin: 0 !important;
+        min-width: 100% !important;
+        text-align: center !important;
       }
       md-icon {
-        margin: 8px 0;
-        padding: 8px 24px;
+        margin: 8px 0 0 !important;
+        padding: 8px;
+        width: 100%;
       }
       p {
-        opacity: 0;
+        display: none;
       }
     }
   }

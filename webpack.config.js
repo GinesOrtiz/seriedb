@@ -18,6 +18,7 @@ var pathConfig = {
 // varPlugin takes raw strings and inserts them, so you can put strings of JS if you want.
 var varPlugin = new webpack.DefinePlugin({
   __DEV__: JSON.stringify(JSON.parse(process.env.BUILD_DEV || 'true')),
+  __ENV__: JSON.stringify(process.env.ENV),
   __API_URL__: JSON.stringify(process.env.API_URL || 'http://api.billydomain.com'),
   __VERSION__: JSON.stringify(require('./package.json').version),
   __SENTRY_ID__: JSON.stringify(process.env.SENTRY_ID),

@@ -22,7 +22,7 @@ const featureFlagDirective = ([
 
 const featureFlagService = () => {
   'use strict';
-  let features = {
+  let allFeatures = {
     'production': [
       'noUserTypeSelector',
       'oldRestrictions'
@@ -37,8 +37,10 @@ const featureFlagService = () => {
       'newRestrictions'
     ]
   };
+  let features = allFeatures[__ENV__];
 
   const getFeatures = () => {
+    /* globals __ENV__ */
     return features;
   };
 

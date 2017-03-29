@@ -1,25 +1,8 @@
 import angular from 'angular';
-import template from './void.html';
-import {voidController as controller} from './void.controller';
-window.moment = require('moment');
-
-import 'ob-daterangepicker/dist/styles/ob-daterangepicker.css';
-import 'ob-daterangepicker';
-
-const voidViewConfig = ($stateProvider) => {
-  'use strict';
-  $stateProvider
-    .state('billy.voidState', {
-      url: '/void',
-      controller,
-      controllerAs: 'vm',
-      template,
-      auth: true,
-    });
-
-};
-voidViewConfig.$inject = ['$stateProvider'];
+import {voidComponent} from './void.component';
+import {voidViewRouter} from './router';
 
 export const voidView = angular
-  .module('voidView', ['obDateRangePicker'])
-  .config(voidViewConfig);
+  .module('billy.void', [])
+  .config(voidViewRouter)
+  .component('voidComponent', voidComponent);

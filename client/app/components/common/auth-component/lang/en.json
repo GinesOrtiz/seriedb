@@ -39,5 +39,26 @@
   "origin": "How did you meet us?",
   "ph_": "",
   "ph_otherPlaceholder": "Let us know more!",
-  "originExtra": ""
+  "originExtra": "",
+  "auth": {
+    "email": "Email",
+    "emailReq": "Email is required",
+    "error": "There was an error. Please try again later.",
+    "errorNoMatch": "Passwords do not match",
+    "loggingOut": "Logging out...",
+    "name": "Name",
+    "nameReq": "Name is required",
+    "password": "Password",
+    "passwordConfirm": "Confirm password",
+    "passwordReq": "Password is required",
+    "signIn": "Sign in",
+    "submit": "Submit",
+    "minlength": "Password should be minimum 6 characters long",
+    "changeSuccess": "Your information has been updated successfully",
+    "conflictPasswords": "The new password fields doesn't match",
+    "wrongPassword": "Your current password is wrong",
+    "typeWebsite": "Website",
+    "typeAffiliate": "Affiliate",
+    "whoareyou": "Who are you?"
+  }
 }

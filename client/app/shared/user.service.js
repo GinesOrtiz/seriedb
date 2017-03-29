@@ -93,12 +93,11 @@ const UserService = (localStorage, translateService, $state, $injector) => {
    * @returns {array} - state names where the user can enter
    */
   const getUserRoleAccess = () => {
-    let rolesConfig = __ROLES_CONFIG__;
-    let userRoleConfig = rolesConfig[user.type || 'Anon'];
-
-    if (user.marketplaceAllowed) {
-      userRoleConfig.push('marketplace');
-    }
+    let rolesConfig = {
+      'User': [],
+      'Anon': []
+    };
+    let userRoleConfig = rolesConfig[user.type || 'Anon'] || [];
 
     return userRoleConfig.concat(user.access || []);
   };

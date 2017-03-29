@@ -19,6 +19,15 @@ const authRun = (PermRoleStore, AuthService, $urlRouter) => {
           }
         ]);
 
+      PermRoleStore
+        .defineRole('User', [
+          'UserService',
+          (UserService) => {
+            return !UserService.isAuth();
+          }
+        ]);
+
+      $urlRouter.sync();
       $urlRouter.listen();
     });
 };

@@ -39,5 +39,26 @@
   "origin": "¿Cómo nos has conocido?",
   "ph_": "",
   "ph_otherPlaceholder": "¡Indícanos cuál!",
-  "originExtra": ""
+  "originExtra": "",
+  "auth": {
+    "email": "Email",
+    "emailReq": "El email es obligatorio",
+    "error": "Ha ocurrido un error, inténtalo de nuevo más tarde.",
+    "errorNoMatch": "Las contraseñas no coinciden",
+    "loggingOut": "Cerrando sesión ...",
+    "name": "Nombre",
+    "nameReq": "El nombre es obligatorio",
+    "password": "Contraseña",
+    "passwordConfirm": "Confirmar contraseña",
+    "passwordReq": "La contraseña es obligatoria",
+    "signIn": "Iniciar sesión",
+    "submit": "Enviar",
+    "minlength": "La contraseña tiene que ser mínimo 6 caracteres",
+    "changeSuccess": "La información de tu cuenta ha sido actualizada",
+    "conflictPasswords": "La contraseña actual no es válida",
+    "wrongPassword": "Tu contraseña actual no es correcta",
+    "typeWebsite": "Website",
+    "typeAffiliate": "Affiliate",
+    "whoareyou": "¿Quién eres?"
+  }
 }

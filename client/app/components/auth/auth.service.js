@@ -184,10 +184,7 @@ const AuthService = (translateService, localStorage, UserService,
             bmMixpanel.reset();
           });
         BigLoaderService.setState('show',
-          {message: $filter('translate')('auth.loggingOut')});
-        $timeout(() => {
-          //$window.location.href = '/auth';
-        }, 1000);
+          {message: $filter('translate')('shared.auth.loggingOut')});
       });
   };
 

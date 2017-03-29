@@ -1,0 +1,16 @@
+<label class="input-label"
+  ng-if="::!field.hideLabel">
+  {{::field.label && (field.label | translate)}}</label>
+
+<md-select placeholder="{{::field.placeholder && (field.placeholder | translate)}}"
+  ng-required="{{::field.required}}"
+  ng-model="vm.vmodel[field.name]"
+  ng-disabled="field.disabled"
+  md-on-open="vm.async(field)"
+  class="{{::field.class}}"
+  aria-label="{{::option.label || option.name}}">
+  <md-option ng-value="option.value"
+    ng-disabled="option.disabled"
+    ng-repeat="option in field.options">{{::option.label || option.name}}
+  </md-option>
+</md-select>

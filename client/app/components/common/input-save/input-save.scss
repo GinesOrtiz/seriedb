@@ -1,0 +1,58 @@
+@import "../../../shared/variables";
+
+input-save {
+  height: 40px;
+  display: block;
+  &.background {
+    .display-mode span {
+      background: rgba($color-primary, .07);
+      color: rgba($color-primary, .9);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+  }
+  &.link {
+    .display-mode span {
+      font-weight: 500;
+      color: $color-billy;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  md-progress-circular {
+    margin: 0 auto;
+  }
+  .md-button {
+    height: 40px;
+    padding: 0;
+    min-width: 30px;
+    max-height: 30px;
+    min-height: 30px;
+    margin: 5px $base/4;
+    md-icon {
+      vertical-align: top;
+      margin-top: 4px;
+      font-size: 20px;
+      line-height: 22px;
+      margin-left: 2px;
+    }
+  }
+  .edit-mode {
+    input {
+      width: 100%;
+      margin: $base/2 $base/2 $base/2 0;
+    }
+  }
+  .display-mode {
+    span {
+      text-align: left;
+      margin: $base/2 0;
+      height: $base*4;
+      display: inline-block;
+      line-height: $base*4;
+      padding: 0 12px;
+    }
+  }
+}

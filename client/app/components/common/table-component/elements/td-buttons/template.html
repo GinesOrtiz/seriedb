@@ -1,0 +1,12 @@
+<div class="{{::vm.element.class}}">
+  <md-button class="{{::button.class}}"
+    ng-if="button.ngIf ? button.ngIf(vm.row) : true"
+    ng-repeat="button in ::vm.element.buttons"
+    ng-click="button.action(vm.row, $event)"
+    popover-placement="{{:: button.tooltipDirection}}"
+    uib-popover="{{:: button.tooltip && (button.tooltip | translate)}}"
+    popover-trigger="mouseenter">
+    <md-icon ng-if="::button.icon">{{::button.icon}}</md-icon>
+    {{::button.text ? (button.text | translate) : ''}}
+  </md-button>
+</div>

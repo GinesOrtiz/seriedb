@@ -1,0 +1,95 @@
+<md-toolbar class="md-whiteframe-z1 bm-toolbar"
+  id="{{::vm.stateMode}}">
+
+  <div class="pull-left">
+    <md-button class="bm-menu-icon md-icon-button"
+      ng-click="vm.openSideNav()">
+      <md-icon>menu</md-icon>
+    </md-button>
+    <div class="bm-menu-logo"
+      ng-click="vm.clickLogo()">
+      <img ng-src="{{ ::vm.logo }}"
+        alt="Billy Mobile">
+      <span feature-flag="betaLogo">beta</span>
+    </div>
+  </div>
+
+  <div class="pull-right">
+    <!-- CURRENCY SELECT -->
+    <md-menu
+      class="bm-toolbar-element"
+      md-offset="0 65"
+      ng-click="$mdOpenMenu($event)">
+      <div
+        ng-click="angular.noop()"
+        class="element-content"
+        aria-label="menu">
+        <span class="content-label">{{::vm.user.currency}}</span>
+      </div>
+      <md-menu-content>
+        <md-menu-item ng-repeat="currency in vm.currencies"
+          ng-click="vm.changeCurrency(currency)">
+          <md-button>{{:: currency}}</md-button>
+        </md-menu-item>
+      </md-menu-content>
+    </md-menu>
+
+    <!-- LANG SELECT -->
+    <md-menu
+      class="bm-toolbar-element"
+      md-offset="0 65"
+      ng-click="$mdOpenMenu($event)">
+      <div ng-click="angular.noop()"
+        class="element-content"
+        aria-label="menu">
+        <span class="content-label">{{::vm.user.language}}</span>
+      </div>
+      <md-menu-content>
+        <md-menu-item ng-repeat="lang in vm.languagesAvailable"
+          ng-click="vm.changeLang(lang)">
+          <md-button>{{:: lang}}</md-button>
+        </md-menu-item>
+      </md-menu-content>
+    </md-menu>
+
+    <!-- FAQ BUTTON -->
+    <div class="bm-toolbar-element hide-xs"
+      aria-label="FAQ"
+      ng-click="vm.openFAQ()">
+      <div class="element-content">
+        <md-icon class="content-icon"
+          aria-label="live-help">live_help
+        </md-icon>
+      </div>
+
+    </div>
+
+    <!-- USER MENU -->
+    <md-menu md-position-mode="target-right target topbar-selector"
+      md-no-ink=""
+      ng-if="vm.isAuth"
+      class="bm-toolbar-element"
+      md-offset="0 65">
+      <md-button
+        class="element-content"
+        ng-click="$mdOpenMenu($event)">
+        <img ng-src="{{::vm.gravatar}}"
+          class="content-avatar">
+        <span class="content-label hide-xs hide-sm">{{ ::vm.userName }}</span>
+        <md-icon class="content-icon">arrow_drop_down</md-icon>
+      </md-button>
+      <md-menu-content width="4"
+        class="main-menu-content">
+        <md-menu-item>
+          <md-button ng-click="vm.logout()">
+            <div layout="row"
+              flex>
+              <md-icon>exit_to_app</md-icon>
+              <p flex>{{:: 'sidebar.logout' | translate }}</p>
+            </div>
+          </md-button>
+        </md-menu-item>
+      </md-menu-content>
+    </md-menu>
+  </div>
+</md-toolbar>

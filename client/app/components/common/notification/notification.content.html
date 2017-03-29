@@ -1,0 +1,13 @@
+<script type="text/ng-template"
+  id="/notification.html">
+  <div class="ui-notification"
+    ng-class="{'auth': isAuth}">
+    <h3 ng-show="title"
+      ng-bind-html="title"></h3>
+    <div class="message"
+      ng-bind-html="message"></div>
+    <md-icon aria-label="Close notification"
+      class="close-icon material-icons">close
+    </md-icon>
+  </div>
+</script>

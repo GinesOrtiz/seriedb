@@ -1,0 +1,13 @@
+{
+  "title": "Ops! It seems like you are not logged in",
+  "titleDownloadBanners": "Ops! It seems like you are not logged in",
+  "titleNeutral": "Login",
+  "subtitle": "",
+  "description": "Click the button below to sign in the system or sign up if you don't have an account.",
+  "bottom": "",
+  "login": "LOGIN",
+  "cancel": "CANCEL",
+  "signUpMessage": "You don't have an account?",
+  "signUp": "Sign up",
+  "signUpHere": "Sign up here"
+}

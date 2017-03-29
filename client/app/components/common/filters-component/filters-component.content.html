@@ -1,0 +1,114 @@
+<div id="filters-component">
+  <form>
+    <md-card ng-class="{'open': vm.forceOpen || vm.showFilterBox}"
+      class="bm-section-content filters-box">
+      <md-card-content layout="row"
+        layout-wrap>
+        <div ng-repeat="(filterName, filterInfo) in vm.filtersFields"
+          class="filter-wrapper"
+          flex="100"
+          layout="column"
+          ng-if="!filterInfo.hidden">
+          <div class="filter-block">
+            <p class="bm-graph-headline ng-binding"
+              layout="row">{{::filterInfo.title}}</p>
+            <div ng-switch="filterInfo.type">
+              <!--CHIPS START-->
+              <md-chips ng-model="vm.model[filterName]"
+                md-autocomplete-snap="true"
+                md-require-match="true"
+                ng-switch-when="chip"
+                md-on-add="filterInfo.mdOnAdd()"
+                readonly="filterInfo.readonly">
+                <md-autocomplete
+                  md-autofocus="false"
+                  md-autoselect="false"
+                  md-no-cache="true"
+                  md-min-length="0"
+                  md-item-text="item.name"
+                  md-search-text="vm.filterSearchText[filterName]"
+                  md-items="item in vm.querySearch(filterInfo.options, vm.filterSearchText[filterName], vm.model[filterName])"
+                  placeholder="{{::filterInfo.placeholder}}">
+                  <md-item-template>{{item.name}}</md-item-template>
+                </md-autocomplete>
+                <md-chip-template><span><em>{{$chip.name}}</em></span></md-chip-template>
+              </md-chips>
+              <!--CHIPS END-->
+
+              <!--TEXT START-->
+              <md-input-container md-no-float
+                ng-switch-when="text">
+                <input type="text"
+                  ng-class="{'search' : filterInfo.search }"
+                  ng-model="vm.model[filterName]"
+                  flex
+                  placeholder="{{::filterInfo.placeholder}}">
+              </md-input-container>
+              <!--TEXT END-->
+
+              <!--SELECT START-->
+              <md-input-container md-no-float
+                ng-switch-when="select"
+                class="select-type">
+                <md-select ng-model="vm.model[filterName]"
+                  aria-label="filterName"
+                  ng-disabled="filterInfo.disabled"
+                  ng-change="filterInfo.ngChange && filterInfo.ngChange()"
+                  md-on-open="filterInfo.onOpen && filterInfo.onOpen()"
+                  flex>
+                  <md-option ng-repeat="model in filterInfo.options"
+                    value="{{::model.id}}">
+                    <span ng-class="{'placeholder': model.id === 'all'}">{{::model.name}}</span>
+                  </md-option>
+                </md-select>
+              </md-input-container>
+              <!--SELECT END-->
+
+              <!-- CHECKBOXES START -->
+              <div class="checkbox-wrapper"
+                ng-switch-when="checkbox">
+                <md-checkbox ng-repeat="check in filterInfo.options"
+                  ng-click="vm.toggleCheckBox(check, filterName)"
+                  class="md-primary"
+                  ng-checked="vm.shouldMarkAsChecked(check,filterName)"
+                  aria-label="{{::check.name}}">{{::check.name}}
+                </md-checkbox>
+              </div>
+              <!-- CHECKBOXES END -->
+
+              <!-- RADIO START -->
+              <md-radio-group
+                ng-model="vm.model[filterName]"
+                class="checkbox-wrapper"
+                ng-switch-when="radio">
+                <md-radio-button ng-repeat="radio in filterInfo.options"
+                  ng-value="radio.id"
+                  class="md-primary"
+                  aria-label="{{ radio.name}}">
+                  {{ ::radio.name}}
+                </md-radio-button>
+              </md-radio-group>
+              <!-- RADIO END -->
+
+              <!--LABEL-->
+              <span ng-switch-when="label"
+                class="{{::filterInfo.addClass}}">{{:: filterInfo.text}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="button-block"
+          flex="100">
+          <md-button class="bm-btn default"
+            ng-click="vm.clearFilters(true)">
+            {{:: 'filters-component.cancelFilters' | translate}}
+          </md-button>
+          <md-button class="bm-btn success"
+            type="submit"
+            ng-click="vm.querySubmit()">
+            {{:: 'filters-component.applyFilters' | translate}}
+          </md-button>
+        </div>
+      </md-card-content>
+    </md-card>
+  </form>
+</div>

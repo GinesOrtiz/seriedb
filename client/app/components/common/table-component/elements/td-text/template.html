@@ -1,0 +1,18 @@
+<div popover-placement="{{::vm.element.tooltipDirection || 'top'}}"
+  uib-popover="{{:: vm.row[vm.element.tooltipKey] || (vm.element.tooltip && (vm.element.tooltip | translate)) }}"
+  popover-trigger="mouseenter">
+<span ng-if="!vm.element.custom"
+  class="{{::vm.element.class}} {{::vm.element.customClass && vm.element.customClass(vm.row)}}">
+  {{vm.getFormat(vm.row, vm.element.key, vm.element.format, vm.element.float)}}
+  <small ng-if="vm.element.subtext"
+    class="{{::vm.element.subtext.class}}">
+    {{::vm.getFormat(vm.row, vm.element.subtext.key, vm.element.subtext.format, vm.element.subtext.float)}}</small>
+</span>
+  <span ng-if="vm.element.custom"
+    class="{{::vm.getText(vm.row, vm.element).class}}"
+    ng-bind-html="vm.getText(vm.row, vm.element).text | translate">
+  <small ng-if="vm.element.subtext"
+    class="{{::vm.element.subtext.class}}">
+    {{::vm.getText(vm.row, vm.element).subtext}}</small>
+</span>
+</div>

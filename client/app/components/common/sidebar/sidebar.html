@@ -1,0 +1,29 @@
+<md-sidenav class="md-sidenav-left"
+  md-component-id="left"
+  md-is-locked-open="$mdMedia('gt-sm')">
+
+  <md-list flex>
+    <md-list-item ui-sref="{{::menu.state}}"
+      ng-repeat="menu in vm.sidebarConfig"
+      ui-sref-active="active">
+
+      <md-icon aria-label="My tags Icon"
+        class="md-avatar-icon material-icons">{{::menu.icon}}
+      </md-icon>
+
+      <span class="new-label"
+        ng-if=":: menu.isNew">{{:: 'sidebar.newLabel' | translate }}</span>
+
+      <p>{{:: menu.label | translate }}</p>
+
+      <md-tooltip md-direction="right"
+        class="sidebar-tooltip">
+        {{:: menu.label | translate }}
+      </md-tooltip>
+
+    </md-list-item>
+
+    <account-manager ng-if="vm.isAuthUser"></account-manager>
+
+  </md-list>
+</md-sidenav>

@@ -1,0 +1,378 @@
+@import "../app/shared/variables";
+
+$toolbar-height: 56px;
+
+appShell {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  background: $color-background;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  //pointer-events: none;
+  @include transition(all .2s);
+  &.user-enabled {
+    .user-enabled {
+      display: none;
+    }
+    .sidebar {
+      .option {
+        display: block !important;
+      }
+    }
+  }
+  &.remove {
+    opacity: 0;
+  }
+  .topbar {
+    position: fixed;
+    height: 56px;
+    background: $color-primary;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0, rgba(black, 0.137255) 0 1px 1px 0, rgba(black, 0.117647) 0 2px 1px -1px;
+    .logo {
+      height: 31.5px;
+      width: 64.14px;
+      cursor: pointer;
+      display: block;
+      position: absolute;
+      top: 12px;
+      left: 16px;
+      @media #{$max-md}{
+        top: 12px;
+        left: 56px;
+      }
+    }
+    .burger {
+      background: white;
+      height: 12px;
+      width: 18px;
+      position: absolute;
+      top: 23px;
+      left: 27px;
+      display: none;
+      @media #{$max-md}{
+        display: block;
+      }
+      &:before, &:after {
+        content: '';
+        background: $color-primary;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        left: 0;
+      }
+      &:before {
+        top: 2px;
+      }
+      &:after {
+        top: 7px;
+      }
+    }
+  }
+  .sidebar {
+    position: fixed;
+    top: 56px;
+    background: white;
+    width: 73px;
+    bottom: 0;
+    z-index: 2;
+    box-shadow: inset -1px 0 rgba($color-primary, .2);
+    @media #{$max-md}{
+      display: none;
+    }
+    .option {
+      height: 56px;
+      width: 100%;
+      position: relative;
+      &:nth-child(3), &:nth-child(4) {
+        display: none;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background: rgba($color-primary, .2);
+        left: 50%;
+        top: 50%;
+        margin-left: -8px;
+        margin-top: -8px;
+      }
+    }
+  }
+  .sidebar-filter {
+    position: fixed;
+    top: 56px;
+    left: 73px;
+    bottom: 0;
+    background: #FAFAFA;
+    width: 240px;
+    z-index: 2;
+    box-shadow: inset -1px 0 rgba($color-primary, .2);
+    @media #{$max-md}{
+      display: none;
+    }
+  }
+  .top-filter {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    height: 56px;
+    z-index: 1;
+    background: white;
+    box-shadow: inset -1px 0 rgba($color-primary, .2);
+    .marketplace {
+      width: 220px;
+      top: 16px;
+      left: 330px;
+      height: 26px;
+      background: rgba($color-primary, .2);
+      position: absolute;
+    }
+  }
+  .content-card {
+    background: white;
+    height: 100%;
+    width: 100%;
+    max-width: 998px;
+    position: fixed;
+    left: 50%;
+    margin-left: -462px;
+    top: 73px;
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba($color-primary, .1);
+  }
+  .cards {
+    position: fixed;
+    top: 112px;
+    left: 312px;
+    right: 0;
+    bottom: 0;
+    @media #{$max-md}{
+      left: 0;
+    }
+    .card {
+      width: 50%;
+      height: 344px;
+      float: left;
+      box-sizing: border-box;
+      position: relative;
+      @media (min-width: 1124px) {
+        width: 33.3333%;
+      }
+      @media (min-width: 1440px) {
+        width: 25%;
+      }
+      @media #{$max-md}{
+        width: 50%;
+      }
+      @media #{$max-sm}{
+        width: 100%;
+      }
+      &:after {
+        position: absolute;
+        content: '';
+        background: white;
+        top: 17px;
+        left: 18px;
+        right: 16px;
+        bottom: 16px;
+        border-radius: 3px;
+        box-shadow: 0 0 0 1px rgba($color-primary, .1);
+      }
+    }
+  }
+  .boxes {
+    position: fixed;
+    top: 108px;
+    left: 72px;
+    right: 0;
+    bottom: 0;
+    height: 108px;
+    @media #{$max-md}{
+      left: 0;
+    }
+    .box {
+      width: 25%;
+      height: 94px;
+      float: left;
+      box-sizing: border-box;
+      position: relative;
+      @media #{$max-md}{
+        width: 50%;
+      }
+      @media #{$max-sm}{
+        width: 100%;
+      }
+      &:after {
+        position: absolute;
+        content: '';
+        background: white;
+        top: 17px;
+        left: 18px;
+        right: 16px;
+        bottom: 16px;
+        border-radius: 3px;
+        box-shadow: 0 0 0 1px rgba($color-primary, .1);
+      }
+    }
+  }
+  .table {
+    position: fixed;
+    top: 216px;
+    left: 72px;
+    right: 0;
+    bottom: 0;
+    @media #{$max-md}{
+      left: 0;
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      background: white;
+      top: 58px;
+      left: 16px;
+      bottom: 190px;
+      border-radius: 3px;
+      box-shadow: 0 0 0 1px rgba(55, 65, 70, 0.1);
+      width: calc(100% - 104px);
+      @media #{$max-md}{
+        left: 18px;
+        width: calc(100% - 34px);
+        top: 134px;
+        height: 100%;
+      }
+      @media #{$max-sm}{
+        top: 344px;
+      }
+    }
+  }
+  .blink {
+    position: fixed;
+    top: 56px;
+    left: 72px;
+    bottom: 0;
+    right: 0;
+    padding: 16px;
+    @media #{$max-md}{
+      left: 0;
+    }
+    .chart1, .chart2 {
+      height: 217px;
+      width: 49.2%;
+      display: inline-block;
+      background: white;
+      position: relative;
+      top: 56px;
+      float: left;
+      border-radius: 3px;
+      @media #{$max-md}{
+        width: 100%;
+        top: 107px;
+        margin-bottom: 16px;
+      }
+    }
+    .chart2 {
+      margin-left: 11px;
+      float: right;
+      @media #{$max-md}{
+        margin-left: 0;
+        float: none;
+      }
+    }
+    .btable {
+      left: 16px;
+      right: 16px;
+      height: 100%;
+      background: white;
+      position: absolute;
+      top: 359px;
+      box-shadow: inset 0 42px #f3f7fd;
+      @media #{$max-md}{
+        display: none;
+      }
+    }
+    .bsearch {
+      position: absolute;
+      top: 307px;
+      border-radius: 3px;
+      right: 16px;
+      height: 41px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05) !important;
+      width: 27%;
+      background: white;
+      max-width: 240px;
+      @media #{$max-md}{
+        display: none;
+      }
+    }
+  }
+  .reports-chart {
+    background: white;
+    position: absolute;
+    top: 123px;
+    left: 330px;
+    right: 16px;
+    height: 316px;
+    border-radius: 3px;
+  }
+  .dimensions-block {
+    position: absolute;
+    top: 456px;
+    left: 330px;
+    right: 16px;
+    height: 36px;
+    .dimension-selector {
+      width: 115px;
+      height: 36px;
+      background: white;
+      float: left;
+      border-radius: 3px;
+      box-shadow: 0 1px 5px rgba($color-primary, .1);
+    }
+    .dimension-selector-add {
+      width: 36px;
+      height: 36px;
+      background: white;
+      float: left;
+      border-radius: 3px;
+      margin-left: 16px;
+      box-shadow: 0 1px 5px rgba($color-primary, .1);
+    }
+    .export-csv {
+      width: 142px;
+      height: 36px;
+      background: white;
+      float: right;
+      border-radius: 3px;
+      box-shadow: 0 1px 5px rgba($color-primary, .1);
+    }
+  }
+  .reports-table {
+    position: fixed;
+    top: 508px;
+    left: 330px;
+    right: 16px;
+    height: 100%;
+    background: white;
+    &:before {
+      content: '';
+      background: rgba($color-secondary, .05);
+      height: 36px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+    }
+  }
+}

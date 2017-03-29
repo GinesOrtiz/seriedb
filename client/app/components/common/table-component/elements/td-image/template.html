@@ -1,0 +1,21 @@
+<div popover-placement="{{::vm.element.tooltipDirection || 'top'}}"
+  uib-popover="{{:: vm.row[vm.element.tooltipKey] || (vm.element.tooltip && (vm.element.tooltip | translate)) }}"
+  popover-trigger="mouseenter"
+  class="{{::vm.element.class}}">
+  <img ng-src="{{vm.row[vm.element.src]}}"
+    ng-if="!vm.element.external"
+    ng-style="{
+    width: vm.element.width,
+    height: vm.element.height,
+    'max-width': vm.element.maxWidth,
+    'max-height': vm.element.maxHeight
+  }">
+  <img ng-src="{{vm.element.src(vm.row)}}"
+    ng-if="vm.element.external"
+    ng-style="{
+    width: vm.element.width,
+    height: vm.element.height,
+    'max-width': vm.element.maxWidth,
+    'max-height': vm.element.maxHeight
+  }">
+</div>

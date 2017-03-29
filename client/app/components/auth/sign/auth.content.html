@@ -1,0 +1,19 @@
+<div id="auth"
+  ng-style="{'background-image' : 'url('+vm.bigBg+')'}"
+  flex
+  layout-align="center center"
+  layout="column"
+  layout-fill
+  ng-class="{'signup': vm.current=='signup', 'loaded': vm.bgLoaded}">
+  <div class="lazy-image"
+    ng-style="{'background-image' : 'url('+vm.miniBg+')'}"></div>
+  <div class="logo">
+    <img ng-src="{{::vm.logo}}"
+      alt="Billy Performance Logo">
+  </div>
+  <auth-component view="{{vm.view}}"
+    class="animation form-only"
+    disable-signup="true"
+    disable-info="true"
+    ng-class="{'no-select': vm.origin}"></auth-component>
+</div>

@@ -1,0 +1,28 @@
+<div id="emailActivation"
+  ng-if="vm.emailIsNotVerified">
+  <div class="featured-box">
+    <div class="featured-wrapper"
+      layout-gt-xs="row"
+      layout-align="center">
+
+      <div class="col featured-text"
+        flex-xs="100"
+        flex="70">
+        <h1 class="featured-title">
+          {{ :: 'messageBlock.email-activation.verify' | translate }}
+        </h1>
+        <p ng-bind-html="'messageBlock.email-activation.welcome' | translate : {vars: [vm.user.fullName]}"></p>
+        <p ng-bind-html="'messageBlock.email-activation.verifyPrompt' | translate : {vars: [vm.user.email]}"></p>
+      </div>
+      <div class="col featured-actions"
+        layout="column"
+        layout-align="center end"
+        layout-align-xs="center center">
+        <md-button class="btn"
+          ng-click="vm.resend()">
+          {{:: 'messageBlock.email-activation.notReceivedLinkResend' | translate}}
+        </md-button>
+      </div>
+    </div>
+  </div>
+</div>

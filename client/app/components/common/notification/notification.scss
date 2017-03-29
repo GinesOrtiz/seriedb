@@ -1,0 +1,39 @@
+@import "../../../shared/variables";
+
+body {
+  .ui-notification {
+    padding: $base * 2 0;
+    text-align: center;
+    &.success {
+      background: $color-success;
+    }
+    &.auth {
+      margin-top: 56px;
+    }
+    &.warning {
+      color: #fff;
+      background: $color-warning;
+    }
+    &.error {
+      color: #fff;
+      background: $color-danger;
+    }
+    &.info {
+      color: #fff;
+      background: lighten($color-secondary, 10);
+    }
+    .message {
+      margin: 0;
+      padding: 0 50px;
+      a.underline {
+        text-decoration: underline;
+      }
+    }
+    .close-icon {
+      position: absolute;
+      color: white;
+      right: 17px;
+      top: 17px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "invalid": "Invalid",
+  "loading": "Loading",
+  "close": "Close",
+  "save": "Save",
+  "cancel": "Cancel",
+  "apply": "Apply",
+  "copySuccess": "Copied to your clipboard successfully",
+  "copyError": "Error while copying to clipboard. Your browser is not compatible.",
+  "rejection": {
+    "connection": "Error connecting to API",
+    "error": "There was an error, try again later.",
+    "errorUnexpected": "Unexpected error. Please try again later.",
+    "sourceNotAuth": "You have tried to retrieve a non authorized resource.",
+    "timeout": "Your request has timed out. Please try again in a moment.",
+    "unauthorized": "Unauthorized, please authenticate again.",
+    "serverProblemsTitle": "Something's wrong here...",
+    "serverProblemsSubtitle": "Looks like something went wrong on our end. Please come back in a few minutes.",
+    "serverProblemsIntercom": "Talk with us"
+  }
+}

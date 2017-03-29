@@ -1,0 +1,19 @@
+@import "../../shared/variables";
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans";
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+.section-title {
+  font-size: 26px;
+  font-weight: 500;
+  padding: 8px;
+  color: rgba($color-primary, 0.9);
+  small {
+    font-size: 14px;
+    color: rgba($color-primary, 0.7);
+  }
+}

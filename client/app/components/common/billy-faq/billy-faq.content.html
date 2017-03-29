@@ -1,6 +1,6 @@
-<div id="billy-intercom">
+<div id="billy-faq">
   <md-sidenav class="md-sidenav-right md-whiteframe-4dp intercom-panel"
-    md-component-id="billyIntercom">
+    md-component-id="billyFaq">
     <md-toolbar class="toolbar">
       <h1 class="md-toolbar-tools">F.A.Q.</h1>
       <md-icon ng-click="vm.close()"
@@ -54,12 +54,12 @@
           layout-align="center center"
           ng-hide="vm.filterQuestionsLeft">
           <div class="nothing-found">
-            <h2>{{ :: 'intercom.nothingFound' | translate }}</h2>
-            <p>{{ :: 'intercom.nothingFoundSubtitle' | translate }}</p>
+            <h2>{{ :: 'faq.nothingFound' | translate }}</h2>
+            <p>{{ :: 'faq.nothingFoundSubtitle' | translate }}</p>
             <md-button ui-sref="billy.setup.creator"
               class="button-new-tag btn-center btn-default btn-success"
               ng-click="app.openIntercom()">
-              {{:: 'intercom.intercomButton' | translate}}
+              {{:: 'faq.intercomButton' | translate}}
             </md-button>
           </div>
         </div>

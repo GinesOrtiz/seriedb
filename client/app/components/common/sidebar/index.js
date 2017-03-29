@@ -14,6 +14,7 @@ const moduleRun = (translateService) => {
 
 moduleRun.$inject = ['translateService'];
 
-export const sidebar = angular.module('commonComponents.sidebar', [])
+export const sidebar = angular
+  .module('billy.common.sidebar', [])
   .component('sidebar', sidebarComponent)
   .run(moduleRun);

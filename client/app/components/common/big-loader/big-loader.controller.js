@@ -1,4 +1,4 @@
-class BigLoaderController {
+class bigLoaderController {
 
   constructor($scope, $filter) {
     this.$scope = $scope;
@@ -29,6 +29,9 @@ class BigLoaderController {
   }
 }
 
-BigLoaderController.$inject = ['$scope', '$filter'];
+bigLoaderController.$inject = [
+  '$scope',
+  '$filter'
+];
 
-export {BigLoaderController};
+export {bigLoaderController};

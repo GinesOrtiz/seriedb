@@ -2,7 +2,7 @@ import _ from 'lodash';
 
 const localStorageService = ($localStorage) => {
   'use strict';
-  const USER_TYPE = 'publisher-';
+  const USER_TYPE = 'panel-';
 
   /**
    *

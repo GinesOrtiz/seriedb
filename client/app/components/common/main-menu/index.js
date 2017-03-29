@@ -1,6 +1,7 @@
 import angular from 'angular';
 
-import {mainMenuDirective} from './main-menu.directive';
+import {mainMenuComponent} from './main-menu.component';
 
-export const mainMenu = angular.module('commonComponents.main-menu', [])
-  .directive('mainMenu', mainMenuDirective);
+export const mainMenu = angular
+  .module('billy.common.main-menu', [])
+  .component('mainMenu', mainMenuComponent);

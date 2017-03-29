@@ -1,7 +1,6 @@
 import logo from './../../assets/logo_white.png';
 import md5 from 'md5';
 
-
 class BMMainMenu {
   constructor(LoginPopupService, AuthService, UserService, bmMixpanel, translateService,
               BigLoaderService, localStorage, BackgroundUpdateService, $timeout, $state, $mdSidenav,

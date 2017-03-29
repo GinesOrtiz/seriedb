@@ -15,6 +15,6 @@ import './compare-box.scss';
  * @type {any}
  */
 export const compareBox = angular
-  .module('commonComponents.compareBox', [])
+  .module('billy.common.compareBox', [])
   .factory('CompareBoxService', CompareBoxService)
   .component('compareBox', compareBoxComponent);

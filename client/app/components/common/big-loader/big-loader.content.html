@@ -1,10 +1,19 @@
-<div id="big-loader" flex layout-align="center center" layout="row" layout-fill ng-if="vm.BigLoaderService.visible">
+<div id="big-loader"
+  flex
+  layout-align="center center"
+  layout="row"
+  layout-fill
+  ng-if="vm.BigLoaderService.visible">
   <md-card class="md-whiteframe-16dp">
     <md-card-content>
-      <md-progress-circular ng-if="!vm.BigLoaderService.percent" md-mode="indeterminate"
-                            md-diameter="75"></md-progress-circular>
-      <div class="percent-circle" ng-if="vm.BigLoaderService.percent">
-        <md-progress-circular md-diameter="40" md-mode="determinate" value="{{vm.BigLoaderService.percent}}"></md-progress-circular>
+      <md-progress-circular ng-if="!vm.BigLoaderService.percent"
+        md-mode="indeterminate"
+        md-diameter="75"></md-progress-circular>
+      <div class="percent-circle"
+        ng-if="vm.BigLoaderService.percent">
+        <md-progress-circular md-diameter="40"
+          md-mode="determinate"
+          value="{{vm.BigLoaderService.percent}}"></md-progress-circular>
       </div>
       <div>
         <span>{{vm.BigLoaderService.message}}</span>

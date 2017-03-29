@@ -6,7 +6,7 @@ import langES from './lang/es.json';
 import './auth-component.scss';
 
 export const authBox = angular
-  .module('commonComponents.authComponent', [])
+  .module('billy.common.authComponent', [])
   .component('authComponent', authComponent)
   .run((translateService) => {
     'use strict';

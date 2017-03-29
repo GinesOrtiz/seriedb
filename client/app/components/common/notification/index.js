@@ -1,7 +1,8 @@
 import angular from 'angular';
 import './notification.scss';
 
-import {notificationDirective} from './notification.directive';
+import {notificationComponent} from './notification.component';
 
-export const notification = angular.module('commonComponents.notification', [])
-  .directive('notification', notificationDirective);
+export const notification = angular
+  .module('billy.common.notification', [])
+  .component('notification', notificationComponent);

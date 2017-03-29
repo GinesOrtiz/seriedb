@@ -18,7 +18,7 @@ class inputSaveController {
     config = Object.assign(angular.copy(this.extraParams), configBase);
     this.editState = 2;
     this.factory[this.factoryAction](config)
-      .then((res)=> {
+      .then((res) => {
         this.editState = 0;
         this.onSuccess(res);
       }, (res) => {

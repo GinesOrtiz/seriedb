@@ -1,9 +1,9 @@
 /**
  * This module replaces intercom with a custom FAQ and adds a button to open the real one
  */
-class BillyIntercomController {
-  constructor($log, IntercomService, UserService, FaqService, $mdSidenav, $scope, $filter,
-              localStorage) {
+class billyFaqController {
+  constructor($log, IntercomService, BigLoaderService, UserService, FaqService, $mdSidenav, $scope,
+              $filter, localStorage) {
     this.$log = $log;
     this.$filter = $filter;
     this.$scope = $scope;
@@ -20,12 +20,14 @@ class BillyIntercomController {
     this.faq = {};
 
     this.$scope.$on('openFaqSidebar', () => {
+      BigLoaderService.setState('show');
       this.FaqService.getFaq(this.lang)
         .then((faq) => {
+          BigLoaderService.setState('hide');
           this.questionsIndex[this.lang] = faq.questionsIndex;
           this.filterQuestions = faq.filterQuestions;
           this.faq[this.lang] = faq.content;
-          this.$mdSidenav('billyIntercom')
+          this.$mdSidenav('billyFaq')
             .toggle();
         });
     });
@@ -44,7 +46,7 @@ class BillyIntercomController {
    * Open from our button
    */
   openBillyIntercom() {
-    this.$mdSidenav('billyIntercom')
+    this.$mdSidenav('billyFaq')
       .toggle();
     this.closeNoButton();
   }
@@ -53,7 +55,7 @@ class BillyIntercomController {
    * Close FAQ
    */
   close() {
-    this.$mdSidenav('billyIntercom')
+    this.$mdSidenav('billyFaq')
       .close();
   }
 
@@ -64,7 +66,7 @@ class BillyIntercomController {
     if (this.firstTime) {
       this.firstTime = false;
       this.$scope.$watch(() => {
-        return this.$mdSidenav('billyIntercom')
+        return this.$mdSidenav('billyFaq')
           .isOpen();
       }, () => {
         document.getElementsByTagName('html')[0].classList.toggle('openSidebar');
@@ -115,9 +117,10 @@ class BillyIntercomController {
 
 }
 
-BillyIntercomController.$inject = [
+billyFaqController.$inject = [
   '$log',
   'IntercomService',
+  'BigLoaderService',
   'UserService',
   'FaqService',
   '$mdSidenav',
@@ -126,4 +129,4 @@ BillyIntercomController.$inject = [
   'localStorage'
 ];
 
-export {BillyIntercomController}
+export {billyFaqController};

@@ -1,17 +1,18 @@
-import {FiltersComponentDirective} from './filters-component.directive';
+import {filtersComponentComponent} from './filters-component.component';
 import langES from './lang/es.json';
 import langEN from './lang/en.json';
 import angular from 'angular';
 
-export const FiltersComponent = angular.module('commonComponents.filters', [])
-  .directive('filtersComponent', FiltersComponentDirective)
-  .config(() => {
-  })
-  .run((translateService) => {
-    'use strict';
+const filtersComponentRun = (translateService) => {
+  'use strict';
 
-    translateService.addLang('filters-component', {
-      EN: langEN,
-      ES: langES
-    });
+  translateService.addLang('filters-component', {
+    EN: langEN,
+    ES: langES
   });
+};
+
+export const filtersComponent = angular
+  .module('billy.common.filters', [])
+  .component('filtersComponent', filtersComponentComponent)
+  .run(filtersComponentRun);

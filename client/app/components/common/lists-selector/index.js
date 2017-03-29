@@ -14,13 +14,15 @@ import langEN from './lang/en.json';
  * }
  */
 
+const listsSelectorRun = (translateService) => {
+  'use strict';
+  translateService.addLang('listsSelector', {
+    EN: langEN,
+    ES: langES
+  });
+};
+
 export const listsSelector =
-  angular.module('commonComponents.listsSelector', [])
+  angular.module('billy.common.listsSelector', [])
     .component('listsSelector', listsSelectorComponent)
-    .run((translateService) => {
-      'use strict';
-      translateService.addLang('listsSelector', {
-        EN: langEN,
-        ES: langES
-      });
-    });
+    .run(listsSelectorRun);

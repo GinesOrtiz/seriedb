@@ -4,7 +4,7 @@ const UserService = (localStorage, translateService, $state, $injector) => {
     language: localStorage.getItem('language', true) || translateService.standard,
     currency: localStorage.getItem('currency', true) || 'EUR'
   };
-  const USER_TYPE = window.localStorage.USER_TYPE || 'publisher';
+  const USER_TYPE = 'panel';
 
   /**
    * returns the user stored in Api service

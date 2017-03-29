@@ -1,7 +1,7 @@
-class SideBarController {
+class sideBarController {
   constructor(UserService, LoginPopupService) {
     this.LoginPopupService = LoginPopupService;
-    let isAuthUser = UserService.isAuth();
+    this.isAuthUser = UserService.isAuth();
 
     let sidebarConfig = [
       // When not logged
@@ -34,7 +34,7 @@ class SideBarController {
       ]
     ];
 
-    this.sidebarConfig = sidebarConfig[isAuthUser ? 1 : 0];
+    this.sidebarConfig = sidebarConfig[this.isAuthUser ? 1 : 0];
   }
 
   login() {
@@ -47,9 +47,9 @@ class SideBarController {
 }
 
 
-SideBarController.$inject = [
+sideBarController.$inject = [
   'UserService',
   'LoginPopupService'
 ];
 
-export {SideBarController};
+export {sideBarController};

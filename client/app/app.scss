@@ -68,6 +68,39 @@ ui-view, [ui-view], layout {
   transform: translateY(-50%);
 }
 
+.pull-right {
+  float: right;
+  > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.pull-left {
+  float: left;
+  > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+md-backdrop.md-menu-backdrop {
+  position: fixed !important;
+  z-index: 99998;
+}
+
+.md-open-menu-container {
+  z-index: 99999;
+}
+
+.md-select-menu-container {
+  z-index: 99999;
+}
+
+md-backdrop.md-sidenav-backdrop {
+  z-index: 999;
+}
+
 //************* CUSTOM INPUTS STYLES ********************
 
 .input-wrapper {

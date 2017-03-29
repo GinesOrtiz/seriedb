@@ -1,10 +1,10 @@
-import {billyIntercom} from './billy-intercom';
+import {billyFaq} from './billy-faq';
 import {accountManager} from './account-manager';
 import {mainMenu} from './main-menu';
 import {sidebar} from './sidebar';
 import {bigLoader} from './big-loader';
 import {notification} from './notification';
-import {FiltersComponent} from './filters-component';
+import {filtersComponent} from './filters-component';
 import {BPNTabset} from './bpn-tabset';
 import {BPNTab} from './bpn-tabset/bpn-tab';
 import {loginPopup} from './login-popup';
@@ -23,8 +23,8 @@ export const common = angular.module('commonComponents', [
   mainMenu.name,
   sidebar.name,
   bigLoader.name,
-  billyIntercom.name,
-  FiltersComponent.name,
+  billyFaq.name,
+  filtersComponent.name,
   accountManager.name,
   BPNTabset.name,
   BPNTab.name,

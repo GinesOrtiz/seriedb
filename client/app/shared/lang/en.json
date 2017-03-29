@@ -5,16 +5,6 @@
   "save": "Save",
   "cancel": "Cancel",
   "apply": "Apply",
-  "noTags": "You don't have any tag yet...",
-  "noTagsMobile": "You don't have any tag yet...",
-  "noTagsMobileSubtitle": "But don't worry! Login in a desktop to be able to create your first tag.",
-  "noData": "You don't have any data to display",
-  "createNewTag": "You can create a new tag by clicking the button below",
-  "newTagButton": "New Tag",
-  "createTag": "Create tag",
-  "noCampaigns": "You don't have any campaign yet...",
-  "createCampaignSubtitle": "You can create a new campaign from the Marketplace",
-  "createCampaign": "Go to Marketplace",
   "copySuccess": "Copied to your clipboard successfully",
   "copyError": "Error while copying to clipboard. Your browser is not compatible.",
   "rejection": {
@@ -26,20 +16,6 @@
     "unauthorized": "Unauthorized, please authenticate again.",
     "serverProblemsTitle": "Something's wrong here...",
     "serverProblemsSubtitle": "Looks like something went wrong on our end. Please come back in a few minutes.",
-    "serverProblemsIntercom": "Talk with us",
-    "billingEmpty": "Please fill all the billing information fields in order to save your new data.",
-    "offerNotFound" : "We are sorry we couldn't find your offer. Please select another one."
-  },
-  "macros": {
-    "sub": "This is the click ID container, through which we pass each other the clicks and conversions whenever they happen. This is the most important value",
-    "source": "This value will report your publisher ID associated with every click ID. This is very useful for traffic optimisation",
-    "sub2": "Here you can pass any other extra piece of information you'd like to send",
-    "sub3": "Here you can pass any other extra piece of information you'd like to send",
-    "sub4": "Here you can pass any other extra piece of information you'd like to send",
-    "sub5": "Here you can pass any other extra piece of information you'd like to send",
-    "currency": "This value will report the currency of every transaction, for example: EUR, USD, GBP, etc...",
-    "commission": "This is the payout that we will report to you for every transaction",
-    "carrier": "This value will report the operator related to the conversion",
-    "country": "This value will report the country related to the conversion"
+    "serverProblemsIntercom": "Talk with us"
   }
 }

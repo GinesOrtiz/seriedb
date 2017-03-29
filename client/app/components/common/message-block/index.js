@@ -18,7 +18,7 @@ const messageBlockRun = (translateService) => {
 messageBlockRun.$inject = ['translateService'];
 
 export const messageBlock = angular
-  .module('commonComponents.messageBlock', [])
+  .module('billy.common.messageBlock', [])
   .component('messageBlock', messageBlockComponent)
   .component('emailActivation', emailActivationComponent)
   .component('marketplaceAnon', marketplaceAnonComponent)

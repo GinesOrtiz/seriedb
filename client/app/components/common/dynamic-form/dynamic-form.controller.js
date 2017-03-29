@@ -3,7 +3,7 @@ import {elements} from './elements';
 class dynamicFormController {
   constructor($scope) {
     this.vmodel = this.iterate(this.model);
-    $scope.$watch(()=> {
+    $scope.$watch(() => {
       return this.vmodel;
     }, (model) => {
       if (model) {
@@ -107,13 +107,13 @@ class dynamicFormController {
 
   async(field) {
     field.async()
-      .then((options)=> {
+      .then((options) => {
         field.options = options;
       });
   }
 
   submit() {
-    this.fields.buttons.forEach((button)=> {
+    this.fields.buttons.forEach((button) => {
       if (button.submit) {
         button.action();
       }

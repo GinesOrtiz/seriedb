@@ -2,7 +2,7 @@
 
 lists-selector {
 
-  &:first-child{
+  &:first-child {
     border-top-right-radius: $base/4;
     border-bottom-right-radius: $base/4;
   }
@@ -31,7 +31,7 @@ lists-selector {
       .material-icons {
         font-size: $base*2;
         font-weight: bold;
-        box-shadow: -1px 0px rgba(0,0,0,0.1);
+        box-shadow: -1px 0px rgba(0, 0, 0, 0.1);
       }
       md-icon {
         width: $base*2;
@@ -70,7 +70,7 @@ lists-selector {
     color: rgba($color-primary, .8);
     font-size: $base * 1.5;
     top: $base * 1.5;
-    width:$base*2;
+    width: $base*2;
   }
 
   .add-list {

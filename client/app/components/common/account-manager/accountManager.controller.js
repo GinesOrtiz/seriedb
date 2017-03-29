@@ -1,4 +1,4 @@
-class AccountManagerController {
+class accountManagerController {
   constructor(IntercomService, UserService, $window, $timeout) {
     this.IntercomService = IntercomService;
     this.user = UserService.getState();
@@ -13,9 +13,9 @@ class AccountManagerController {
     this.showTooltip = $window.innerWidth > 959;
 
     $(window)
-      .on('resize', ()=> {
+      .on('resize', () => {
         $timeout.cancel(resizeTimeout);
-        resizeTimeout = $timeout(()=> {
+        resizeTimeout = $timeout(() => {
           this.showTooltip = $window.innerWidth > 959;
         }, 200);
       });
@@ -26,11 +26,11 @@ class AccountManagerController {
   }
 }
 
-AccountManagerController.$inject = [
+accountManagerController.$inject = [
   'IntercomService',
   'UserService',
   '$window',
   '$timeout'
 ];
 
-export {AccountManagerController}
+export {accountManagerController};

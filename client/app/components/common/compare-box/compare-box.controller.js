@@ -6,7 +6,7 @@ class compareBoxController {
     if (this.config === undefined) {
       this.config = {
         showSubcontent: true
-      }
+      };
     }
   }
 

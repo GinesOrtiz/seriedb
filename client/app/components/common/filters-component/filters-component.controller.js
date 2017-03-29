@@ -1,4 +1,4 @@
-class FiltersComponentController {
+class filtersComponentController {
   constructor($filter, $timeout) {
 
     this.$filter = $filter;
@@ -16,11 +16,11 @@ class FiltersComponentController {
     let availableFilters = [];
     let usedFilters = [];
 
-    selected.forEach((option)=> {
+    selected.forEach((option) => {
       usedFilters.push(option.id);
     });
 
-    filterByName.forEach((option)=> {
+    filterByName.forEach((option) => {
       if (usedFilters.indexOf(option.id) < 0) {
         availableFilters.push(option);
       }
@@ -36,13 +36,13 @@ class FiltersComponentController {
   clearFilters(forceClear) {
     if (forceClear) {
       this.model = {};
-      this.$timeout(()=> {
+      this.$timeout(() => {
         this.querySubmit();
       });
     }
 
     Object.keys(this.fields)
-      .forEach((key)=> {
+      .forEach((key) => {
         if (!this.model[key]) {
           switch (this.fields[key].type) {
             case 'text':
@@ -70,20 +70,20 @@ class FiltersComponentController {
       this.model[filterName].push(check);
     }
     else {
-      _.pullAt(this.model[filterName],index);
+      _.pullAt(this.model[filterName], index);
     }
   }
 
-  shouldMarkAsChecked(check, filterName){
-    return _.find(this.model[filterName],check);
+  shouldMarkAsChecked(check, filterName) {
+    return _.find(this.model[filterName], check);
   }
 
 
 }
 
-FiltersComponentController.$inject = [
+filtersComponentController.$inject = [
   '$filter',
   '$timeout'
 ];
 
-export {FiltersComponentController};
+export {filtersComponentController};

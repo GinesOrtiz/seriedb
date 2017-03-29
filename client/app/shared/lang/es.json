@@ -5,16 +5,6 @@
   "save": "Guardar",
   "cancel": "Cancelar",
   "apply": "Aplicar",
-  "noTags": "Aún no tienes ningún tag creado ...",
-  "noTagsMobile": "Aún no tienes ningún tag creado ...",
-  "noTagsMobileSubtitle": "¡No te preocupes! Inicia sesión desde tu ordenador para crear tu primer tag.",
-  "noData": "Todavía no tienes suficiente información para mostrar",
-  "createNewTag": "Para crear un tag simplemente clica en este botón:",
-  "newTagButton": "Nuevo tag",
-  "createTag": "Crear tag",
-  "noCampaigns": "Aún no tienes ninguna campaña creada ...",
-  "createCampaignSubtitle": "Puede crear los tags desde el Marketplace",
-  "createCampaign": "Ir a Marketplace",
   "copySuccess": "Copiado correctamente a tu portapapeles",
   "copyError": "Error al copiar al portapapeles. Tu navegador no soporta esta acción.",
   "rejection": {
@@ -26,20 +16,6 @@
     "unauthorized": "Acceso no autorizado, por favor inicia sesión de nuevo.",
     "serverProblemsTitle": "Algo va mal...",
     "serverProblemsSubtitle": "Parece que algo está mal por nuestra parte. Por favor, prueba de nuevo en unos minutos.",
-    "serverProblemsIntercom": "Habla con nosotros",
-    "billingEmpty": "Por favor, rellena todos los campos de facturación para guardar tus datos.",
-    "offerNotFound": "No hemos podido encontrar esa oferta. Por favor seleciona otra de las disponibles."
-  },
-  "macros": {
-    "sub": "Este es el campo de clic ID, a través del cual nos pasamos los clics y las conversiones cada vez que suceden. Este es el valor más importante",
-    "source": "Este valor informará de tu ID de publisher asociado con cada clic ID. Esto es muy útil para la optimización del tráfico",
-    "sub2": "Aquí puedes pasar cualquier otra información adicional que desees enviar",
-    "sub3": "Aquí puedes pasar cualquier otra información adicional que desees enviar",
-    "sub4": "Aquí puedes pasar cualquier otra información adicional que desees enviar",
-    "sub5": "Aquí puedes pasar cualquier otra información adicional que desees enviar",
-    "currency": "Este valor informará la moneda de cada transacción, por ejemplo: EUR, USD, GBP, etc ...",
-    "commission": "Este es el pago que le informaremos para cada transacción",
-    "carrier": "Este valor informará al operador relacionado con la conversión",
-    "country": "Este valor informará al país relacionado con la conversión"
+    "serverProblemsIntercom": "Habla con nosotros"
   }
 }

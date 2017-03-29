@@ -5,7 +5,7 @@ const AuthService = (translateService, localStorage, UserService,
                      $timeout, $window, Notification, $rootScope, $interval, $http, $q) => {
   'use strict';
 
-  const USER_TYPE = window.localStorage.USER_TYPE || 'publisher';
+  const USER_TYPE = window.localStorage.USER_TYPE || 'panel';
   const API_URL = __API_URL__;
   let userAlreadyRequested = false;
 
@@ -16,7 +16,7 @@ const AuthService = (translateService, localStorage, UserService,
    * @returns {*}
    */
   const login = (data) => {
-    data.userType = USER_TYPE;
+    data.userType = 'publisher';
 
     return $http.post(`${API_URL}/auth/login`, data)
       .then(({data}) => {

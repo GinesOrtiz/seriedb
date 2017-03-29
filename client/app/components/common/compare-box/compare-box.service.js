@@ -1,4 +1,5 @@
 const CompareBoxService = (UserService, $http, $q) => {
+  'use strict';
 
   const API_URL = __API_URL__;
   const setParams = () => {
@@ -16,7 +17,7 @@ const CompareBoxService = (UserService, $http, $q) => {
   const getData = () => {
     let dfd = $q.defer();
     $http.get(`${API_URL}/stats/query`, {params: setParams()})
-      .then(({data})=> {
+      .then(({data}) => {
         return dfd.resolve(data.total.publisher_conversion_amount);
       });
 
@@ -26,7 +27,7 @@ const CompareBoxService = (UserService, $http, $q) => {
 
   return {
     getData
-  }
+  };
 };
 
 CompareBoxService.$inject = [

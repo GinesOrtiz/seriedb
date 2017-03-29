@@ -34,7 +34,7 @@ md-toolbar.bm-toolbar {
     padding-left: 0;
   }
   @media #{$media-md}{
-    display: none;
+    display: none !important;
   }
 }
 

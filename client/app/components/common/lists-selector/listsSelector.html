@@ -1,0 +1,30 @@
+<div
+  class="wrapper"
+  layout="row"
+  ng-repeat="(listIndex, listElements) in vm.lists">
+  <md-select
+    ng-model="vm.model[listIndex]"
+    ng-change="vm.selectElement({listIndex: listIndex, element: vm.model[listIndex]})"
+    placeholder="{{vm.config.placeholder}}">
+    <md-option ng-repeat="option in listElements"
+      ng-value="option">
+      {{ vm.config.translationKey +'.dimensions.'+ (option.name || option) | translate }}
+    </md-option>
+  </md-select>
+  <div class="remove-list"
+    ng-if="vm.showRemoveButton(listIndex)"
+    ng-click="vm.handleListRemoval(listIndex)">
+    <md-icon aria-label="close"
+      class="material-icons">close
+    </md-icon>
+  </div>
+</div>
+
+<div
+  class="add-list"
+  ng-click="vm.addList()"
+  ng-if="vm.lists.length < vm.config.maximumLists">
+  <md-icon aria-label="caret arrow"
+    class="material-icons">add
+  </md-icon>
+</div>

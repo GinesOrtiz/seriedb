@@ -1,0 +1,42 @@
+{
+  "passwordRemember": {
+    "backTo": "Back to ",
+    "description": "Enter your email and we will send you a link where you can reset your password.",
+    "descriptionSuccess": "A password reset link was sent to your email address:",
+    "error": "There was a conflict with the params sent. Check the information and try again.",
+    "title": "Forgot password?",
+    "titleSuccess": "Reset link was sent"
+  },
+  "passwordReset": {
+    "password": "New password",
+    "success": "Password successfully changed.",
+    "title": "Reset password for ",
+    "titleSuccess": "Reset link was sent"
+  },
+  "sign": {
+    "auth": {
+      "forgotPassword": "Forgot password?",
+      "footerText": "No account? ",
+      "footerLink": "Sign up",
+      "message": "Don't have an account?",
+      "other": "Sign up",
+      "otherLink": "signup",
+      "title": "Sign in"
+    },
+    "errorCredentials": "Credentials are not correct",
+    "loginMsg": "Login...",
+    "signup": {
+      "terms": "By checking this, I agree to the <a href='http://www.billymob.com/terms-and-conditions.html' target='_blank'>Terms of Service</a>",
+      "error": "There's an error:",
+      "footerText": "Already have an account? ",
+      "footerLink": "Sign in",
+      "message": "Don't have an account?'",
+      "other": "Sign in",
+      "otherLink": "auth",
+      "success": "Sign up success! Remember to verify your email",
+      "title": "Sign up",
+      "newsletter": "I want to subscribe to the newsletter",
+      "phone": "Phone number"
+    }
+  }
+}

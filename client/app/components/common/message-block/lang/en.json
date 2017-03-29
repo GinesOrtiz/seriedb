@@ -1,0 +1,23 @@
+{
+  "email-activation": {
+    "notReceivedLink": "If you have not received any link, we can",
+    "notReceivedLinkResend": "resend it now",
+    "sentError": "There was an error. Try again latter",
+    "sentSuccess": "Email resent successfully. Please check your inbox.",
+    "title": "Email verification",
+    "verify": "Verify your email",
+    "verifyPrompt": "We just have sent you an email to <b>%s</b>. Please, click the verification link on the email to start working with us.",
+    "welcome": "Hi <b>%s</b>. Welcome to Billy!"
+  },
+  "marketplace-anon": {
+    "title_small": "Sign up",
+    "title_big": "for free.",
+    "bullets_title": "You'll get access to:",
+    "bullet_text_1": "6,000+ open and private offers",
+    "bullet_text_2": "Overall and historical stats of each offer",
+    "bullet_text_3": "Live Chat and dedicated specialists 24/7",
+    "bullets_footer": "and much more...",
+    "login_button": "or login",
+    "signup_button": "Sign up"
+  }
+}

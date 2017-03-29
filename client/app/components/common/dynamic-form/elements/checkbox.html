@@ -1,0 +1,6 @@
+<md-checkbox ng-model="vm.vmodel[field.name]"
+  ng-required="{{::field.required}}"
+  ng-disabled="field.disabled"
+  name="{{::field.name}}">
+  <span ng-bind-html="::field.label | translate"></span>
+</md-checkbox>

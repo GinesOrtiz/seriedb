@@ -1,0 +1,374 @@
+[
+  {
+    "title": "How do I get started",
+    "questions": [
+      {
+        "q": "1. How do I sign up?",
+        "a": "Signing up with Billy is easy! Simply click this <a href='https://publishers.billymob.com/signup' target='_blank'>link</a>, enter your name, email address, phone number and desired password, click sign up and you’re done!<br><img src='https://billymob.com/assets/faq/Affiliates/en/q01.png'/>"
+      },
+      {
+        "q": "2. Is it free to sign up?",
+        "a": "Yes! <a href='https://publishers.billymob.com/signup' target='_blank'>Signing up</a> is completely free with no hidden fees along the way"
+      },
+      {
+        "q": "3. Why should I sign up?",
+        "a": "Signing up with Billy gives you access to the tracking links of over 6,000 active high quality mobile advertising offers. It also means you can use our Bxlink, a single link that you can use to monetize all your traffic thanks to our advanced technology.  Basically, signing up is the first step to start monetising your traffic and increasing your profits!"
+      },
+      {
+        "q": "4. I'm interested, how do I get started?",
+        "a": "Getting started at Billy's self service platform is easy. After you have signed up, you have two choices. Firstly, you can simply enter the marketplace and start searching to find the right offer for you. More information on searching the offers can be found in question 10. When you´ve found the right offer, simply select it, get the tracking link and send your traffic! Help about this can be found in question 34.<br>Your second choice is to have our Bxlink do the work for you. Using our proprietary technology, ActiveBx, our Bxlink will find the right offers for your traffic, ensuring the right ad goes to the right user at the right time. For more information about this, take a look in Bxlink section. Remember, if you need any advice, you can speak to our dedicated staff 24/7 via our live chat"
+      },
+      {
+        "q": "5. I need to contact you! how do I do it?",
+        "a": "Billy provides you with 24/7 support via our live chat. Simply click the green button at the bottom right of the page and get chatting! You can also contact us by email at <a href='mailto:market@billymob.com'>market@billymob.com</a>."
+      },
+      {
+        "q": "6. What do I do if I forget my password?",
+        "a": "If you forget your password don’t worry! On the <a href='https://publishers.billymob.com/auth' target='_blank'>login page</a>, simply click the option <a href='https://publishers.billymob.com/remember' target='_blank'>“Forgot Password”</a>. Enter your registered email address and a reset password link will be sent to you"
+      },
+      {
+        "q": "7. How do I change my password?",
+        "a": "If you want to change your password, simply visit your account settings page and click on <a href='https://publishers.billymob.com/settings?tab=security' target='_blank'>security</a>. Here you can enter your new password.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q07.png'/>"
+      },
+      {
+        "q": "8. Can I browse the offers without registering?",
+        "a": "Yes! You can access the marketplace without registering and search our available offers. However, if you want to get tracking links or use our Bxlink and start monetising your traffic, you will need to register <a href='https://publishers.billymob.com/signup' target='_blank'>here</a>. Registering also provides you with access to offers in the Adult category type."
+      },
+      {
+        "q": "9. How do I use the live chat?",
+        "a": "Using the live chat is simple. On the bottom right hand side of the screen, you’ll find a green circle with a speech bubble. Click on this and start typing!<br><img src='https://billymob.com/assets/faq/Affiliates/en/q05.png'/>"
+      }
+    ]
+  },
+  {
+    "title": "How do I search for offers in the Marketplace?",
+    "questions": [
+      {
+        "q": "10. How do I browse the offers in the Marketplace and find the right one for me?",
+        "a": "On the left hand side of the <a href='https://publishers.billymob.com/marketplace' target='_blank'>Billy Marketplace homepage</a>, there are various filters you can utilise to help you find the right offer for you. Feel free to filter by one or as many as you like. You can currently filter by country, category, offer type, carrier, connection type and operating system. Once you're happy with your choices, simply click filter and view your results!<br><img src='https://billymob.com/assets/faq/Affiliates/en/q10a.png'/><br>If you already know the offer you are looking for, you can simply type the name or ID into the designated box on the left hand side of the homepage.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q10b.png'/>"
+      },
+      {
+        "q": "11. How do I interpret the search results in the Marketplace?",
+        "a": "The results shown are the active offers that match the specifications you have selected using the filters.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q11a.png'/><br>The list of offers will display the aggregate performance of the offer from all publishers. Here you can find the number of clicks, revenue generated, CR and eCPM (3). You can select whether you want to view this data for the previous 24 hours or the last 7 days (2). You’ll also be able to see the offer type, offer category (mainstream or adult) (1), the country (4) and the payout (5). If you want to see more details about the offer, simply click on it and you’ll be taken to the offer details page.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q11b.png'/>"
+      },
+      {
+        "q": "12. What do the stats for the offers in the Marketplace correspond to?",
+        "a": "The stats shown are real time data, displaying the aggregate performance of the offer from all publishers. Here you can find the number of clicks, revenue generated, CR and eCPM. You can view this data for the previous 24 hours or the last 7 days.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q12.png'/>"
+      },
+      {
+        "q": "13. Can I sort the search results in the Marketplace?",
+        "a": "Of course! On the top right of the screen there´s a button that by default, should be set to say ´revenue´. It might be different if you've already changed the order, but you should recognise it by the 3 horizontal lines next to it. Click on this and a drop down menu will appear with a variety of sorting options. You can sort your results by creation date, clicks, revenue, conversion rates, conversions, eCPM, payout and alphabetically.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q13.png'/>"
+      },
+      {
+        "q": "14. How do I set my currency preference?",
+        "a": "At the top right of the page in the black bar you will see either the text “EUR” or “USD”. Click on this and you can pick the currency you prefer. This is the currency your results will be displayed in. You can also do this in your account settings page under preferences.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q14.png'/>"
+      },
+      {
+        "q": "15. How do I set my language preference?",
+        "a": "At the top right of the page, you will see either “EN” or “ES”. Click on this and you can pick your prefered language. You can also do this in your account settings page under preferences.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q15.png'/>"
+      },
+      {
+        "q": "16. What information is provided in the offer page in the Marketplace?",
+        "a": "In the offer page you’ll be able to find the tracking link, allowing you to start running the offer and start making money!<br><img src='https://billymob.com/assets/faq/Affiliates/en/q16a.png'/><br>You’ll also find information such as the offer preview, payout and category type.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q16b.png'/><br>The general performance of the offer can also be found. You’ll be able to see the aggregate amount of generated revenue and eCPM or clicks and CR by day for the last 7 days in graph format. You can also see this aggregate information for the last 7 days or 24 hours in numeric format.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q16c.png'/><br>Traffic restrictions are displayed, allowing you to see if the advertiser has requested any specific restrictions for a particular offer. Please be aware that if you send traffic that does not match the advertiser's requirements, we will not be able to take this into account.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q16d.png'/><br>If the offer has available banners these can also be found here, with images, URL and size details displayed.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q16e.png'/>"
+      },
+      {
+        "q": "17. What is the Traffic Restrictions section about?",
+        "a": "The traffic restrictions section relates to specific restrictions the advertiser has requested for the offer. For example, you’ll be able to see if the advertiser permits:<ul><li>Redirect</li><li>Popups</li><li>Interstitial</li><li>Other banners (banners not created by the advertiser)</li><li>Push ad notifications</li><li>Social traffic</li><li>Incentivised traffic</li></ul><br>If a listed traffic type is marked with a tick, it means that you can use this kind of traffic for that specific offer. For those with a cross marked next to them, this means this type of traffic is not permitted for that specific offer.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q16d.png'/>"
+      },
+      {
+        "q": "18. I´ve got a doubt regarding the user flow, what should I do?",
+        "a": "If you have any doubts or queries, get in touch with our specialists, available 24/7 via our online chat."
+      },
+      {
+        "q": "19. Do I have to configure a postback for each offer?",
+        "a": " No! If you have a global postback this is sufficient. However, setting up a specific postback for each offer allows you to manage your traffic sources. If you’re working with different traffic sources and/or tracking systems, it allows you to specify a postback for each offer. Remember, if you’re not using any tracking system, you don’t have to set up any postback at all and can follow your results directly through our <a href='https://publishers.billymob.com/reports' target='_blank'>reports</a>"
+      },
+      {
+        "q": "20. Can I download all the banners at once?",
+        "a": "Yes! Click on the download icon to the right of the word ´banners´, this will download all banners in a .zip file.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q20.png'/>"
+      },
+      {
+        "q": "21. Can I use my own banners?",
+        "a": "Yes, but only if the offer allows it. You can check this information on the offer page under traffic restrictions."
+      },
+      {
+        "q": "22. The offer has no banners, what should I do?",
+        "a": "If the offer does not have banners, you are free to use your own creative material to promote the offer. If you need the banners simply contact us via our live chat and we will send them to you."
+      },
+      {
+        "q": "23. I can see an IP-list in other restrictions in some offers, what´s that?",
+        "a": "IP-list’s under restrictions means that the advertiser has requested only certain IP’s to be used in conjunction with the offer. This means only traffic coming from specific carriers or countries within those ranges of IP’s will be eligible to run the offer."
+      },
+      {
+        "q": "24. How do I get the tracking link for an offer in the Marketplace?",
+        "a": "You can find the tracking link on the offer’s page. Clicking on a particular offer will direct you to this. In the top right corner you’ll  find the ‘get tracking link’ button. If the offer is open the tracking link will be displayed straight away. For some offers, an account manager is required to open the offer for you. In this instance, once you click on the get tracking link, an account manager will be notified and if they are able to, they will send you a notification as soon as possible.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q24.png'/>"
+      },
+      {
+        "q": "25. I clicked on the Get Tracking Link button, now what?",
+        "a": "There are two types of offers available. Some offers require you to apply to get the tracking link. This means when you click the “Get Tracking Link button” an account manager will receive a notification and will then, if they can, open the offer for you. The other types of offers are open, displaying directly the tracking link on the page. Here, you can copy the link and begin using it.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q25a.png'/><br>You are also able to edit macros to customise the information that you’ll receive through your postback- it is recommended that you include at least your click ID and publisher ID.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q25b.png'/>"
+      },
+      {
+        "q": "26. I´ve got the tracking link, can I start running the offer now?",
+        "a": "Yes! Once you have the tracking link you are free to start running the offer."
+      },
+      {
+        "q": "27. I want to run the offer but I'm not working with any tracking system, can I still do it?",
+        "a": "Don´t worry, if you do not have any tracking system you can still track the results using <a href='https://publishers.billymob.com/reports' target='_blank'>Billy´s panel</a>."
+      },
+      {
+        "q": "28. I´m not working with any tracking system so how can I use the tracking link?",
+        "a": "You can use the tracking link without parameters - as it is - you’ll be able to see the results using <a href='https://publishers.billymob.com/reports' target='_blank'>Billy´s panel</a>."
+      },
+      {
+        "q": "29. How will I be notified about the approval of a tracking link request?",
+        "a": " When you apply for a tracking link, an account manager will instantly be notified and an email will be sent to you immediately after it has been approved."
+      },
+      {
+        "q": "30. I want to see how I'm doing, where can I view my results?",
+        "a": "You can see the results of all your offers using <a href='https://publishers.billymob.com/reports' target='_blank'>Billy´s panel</a>. Please be aware that it can sometimes take 5-10 minutes to update the results. "
+      },
+      {
+        "q": "31.  I´m using Tune (HasOffers), how do I customize the tracking link?",
+        "a": "If you are using Tune (HasOffers), you will need to add in certain SUB ID’s to your tracking link and ensure it corresponds with Billy’s tracking link. The most important ones to add are the AFF_SUB (Click ID) and AFF_SUB2 or SOURCE (Publisher ID). For more information about how to do this on Tune, please visit: <a href='https://help.tune.com/hasoffers/affiliate-sub-ids/' target='_blank'>https://help.tune.com/hasoffers/affiliate-sub-ids/</a>"
+      },
+      {
+        "q": "32. Are the payouts of the offers dynamic or static?",
+        "a": "All the displayed payouts are static. If any changes are applied to the payout of an offer, you’ll be notified by email."
+      }
+    ]
+  },
+  {
+    "title": "Tracking Links",
+    "questions": [
+      {
+        "q": "33. Where can I find the tracking link for an offer in the Marketplace?",
+        "a": "You can find the tracking link on the offer’s page. Clicking on a particular offer will direct you to this. In the top right corner you’ll  find the ‘get tracking link’ button. If the offer is open the tracking link will be displayed straight away. For some offers, an account manager is required to open the offer for you. In this instance, once you click on the get tracking link, an account manager will be notified and, if we are able to, we will send you a notification as soon as possible.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q24.png'/>"
+      },
+      {
+        "q": "34. I clicked on the Get Tracking Link button, now what?",
+        "a": "There are two types of offers available. Some offers require you to apply to get the tracking link. This means when you click the “Get Tracking Link button” an account manager will receive a notification and will then, if they can, open the offer for you. The other types of offers are open, displaying directly the tracking link on the page. Here, you can copy the link and begin using it.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q25a.png'/><br>You are also able to edit macros to customise the information that you’ll receive through your postback- it is recommended that you include at least your click ID and publisher ID.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q25b.png'/>"
+      },
+      {
+        "q": "35. I´ve got the tracking link, can I start running the offer now?",
+        "a": "Yes! Once you have the tracking link you are free to start running the offer."
+      },
+      {
+        "q": "36. If I'm not working with any tracking system, can I run the offer?",
+        "a": "Yes, if you´re not working with any tracking system don't worry! You can still see the results using <a href='https://publishers.billymob.com/reports' target='_blank'>Billy´s panel</a>."
+      },
+      {
+        "q": "37. I´m not working with any tracking system so how can I use the tracking link?",
+        "a": "You can use the tracking link without parameters - as it is - you’ll be able to see the results using <a href='https://publishers.billymob.com/reports' target='_blank'>Billy´s panel</a>."
+      },
+      {
+        "q": "38. How do I place my placeholders within the tracking link?",
+        "a": "When you click “Get tracking link” you’ll be able to edit the macros of the tracking link. Here you can customise the information that you’ll receive through your postback- it is recommended that you include at least your click ID and publisher ID.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q25b.png'/>"
+      },
+      {
+        "q": "39. I´m using Tune (HasOffers), how do I customize the tracking link?",
+        "a": "If you are using Tune (HasOffers), you will need to add in certain SUB ID’s to your tracking link and ensure it corresponds with Billy’s tracking link. The most important ones to add are the AFF_SUB (Click ID) and AFF_SUB2 or SOURCE (Publisher ID). For more information about how to do this on Tune, please visit: <a href='https://help.tune.com/hasoffers/affiliate-sub-ids/' target='_blank'>https://help.tune.com/hasoffers/affiliate-sub-ids/</a>.."
+      }
+    ]
+  },
+  {
+    "title": "Postbacks",
+    "questions": [
+      {
+        "q": "40. How do I set up my global postback?",
+        "a": "Simply go to <a href='https://publishers.billymob.com/settings'>account settings</a> and click on <a href='https://publishers.billymob.com/settings?tab=postback'>global postback</a>. Enter your postback URL and follow the recommendations if you need to customise it with your own macros.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q40.png'/>"
+      },
+      {
+        "q": "41. I don't have a global postback, what shall I do?",
+        "a": "Don´t worry, it's not necessary to have a global postback. You’ll be able to follow up your results in the <a href='https://publishers.billymob.com/reports' target='_blank'>Billy´s panel</a>."
+      },
+      {
+        "q": "42. Do I have to configure a postback for each offer?",
+        "a": "No! If you have a global postback this is sufficient. However, setting up a specific postback for each offer allows you manage your traffic sources. If you’re working with different traffic sources and/or tracking systems, it allows you to specify a postback for each offer. Remember, if you’re not using any tracking system, you don’t have to set up any postback at all and can follow your results directly through our <a href='https://publishers.billymob.com/reports' target='_blank'>reports</a>."
+      },
+      {
+        "q": "43. I don't have a postback, where can I see my results?",
+        "a": "If you don't have a postback there's no need to worry. You can view your results in Billy's panel by accessing the my campaigns section, accessible through the home icon on the left hand bar.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q43.png'/>"
+      },
+      {
+        "q": "44. How long does it take to receive the conversion?",
+        "a": "Usually, we receive the conversions in real time but it really depends on the Advertiser’s system."
+      },
+      {
+        "q": "45. Is it real time or is there a delay?",
+        "a": "Usually, we receive the conversions in real time but it really depends on the Advertiser’s system."
+      }
+    ]
+  },
+  {
+    "title": "My campaigns",
+    "questions": [
+      {
+        "q": "46. Where do I find my reports?",
+        "a": "Click on the second button down on the vertical bar on the left hand side. This will take you to your <a href='https://publishers.billymob.com/reports' target='_blank'>reports</a>. Here you can find your reports for campaigns from the Marketplace and your Bx.link campaigns.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q43.png'/>"
+      },
+      {
+        "q": "47. How can I see the list of my campaigns?",
+        "a": "Click on the first button down on the vertical the bar on the left hand side. This will take you to your <a href='https://publishers.billymob.com/my-campaigns' target='_blank'>campaigns</a>.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q43.png'/>"
+      },
+      {
+        "q": "48. I don't have a postback, where can I see my results?",
+        "a": "If you don't have a postback there's no need to worry. You can view your results in Billy's panel accessing the <a href='https://publishers.billymob.com/reports' target='_blank'>Reports section</a>.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q46.png'/>"
+      },
+      {
+        "q": "49. What information can I access in the My Campaigns section?",
+        "a": "The <a href='https://publishers.billymob.com/my-campaigns' target='_blank'>“My Campaigns”</a> section displays all campaigns you are currently running or have previously run.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q49a.png'/><br>At the top of the page you will find an overview of your results.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q49b.png'/><br><ul><li>Here  (1.) you will see the aggregate revenue you have generated over the last month.</li><li>Under “Month to date”  (2.) you will see the revenue you have created in the current month, i.e. from 1st of month to the current date. Inside this box you’ll also see a percentage figure. This refers to a comparison of today’s revenue with last month on the same day i.e. 8th February vs 8th January.</li><li>In the box “Yesterday” (3.), you can find the aggregate revenue you generated on the previous day.</li><li>In the last box “Today” (4.) you’ll find the aggregate revenue you have generated so far today. This box also includes a percentage figure, this relates to a comparison of today’s revenue with yesterday’s at the same hour i.e. until 4pm today vs prior to 4pm yesterday.</li></ul>"
+      },
+      {
+        "q": "50. How long does it take to receive the conversion?",
+        "a": "Usually, we receive the conversions in real time but it really depends on the Advertiser’s system."
+      },
+      {
+        "q": "51. Is it real time or is there a delay?",
+        "a": "Usually, we receive the conversions in real time but it really depends on the Advertiser’s system."
+      },
+      {
+        "q": "52. There´s no data in my reports section, why?",
+        "a": "If there’s no data in your <a href='https://publishers.billymob.com/reports' target='_blank'>reports</a> section, firstly, check the ranges that are displayed. This can be done by clicking on the “month to date” button in the top right of the page. Here you will be able to see what ranges are displayed. If you still can’t see any data and are sure that you’ve been sending traffic to that offer, contact our dedicated staff via our live chat and they will help you out.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q52.png'/>"
+      },
+      {
+        "q": "53. What reports can I get access to?",
+        "a": "In the <a href='https://publishers.billymob.com/reports' target='_blank'>reports</a> section you’ll be able to gain access to all your current and previous results. You can modify which reports are shown using the filters section. You can select one or several campaigns and/or countries to filter your reports.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q53a.png'/><br>You can also filter by date in order to display offers from a specific date or date range.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q52.png'/>"
+      },
+      {
+        "q": "54. I need more data about my campaigns, what do I do?",
+        "a": "If you need more data about your campaigns than the one that is displayed in your <a href='https://publishers.billymob.com/reports' target='_blank'>reports</a> section, remember that you can contact our staff via our live chat to request more information."
+      },
+      {
+        "q": "55. Is it possible to export my reports to a Spreadsheet? ",
+        "a": "Yes! In <a href='https://publishers.billymob.com/reports' target='_blank'>“your reports”</a> simply click on the button at the top entitled “Export”.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q55.png'/>"
+      },
+      {
+        "q": "56. How do I use the filters and ranges selection?",
+        "a": "In the <a href='https://publishers.billymob.com/reports' target='_blank'>reports</a> section, on the left hand side, you’ll find filter options. Here you can select one or more specific countries or campaigns.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q53a.png'/><br>You can also sort your results by day, campaign, country, domain and size using the “show results by” bar.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q56b.png'/><br>If you want to view campaigns from particular date ranges, select the button that is initially set to “month to date” in the top right corner. Here you will find a variety of options for filtering your results, such as by a specific date or date range.<br><img href='http://cdn.billy.mobi/faq/assets/q52.jpg'/>"
+      }
+    ]
+  },
+  {
+    "title": "Account settings",
+    "questions": [
+      {
+        "q": "57. How do I set up or change my preferences?",
+        "a": "It´s easy to change your preferences. Enter your account settings page by clicking on the drop down menu next to your username and selecting “Account Settings”<br><img src='https://billymob.com/assets/faq/Affiliates/en/q57a.png'/><br>When you are in your account settings page, select preferences. Here you can specify which currency and language you prefer to have as your default.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q57b.png'/>"
+      },
+      {
+        "q": "58. How do I set up my global postback?",
+        "a": "Simply go to account settings and click on global postback. Enter your postback URL and follow the recommendations if you need to customise it with your own macros.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q58.png'/>"
+      },
+      {
+        "q": "59. I don't have a postback, where can I see my results?",
+        "a": "If you don't have a postback there's no need to worry. You can view your results in Billy's panel accessing the reports section.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q43.png'/>"
+      },
+      {
+        "q": "60. How do I set my currency preference?",
+        "a": "At the top right of the page in the black bar you will see either the text “EUR” or “USD”. Click on this and you can pick the currency you prefer. This is the currency your results will be displayed in. You can also do this in your account settings page under preferences.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q60.png'/>"
+      },
+      {
+        "q": "61. How do I set my language preference?",
+        "a": "At the top right of the page, you will see either “EN” or “ES”. Click on this and you can pick your prefered language. You can also do this in your account settings page under preferences.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q61.png'/>"
+      },
+      {
+        "q": "62. How do I provide you with my billing information?",
+        "a": "This information can easily be entered on the billing page. To access this, click on your username in top right. Here a drop down menu will appear, including the option “Billing”.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q62a.png'/><br>In the billing page, click on the green button on the right of the page that says “New Billing”.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q62b.png'/><br>Here, you can enter your billing information and choose if you want wire or paypal transfers<br><img src='https://billymob.com/assets/faq/Affiliates/en/q62c.png'/>"
+      },
+      {
+        "q": "63. Why should I give you my billing information?",
+        "a": "Entering the billing information allows us to provide you with your payments!"
+      },
+      {
+        "q": "64. How do I log in?",
+        "a": "To login, simply visit <a href='https://publishers.billymob.com/marketplace' target='_blank'>https://publishers.billymob.com/marketplace</a>, click on the person icon on the left hand side of the page, enter your details and login!"
+      },
+      {
+        "q": "65. How do I log out?",
+        "a": "On the top right hand side of the page you’ll find your username. Clicking on this will lead to a dropdown menu being displayed where the option logout will be displayed.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q65.png'/>"
+      },
+      {
+        "q": "66. Do I have to configure a postback for each offer?",
+        "a": "No! If you have a global postback this is sufficient. However, setting up a specific postback for each offer allows you manage your traffic sources. If you’re working with different traffic sources and/or tracking systems, it allows you to specify a postback for each offer. Remember, if you’re not using any tracking system, you don’t have to set up any postback at all and can follow your results directly through our reports."
+      },
+      {
+        "q": "67. I've already set up a global postback, what are the benefits of setting up a specific one for each offer?",
+        "a": "Setting up a specific postback for each offer allows you manage your traffic sources. If you’re working with different traffic sources and/or tracking systems, it allows you to specify a postback for each offer."
+      },
+      {
+        "q": "68. How do I get to the account settings page?",
+        "a": "In the top right of the screen, you’ll see your username. Click on this and a drop down menu will appear, click on the option account settings.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q68.png'/>"
+      }
+    ]
+  },
+  {
+    "title": "Payments",
+    "questions": [
+      {
+        "q": "69. How do I provide you with my billing information?",
+        "a": "This information can easily be entered on the billing page. To access this, click on your username in top right. Here a drop down menu will appear, including the option “Billing”.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q62a.png'/><br>In the billing page, click on the green button on the right of the page that says “New Billing”.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q62b.png'/><br>Here, you can enter your billing information and choose if you want wire or paypal transfers.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q62c.png'/>"
+      },
+      {
+        "q": "70. Why should I give you my billing information?",
+        "a": "Entering the billing information allows us to provide you with your payments!"
+      },
+      {
+        "q": "71. What are my payment terms?",
+        "a": "For information about your payment terms please get in touch with our dedicated specialists via our live Chat, available 24/7."
+      }
+    ]
+  },
+  {
+    "title": "Bx.link",
+    "questions": [
+      {
+        "q": "72. What is the Bx.link?",
+        "a": "The Bx.link is a single link designed to maximise each visit using Billy’s advanced proprietary technology, ActiveBx. These powerful algorithms are capable of creating predictive models to decide, when, where and to whom to display ads to. The result is a automated real time optimization, improving ad conversion and revenue by continuously studying and learning from different parameters obtaining the maximum performance."
+      },
+      {
+        "q": "73. Why should I use the Bx.link?",
+        "a": "Essentially, the Bx.link makes making conversions easier. Finding the right offer for you manually can take time. It can require trying out and testing individual offers to find out which ones make you the most revenue. With the Bx.link, this work is done for you. Not only that, but the artificial intelligence behind it ensures maximisation of visits, displaying the right ad to the right user at the right time."
+      },
+      {
+        "q": "74. Do I have to use the Bx.link?",
+        "a": "No! If you’d prefer to pick the offers yourself you can always enter our Marketplace and take a look."
+      },
+      {
+        "q": "75. Does it cost me money to use Bx.link?",
+        "a": "No! Using our Bx.link is completely free!"
+      },
+      {
+        "q": "76. Can I still run other campaigns if I’m using Bx.link?",
+        "a": "Yes of course! You can run as many campaigns from the Marketplace and as many Bx.link campaigns as you like."
+      },
+      {
+        "q": "77. Will using Bx.link affect my other campaigns?",
+        "a": "No not at all! If you run a Bx.link campaign it will be completely independent from your other campaigns."
+      },
+      {
+        "q": "78. How do I get the Bx.link?",
+        "a": "To get the Bx.link, firstly click on the Bx.link button on the left hand side.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q78a.png'/><br>Next, click on the “get Bx.link” button.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q78b.png'/><br>Here, you can enter a name for your Bx.link. This will act as a campaign identifier, so name it whatever you like. Next, pick whether you want it to be for the mainstream or adult category. Click create, then you’re done!<br><img src='https://billymob.com/assets/faq/Affiliates/en/q78c.png'/>"
+      },
+      {
+        "q": "79. Where do I see the results from the Bx.link?",
+        "a": "Click on the second button down on the vertical bar on the left hand side. This will take you to your reports. Here you can find your reports for campaigns from the Marketplace and your Bx.link campaigns.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q46.png'/>"
+      },
+      {
+        "q": "80. How do I get better results with Bx.link?",
+        "a": "You don’t have to do anything! Our powerful technology means you can enjoy automated real time optimization, improved ad conversion and revenue. It continuously studies and learns from different parameters obtaining the maximum performance!"
+      },
+      {
+        "q": "81. How does Bx.link work?",
+        "a": "Bx.link works by using Billy’s advanced proprietary technology, ActiveBx. This is a set of powerful algorithms that are capable of creating predictive models to decide when, where and to whom to display ads to. It continuously studies and learns from different parameters, meaning it results in an automated real time optimization. This leads to an improvement in ad conversion and revenue."
+      },
+      {
+        "q": "82. Is it better to use Bx.link than the other offers?",
+        "a": "It completely depends on your goals and your traffic. Bx.link is perfect if you want Billy to do the job for you. It’s incredibly easy to use and is designed to result in optimized ad conversions and revenue. However, if you want to select the campaigns yourself, visiting the Marketplace is a better idea. Here you can browse through our active offers, filtering for the ones relevant to you. Remember, if you need any further advice about this, contact our dedicated specialists, available 24/7 via our live chat."
+      },
+      {
+        "q": "83. What information can I find in the Bx.link page?",
+        "a": "On the Bx.link page you’ll be able to find targets from different countries for the last 7 days. Firstly, decide whether you want to look at adult or mainstream traffic by selecting an option from the top right.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q83a.png'/><br>For the last 7 days, you’ll be able to see the total revenue generated, total number of clicks and total number of conversions. You will also find the conversion rate and the eCPM.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q83b.png'/><br>You can select countries to be shown in the graphs above. Select up to 5 countries by clicking in the column adjacent to the desired country. Once you have done this, you’ll be able to see a graph of revenue generated in these countries over the last 7 days and a graph displaying eCPM results over the last 7 days<br><img src='https://billymob.com/assets/faq/Affiliates/en/q83c.png'/><br>If you click on a particular country, you’ll be able to see more detailed information.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q83d.png'/><br>Here you can view stats for particular carrier in a country. You can also select up to five carriers to see their revenue and eCPM results in the graphs above.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q83e.png'/><br>If you click on a particular carrier, you’ll also be able to see stats for particular operating systems using that carrier. Again, you can also select up to five to view their revenue and eCPM results in the graphs above.<br><img src='https://billymob.com/assets/faq/Affiliates/en/q83f.png'/>"
+      }
+    ]
+  }
+]

@@ -1,0 +1,94 @@
+<div class="form-zone"
+  ng-class="{'in-transition': vm.formIsChanging}">
+  <h1 class="form-title">{{ ( 'authComponent.' + vm.view ) | translate }}
+    <small ng-if="vm.formFields[vm.view].opposite"
+      ng-click="vm.changeView()"> / {{ ('authComponent.' + vm.viewOpposite) | translate }}
+    </small>
+    <small class="title-small"
+      ng-if="vm.formFields[vm.view].small">{{:: vm.formFields[vm.view].small }}
+    </small>
+  </h1>
+  <form name="authform"
+    ng-submit="vm.submitForm()"
+    ng-class="{'vertical-align': vm.view !== 'signup', 'small-padding': vm.formContent.origin === 'other'}">
+    <div ng-repeat="field in vm.formFields[vm.view].options"
+      ng-switch="field.element">
+
+      <div class="input-wrapper"
+        ng-if="!field.hide()"
+        ng-switch-when="input">
+        <label class="input-label">{{:: ('authComponent.' + field.label) | translate}}</label>
+        <input type="{{::field.type}}"
+          name="{{::field.label}}"
+          placeholder="{{:: ('authComponent.ph_' + field.placeholder) | translate}}"
+          ng-model="vm.formContent[field.label]"
+          ng-required="{{::field.required}}"/>
+      </div>
+      <md-input-container ng-switch-when="checkbox"
+        class="md-checkbox">
+        <md-checkbox ng-model="vm.formContent[field.label]"
+          ng-required="{{::field.required}}"
+          name="terms">
+          <span ng-bind-html="::('authComponent.' + field.label) | translate"></span>
+        </md-checkbox>
+      </md-input-container>
+
+      <md-input-container ng-switch-when="select"
+        ng-if="field.hide">
+        <md-select-labe class="input-label">{{:: ('authComponent.' + field.label) | translate}}</md-select-labe>
+        <md-select ng-model="vm.formContent[field.label]">
+          <md-option ng-repeat="option in field.options"
+            ng-value="option">
+            {{ ( 'authComponent.originSelector.' + option ) | translate }}
+          </md-option>
+        </md-select>
+      </md-input-container>
+
+      <div ng-switch-when="link">
+        <a class="link"
+          href="{{::field.href}}">{{:: ('authComponent.' + field.label) | translate}}</a>
+      </div>
+      <div ng-switch-when="text">
+        <span class="text"
+          ng-bind-html=":: ('authComponent.' + field.label) | translate"></span>
+      </div>
+
+      <div ng-switch-when="hr">
+        <hr class="invisible">
+      </div>
+
+    </div>
+
+    <div class="form-buttons">
+      <button class="hide"
+        type="submit"></button>
+      <md-button class="bm-btn success uppercase"
+        type="button"
+        ng-if="vm.formFields[vm.view].submitButton"
+        ng-click="vm.submitForm()"
+        ng-disabled="authform.$invalid">
+        {{ ( 'authComponent.' + vm.formFields[vm.view].submit) | translate }}
+      </md-button>
+      <a ng-if="vm.formFields[vm.view].opposite"
+        class="link"
+        ng-click="vm.changeView()"> {{ ('authComponent.oposite_' + vm.viewOpposite) | translate }}
+      </a>
+    </div>
+  </form>
+</div>
+<div class="info-zone" ng-if="!vm.disableInfo">
+  <div class="nvertical-align bubble-block">
+    <div class="info-bubble"
+      ng-repeat="bubble in vm.marketplaceBubbles">
+      <div class="bubble-icon">
+        <md-icon>{{::bubble}}</md-icon>
+      </div>
+      <div class="bubble-text">
+        {{:: ('authComponent.marketplaceBubbles.' + $index) | translate }}
+      </div>
+    </div>
+    <md-button ng-click="vm.goToMarketplace()"
+      class="bm-btn secondary">{{:: 'authComponent.marketplaceButton' | translate }}
+    </md-button>
+  </div>
+</div>

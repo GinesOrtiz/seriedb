@@ -1,0 +1,182 @@
+<!--
+<div class="table-header layout-row">
+  <div ng-repeat="column in vm.columns"
+    class="header-row {{column.class}}">
+    {{column.key}}
+    <md-icon ng-if="column.sort"
+      class="sort"
+      ng-click="vm.doSort(column)"
+      ng-class="{'active': column.sort.active}">
+      {{column.sort.direction === 'desc' ? 'arrow_downward' : 'arrow_upward'}}
+    </md-icon>
+  </div>
+</div>
+-->
+<!-- TABLE FILTERS -->
+<div class="table-filters"
+  ng-if="vm.filters"
+  layout-xs="column"
+  layout="row">
+  <div layout="column"
+    layout-xs="row"
+    flex-xs="100"
+    flex="50">
+    <h1 ng-if="::vm.filters.title"
+      class="{{::vm.filters.title.class}}">{{vm.filters.title.text | translate}}
+      <small>{{::vm.filters.title.subtext | translate}}</small>
+    </h1>
+  </div>
+  <div layout="column"
+    layout-xs="row"
+    ng-if="::vm.filters.search"
+    layout-align="center end"
+    flex-xs="100"
+    flex="50">
+    <div class="search">
+      <md-icon>search</md-icon>
+      <form ng-submit="vm.search()">
+        <input ng-model="vm.filters.search.query"
+          placeholder="{{::vm.filters.search.placeholder | translate}}">
+        <button type="submit"
+          class="hide"></button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- TABLE CONTENT -->
+
+<div class="table-container">
+  <table cellpadding="0"
+    cellspacing="0">
+
+    <!-- TABLE HEADER -->
+
+    <thead>
+    <tr class="layout-row">
+      <th ng-repeat="column in vm.columns"
+        layout="row"
+        ng-class="{'active': column.sort.active, 'th-helper': column.tooltip}"
+        class="{{::column.class}}">
+        <md-icon layout="column"
+          class="main-icon"
+          ng-if="::column.icon">
+          {{::column.icon}}
+        </md-icon>
+        <div class="header-tooltip"
+          ng-if="::column.tooltip">
+          <md-icon>info_outline</md-icon>
+          <md-tooltip md-direction="{{::column.tooltipDirection}}">
+            <div ng-bind-html="::column.tooltip | translate"></div>
+          </md-tooltip>
+        </div>
+        <span layout="column"
+          ng-if="::column.text"
+          ng-class="{'cursor-pointer': column.sort}"
+          ng-click="column.sort && vm.doSort(column)">{{::column.text | translate}}</span>
+        <md-icon layout="column"
+          ng-if="::column.sort"
+          class="sort"
+          ng-click="vm.doSort(column)">
+          {{column.sort.direction === 'desc' ? 'arrow_downward' : 'arrow_upward'}}
+        </md-icon>
+      </th>
+    </tr>
+    </thead>
+
+    <!-- TABLE BODY -->
+
+    <!-- TABLE NO INFO FOUND (based on length) -->
+    <tbody ng-if="!vm.content.length">
+    <tr ng-show="!vm.requestingContent">
+      <td colspan="{{vm.columns.length}}"
+        ng-show="!vm.contentIsLoading"
+        class="no-info">
+        <span>{{:: 'tableComponent.noInfo' | translate}}</span>
+      </td>
+    </tr>
+
+    <!-- TABLE LOADING -->
+    <tr ng-show="vm.requestingContent">
+      <td colspan="{{::vm.columns.length}}"
+        ng-style="{'height': vm.tableHeight()}"
+        class="no-info request-loading">
+        <md-progress-circular></md-progress-circular>
+      </td>
+    </tr>
+    </tbody>
+
+    <!-- TABLE BODY CONTENT -->
+
+    <tbody ng-if="vm.content.length">
+
+    <!-- TABLE INFO -->
+
+    <tr ng-repeat="rowContent in vm.content track by $index"
+      class="layout-row">
+      <td ng-repeat="column in vm.columns"
+        ng-class="{'td-tooltip': column.tooltip,
+          'layout-row layout-align-start-center': column.layout !== 'column',
+          'layout-column': column.layout === 'column'}"
+        class="{{::column.class}}">
+        <div ng-repeat="tdElement in column.td"
+          class="td-div"
+          ng-switch="::tdElement.type">
+          <td-text ng-switch-when="text"
+            row="rowContent"
+            element="tdElement"></td-text>
+          <td-icon ng-switch-when="icon"
+            row="rowContent"
+            element="tdElement"></td-icon>
+          <td-image ng-switch-when="image"
+            row="rowContent"
+            element="tdElement"></td-image>
+          <td-buttons ng-switch-when="buttons"
+            row="rowContent"
+            element="tdElement"></td-buttons>
+          <td-checkbox ng-switch-when="checkbox"
+            row="rowContent"
+            element="tdElement"></td-checkbox>
+          <td-marketplace-name ng-switch-when="marketplaceName"
+            row="rowContent"
+            element="tdElement"></td-marketplace-name>
+        </div>
+      </td>
+    </tr>
+
+    <!-- TABLE LOADING -->
+
+    <tr ng-show="vm.loading">
+      <td colspan="{{::vm.columns.length}}"
+        class="no-info">
+        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+      </td>
+    </tr>
+
+    <!-- TABLE TOTAL -->
+    <tr ng-if="::vm.totals"
+      class="layout-row totals">
+      <td ng-repeat="column in vm.columns"
+        ng-class="{'td-tooltip': column.tooltip}"
+        class="{{::column.class}} layout-align-start-center layout-row">
+        <span ng-if="::column.totals.default">{{::column.totals.default | translate}}</span>
+        <td-text row="vm.totals"
+          ng-if="::column.totals && !column.totals.default"
+          element="column.totals"></td-text>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+<table-pagination-component ng-if="vm.pagination"
+  layout="row"
+  rpp="vm.rpp"
+  page="vm.currentPage"
+  rows="vm.pagination"
+  page-change="vm.pageChange"
+  total="vm.total"></table-pagination-component>

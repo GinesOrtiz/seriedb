@@ -1,0 +1,87 @@
+[
+  {
+    "title": "Facturación",
+    "questions": [
+      {
+        "question": "¿Dónde debo enviar la factura?",
+        "answer": "Las facturas se deben enviar a <a href=\"mailto:invoice@billyinvoice.com\">invoice@billyinvoice.com</a> con copia a tu Account Manager. Recibirás un reporte a principios del mes con la cantidad y periodo a facturar."
+      },
+      {
+        "question": "¿Cuales son los datos de facturación de Billy?",
+        "answer": "Las facturas se deben emitir a: <br>BILLY PERFORMANCE NETWORK SLU B-66478223<br>Amigó 11, 6a planta<br>08021 Barcelona<br>España<br>VAT ES66478223<br>"
+      },
+      {
+        "question": "¿En qué periodo debo enviar la factura?",
+        "answer": "Las facturas deben enviarse entre el día 1 y 10 del mes. Las facturas recibidas a posteriori, se abonarán el siguiente mes."
+      },
+      {
+        "question": "¿Qué métodos de pago hay disponibles?",
+        "answer": "Los métodos de pago disponible son Transferencia bancaria, Paypal o Payoneer."
+      },
+      {
+        "question": "¿Cuándo se realizan los pagos?",
+        "answer": "Los pagos se realizan a Net15 (el día 15 de cada mes)."
+      },
+      {
+        "question": "¿Qué importe mínimo hay que realizar para recibir el pago?",
+        "answer": "La cantidad mínima a facturar es de 100€. Si en un mes no se alcanza dicha cantidad, se acumula para el mes siguiente."
+      }
+    ]
+  },
+  {
+    "title": "Creación de tags",
+    "questions": [
+      {
+        "question": "¿Cómo se crea un tag?",
+        "answer": "Diríjase a \"Mis Tags\" y haga clic en \"Crear un tag nuevo\"<br><img src=\"http://cdn.billy.mobi/assets/faq/Website/assets/create_tag_1.png\"><br>Elija la categoría deseada entre Adult y Mainstream así como el formato deseado (fullpage, pop, anchor or bannerDisplay)<br><img src=\"http://cdn.billy.mobi/assets/faq/Website/assets/create_tag_2.png\"><br>Una vez completado, haga clic en CREAR TAG<br><img src=\"http://cdn.billy.mobi/assets/faq/Website/assets/create_tag_3.png\"><br>Inserte el código generado en su página web."
+      }
+    ]
+  },
+  {
+    "title": "Glosario",
+    "questions": [
+      {
+        "question": "¿Cuál es nuestra nomenclatura?",
+        "answer": "- <b>CLICKS</b> : visitas que han visualizado la oferta<br>- <b>CTR</b> : Click Through Rate <br>- <b>CR</b> : Conversion Rate<br>- <b>eRPM</b> : efective revenue per mille<br>- <b>RPA</b> : Revenue per action<br>- <b>Payout</b> : ganancia total"
+      }
+    ]
+  },
+  {
+    "title": "Programa de referidos",
+    "questions": [
+      {
+        "question": "¿Qué es el programa de referidos?",
+        "answer": "El Referral program te permite beneficiarte del 5% de los webmaster que vengan a Billy de tu parte."
+      },
+      {
+        "question": "¿Qué duración tiene?",
+        "answer": "El referral program dura para siempre, mientras tengas tu cuenta activa en Billy."
+      },
+      {
+        "question": "¿Cómo se abona?",
+        "answer": "Se abona junto tu factura de forma mensual."
+      },
+      {
+        "question": "¿Cómo iniciar el programa de referidos?",
+        "answer": "Contacta con Billy support  para ampliar los detalles."
+      }
+    ]
+  },
+  {
+    "title": "Otras preguntas",
+    "questions": [
+      {
+        "question": "¿Se requiere exclusividad?",
+        "answer": "No, en Billy no requerimos exclusividad."
+      },
+      {
+        "question": "¿Billy es compatible con Adsense?",
+        "answer": "Yes, los formatos de Billy son totalmente compatibles con Adsense"
+      },
+      {
+        "question": "¿Hay compromiso de permanencia?",
+        "answer": "No, en Billy no requerimos compromiso de permanencia."
+      }
+    ]
+  }
+]

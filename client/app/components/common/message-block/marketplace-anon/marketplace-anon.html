@@ -1,0 +1,47 @@
+<div id="marketplaceAnon">
+  <div class="featured-box">
+    <div class="featured-wrapper"
+      layout="column"
+      layout-gt-sm="row"
+      layout-align="center">
+      <div class="col"
+        layout="column"
+        layout-align="center center"
+        layout-align>
+        <p class="featured-title">
+          <span>{{:: 'messageBlock.marketplace-anon.title_small' | translate}}</span>
+          <br>
+          <span>{{:: 'messageBlock.marketplace-anon.title_big' | translate}}</span>
+        </p>
+      </div>
+      <div class="col middle-section"
+        flex="50">
+        <p class="featured-bullets-title">{{:: 'messageBlock.marketplace-anon.bullets_title' | translate}}</p>
+        <ul class="featured-bullets"
+          layout="column">
+          <li class="bullet-item">
+            <span class="bullet-text">{{:: 'messageBlock.marketplace-anon.bullet_text_1' | translate}}</span>
+          </li>
+          <li class="bullet-item">
+            <span class="bullet-text">{{:: 'messageBlock.marketplace-anon.bullet_text_2' | translate}}</span>
+          </li>
+          <li class="bullet-item">
+            <span class="bullet-text">{{:: 'messageBlock.marketplace-anon.bullet_text_3' | translate}}</span>
+          </li>
+        </ul>
+        <p class="featured-bullets-footer ">{{:: 'messageBlock.marketplace-anon.bullets_footer' | translate}}</p>
+      </div>
+      <div class="col featured-actions"
+        layout="column"
+        layout-align="center center">
+        <md-button class="btn"
+          ng-click="vm.openSignupPopup()">
+          {{:: 'messageBlock.marketplace-anon.signup_button' | translate}}
+        </md-button>
+        <a class="btn btn-subtle"
+          ng-click="vm.openLoginPopup()">
+          {{:: 'messageBlock.marketplace-anon.login_button' | translate}}</a>
+      </div>
+    </div>
+  </div>
+</div>

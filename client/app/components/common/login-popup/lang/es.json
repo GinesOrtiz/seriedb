@@ -1,0 +1,12 @@
+{
+  "title": "Ups! Parece que no tienes la sesión iniciada",
+  "titleNeutral": "Inicia sesión",
+  "subtitle": "",
+  "description": "Inicia sesión o crea una cuenta nueva con nosotros para continuar.",
+  "bottom": "",
+  "login": "INICIAR SESIÓN",
+  "cancel": "CANCELAR",
+  "signUpMessage": "¿No tiene cuenta?",
+  "signUp": "Regístrate",
+  "signUpHere": "Regístrate aquí"
+}

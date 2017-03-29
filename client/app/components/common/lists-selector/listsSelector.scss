@@ -1,0 +1,100 @@
+@import "../../../shared/variables";
+
+lists-selector {
+
+  &:first-child{
+    border-top-right-radius: $base/4;
+    border-bottom-right-radius: $base/4;
+  }
+
+  .wrapper {
+    margin-right: $base * 2;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+    border-radius: $base/4;
+    overflow: hidden;
+    md-select {
+      height: $base * 4.5;
+      background: #FFF;
+      width: 100%;
+    }
+
+    .remove-list {
+      display: inline-block;
+      color: rgba(56, 64, 69, 0.80);
+      background: #FFF;
+      height: $base * 4.5;
+      width: $base * 4.5;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(158, 158, 158, 0.2);
+      }
+      .material-icons {
+        font-size: $base*2;
+        font-weight: bold;
+        box-shadow: -1px 0px rgba(0,0,0,0.1);
+      }
+      md-icon {
+        width: $base*2;
+        height: $base*2;
+        padding: $base*1.25;
+      }
+    }
+  }
+
+  //reset styles
+  md-select-value {
+    position: relative;
+    box-shadow: none;
+    background: white;
+    padding: 0 $base * 2 !important;
+    text-transform: uppercase;
+    font-size: $base*1.5;
+  }
+  .md-select-value {
+    box-shadow: none;
+    .md-select-icon {
+      margin: 0;
+      &:after {
+        vertical-align: top;
+        line-height: $base*4.5;
+      }
+    }
+  }
+  span {
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
+  }
+  .md-select-icon {
+    text-align: center;
+    margin-right: 0;
+    color: rgba($color-primary, .8);
+    font-size: $base * 1.5;
+    top: $base * 1.5;
+    width:$base*2;
+  }
+
+  .add-list {
+    border-radius: 2px;
+    background: #FFFFFF;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.10);
+    color: $color-primary;
+    line-height: 16px;
+    cursor: pointer;
+    height: $base*4.5;
+    width: $base*4.5;
+    &:hover {
+      background-color: rgba(158, 158, 158, 0.2);
+    }
+    span {
+      margin-left: 0;
+      margin-right: 0 !important;
+      line-height: $base*4.5;
+    }
+    md-icon {
+      font-size: $base*2;
+      margin: 0 $base*1.25;
+      line-height: $base * 4.5;
+    }
+  }
+
+}

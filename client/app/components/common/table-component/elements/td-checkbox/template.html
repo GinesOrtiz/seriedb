@@ -1,0 +1,6 @@
+<md-checkbox ng-model="vm.row.active"
+  aria-label="checkbox"
+  ng-change="vm.element.action(vm.row)"
+  class="md-primary">
+  <span ng-if="vm.element.text">{{:: vm.element.text | translate}}</span>
+</md-checkbox>

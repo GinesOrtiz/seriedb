@@ -1,0 +1,218 @@
+@import "./shared/variables";
+@import "./components/css-components/_index.scss";
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+html {
+  font-size: 16px;
+  //font-family: "Open Sans";
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: transparent !important;
+}
+
+* {
+  outline: none !important;
+}
+
+ui-view, [ui-view], layout {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.animation {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.lowercase {
+  text-transform: lowercase !important;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase !important;
+}
+
+.vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//************* CUSTOM INPUTS STYLES ********************
+
+.input-wrapper {
+  margin-bottom: $base*2;
+  text-align: left;
+  &.first {
+    padding-top: 0;
+  }
+  &.last {
+    margin-bottom: 0;
+  }
+  &.push-bottom {
+    margin-bottom: $base*3;
+  }
+}
+
+label.input-label, md-select-labe.input-label {
+  font-size: 10px;
+  color: #4A4A4A;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: block;
+  text-align: left;
+  padding-bottom: $base;
+  transition: none;
+  transform: none;
+}
+
+.md-select-value {
+  border-radius: 3px;
+  border: none;
+  box-shadow: inset 0 0 0 1px rgba($color-primary, .2);
+  box-sizing: border-box;
+
+  padding: 8px;
+  margin: 0;
+}
+
+.md-select-icon {
+  transform: translate3d(0, 0, 0);
+  color: #4A4A4A;
+}
+
+input, input:-webkit-autofill {
+  height: 32px;
+  border: none !important;
+  border-radius: 3px;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 1px rgba($color-primary, .2), inset 0 0 0 1000px white !important;
+  padding: 8px;
+  width: 100%;
+  margin: 0;
+  &.ng-invalid:not(.ng-pristine) {
+    box-shadow: inset 0 0 0 1px $color-danger;
+  }
+  &.w70 {
+    width: 70%;
+    @media #{$max-md} {
+      width: 100%;
+    }
+  }
+}
+
+md-select {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  width: 70%;
+  @media #{$max-md} {
+    width: auto;
+  }
+  md-select-value {
+    padding: $base !important;
+  }
+}
+
+.invisible {
+  opacity: 0 !important;
+}
+
+md-select:not([disabled]):focus .md-select-value {
+  padding-bottom: $base;
+  border-bottom: 0;
+}
+
+md-radio-group {
+  display: block;
+  &.inline {
+    md-radio-button {
+      display: inline-block;
+      margin-left: $base * 2;
+    }
+  }
+  md-radio-button {
+    &[disabled] {
+      .md-on {
+        background-color: rgba($color-primary, .5);
+      }
+    }
+    .md-on {
+      background-color: $color-primary;
+    }
+  }
+}
+
+.md-open-menu-container {
+  box-shadow: 0 0 0 1px #cdcfd0;
+}
+
+[hide-lt-md] {
+  @media #{$max-md}{
+    display: none !important;
+  }
+}
+
+[show-lt-md] {
+  display: none !important;
+  @media #{$max-md}{
+    display: inherit !important;
+  }
+}
+
+.cursor {
+  &-pointer {
+    cursor: pointer;
+  }
+}
+
+.md-select-value {
+  background-image: none !important;
+}
+
+md-select[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+
+  .md-select-value {
+    cursor: not-allowed;
+  }
+}
+
+md-tooltip .md-content {
+  height: 100% !important;
+  font-size: $base * 1.5;
+}
+
+md-icon {
+  &.success {
+    color: $color-success;
+  }
+  &.disabled {
+    color: rgba($color-primary, .15);
+  }
+}

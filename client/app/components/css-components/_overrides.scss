@@ -1,0 +1,36 @@
+.md-card-transparent {
+  background: none;
+  box-shadow: none;
+}
+
+.bm-select {
+  margin-right: 0;
+  padding-left: 24px;
+}
+
+.md-select-value {
+  text-align: left;
+}
+
+md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
+  color: rgb(46, 62, 81);
+  background: rgb(46, 62, 81);
+}
+
+md-menu-item .md-button:not([disabled]):not(:hover).md-focused,
+md-menu-item .md-button:not([disabled]):hover .md-ripple-container {
+  background: transparent !important;
+}
+
+body .md-open-menu-container .layout-row.flex {
+  flex: 1 0 auto !important;
+}
+
+body .md-card-content, body md-card {
+  overflow: hidden !important;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  border-bottom: 1px solid #dbdbdb;
+}

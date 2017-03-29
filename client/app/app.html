@@ -1,0 +1,12 @@
+<layout ng-if="!vm.isSecuredView">
+  <ui-view></ui-view>
+</layout>
+
+<layout ng-if="vm.isSecuredView">
+  <main-menu></main-menu>
+  <sidebar></sidebar>
+  <ui-view></ui-view>
+  <billy-intercom></billy-intercom>
+</layout>
+
+<pixels></pixels>

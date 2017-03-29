@@ -1,0 +1,18 @@
+<div class="box-wrapper"
+  ng-class="{'is-content-loaded': vm._isContentLoaded(), 'is-subcontent-loaded': vm.showSubcontent()}">
+  <div class="box-title">
+    <span>{{:: vm.state.title}}</span>
+  </div>
+  <div class="box-content">
+    <span>{{vm.state.content | number: 2}}</span>
+  </div>
+  <div class="box-sub-content"
+    ng-if="vm.showSubcontent()"
+    ng-class="vm.calcStyle()">
+    <span>{{vm.state.subcontent | number: 2}}</span>
+  </div>
+  <md-tooltip md-direction="top"
+    ng-if="vm.state.tooltip">
+    {{:: vm.state.tooltip }}
+  </md-tooltip>
+</div>

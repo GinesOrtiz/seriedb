@@ -1,0 +1,105 @@
+<div id="sidebar"
+  ng-class="{'small': sidebar.smallSideBar}">
+  <md-sidenav class="md-sidenav-left"
+    md-component-id="left"
+    md-is-locked-open="$mdMedia('gt-sm')">
+    <md-list flex
+      ng-if="sidebar.isAuthUser">
+      <md-list-item ui-sref="billy.myCampaigns"
+        ui-sref-active="active">
+        <md-icon aria-label="My tags Icon"
+          class="md-avatar-icon material-icons">home
+        </md-icon>
+        <span class="new-label">{{:: 'shared.sidebar.newLabel' | translate }}</span>
+        <p>{{:: 'shared.sidebar.myCampaigns' | translate }}</p>
+        <md-tooltip md-direction="right"
+          ng-if="sidebar.smallSideBar"
+          class="sidebar-tooltip">
+          {{:: 'shared.sidebar.myCampaigns' | translate }}
+        </md-tooltip>
+      </md-list-item>
+      <md-list-item ui-sref="billy.reports"
+        ui-sref-active="active">
+        <md-icon aria-label="Reports Icon"
+          class="md-avatar-icon material-icons">equalizer
+        </md-icon>
+        <p>{{:: 'shared.sidebar.reports' | translate }}</p>
+        <md-tooltip md-direction="right"
+          ng-if="sidebar.smallSideBar"
+          class="sidebar-tooltip">
+          {{:: 'shared.sidebar.reports' | translate }}
+        </md-tooltip>
+      </md-list-item>
+      <md-list-item user-role="marketplace"
+        ng-if="sidebar.user.marketplaceAllowed"
+        ui-sref="billy.marketplace"
+        ui-sref-active="active">
+        <md-icon aria-label="Marketplace"
+          class="md-avatar-icon material-icons">store
+        </md-icon>
+        <p>{{:: 'shared.sidebar.marketPlace' | translate }}</p>
+        <md-tooltip md-direction="right"
+          ng-if="sidebar.smallSideBar"
+          class="sidebar-tooltip">
+          {{:: 'shared.sidebar.marketPlace' | translate }}
+        </md-tooltip>
+      </md-list-item>
+      <md-list-item ui-sref="billy.BLink"
+        user-role="marketplace"
+        ng-if="sidebar.user.marketplaceAllowed"
+        ui-sref-active="active">
+        <md-icon aria-label="My tags Icon"
+          class="md-avatar-icon material-icons blink">link
+        </md-icon>
+        <span class="new-label">{{:: 'shared.sidebar.newLabel' | translate }}</span>
+        <p>B<sup>x</sup> link</sup></p>
+        <md-tooltip md-direction="right"
+          ng-if="sidebar.smallSideBar"
+          class="sidebar-tooltip">
+          <span class="blink">B<span>link</span></span>
+        </md-tooltip>
+      </md-list-item>
+      <account-manager></account-manager>
+    </md-list>
+
+    <md-list flex
+      ng-if="!sidebar.isAuthUser">
+      <md-list-item ng-click="sidebar.login()">
+        <md-icon aria-label="Marketplace"
+          class="md-avatar-icon material-icons">account_circle
+        </md-icon>
+        <md-tooltip md-direction="right"
+          ng-if="sidebar.smallSideBar"
+          class="sidebar-tooltip">
+          {{:: 'shared.sidebar.auth' | translate }}
+        </md-tooltip>
+        <p>{{:: 'shared.sidebar.auth' | translate }}</p>
+      </md-list-item>
+      <md-list-item ui-sref="billy.marketplace"
+        ui-sref-active="active">
+        <md-icon aria-label="Marketplace"
+          class="md-avatar-icon material-icons">store
+        </md-icon>
+        <p>{{:: 'shared.sidebar.marketPlace' | translate }}</p>
+        <md-tooltip md-direction="right"
+          ng-if="sidebar.smallSideBar"
+          class="sidebar-tooltip">
+          {{:: 'shared.sidebar.marketPlace' | translate }}
+        </md-tooltip>
+      </md-list-item>
+      <md-list-item ui-sref="billy.BLink"
+        ui-sref-active="active">
+        <md-icon aria-label="My tags Icon"
+          class="md-avatar-icon material-icons blink">link
+        </md-icon>
+        <span class="new-label">{{:: 'shared.sidebar.newLabel' | translate }}</span>
+        <p>B<sup>x</sup> link</sup></p>
+        <md-tooltip md-direction="right"
+          ng-if="sidebar.smallSideBar"
+          class="sidebar-tooltip">
+          <span class="blink">B<span>link</span></span>
+        </md-tooltip>
+      </md-list-item>
+    </md-list>
+  </md-sidenav>
+</div>

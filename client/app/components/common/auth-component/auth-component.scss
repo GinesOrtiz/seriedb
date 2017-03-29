@@ -1,0 +1,239 @@
+@import "../../../shared/variables.scss";
+
+auth-component {
+  background: white;
+  width: 700px;
+  height: 420px;
+  display: block;
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 0 10px 40px rgba(black, .2);
+  position: relative;
+  z-index: 99;
+  text-align: center;
+  @include transition(all .3s);
+  @media #{$max-md}{
+    width: 100%;
+    height: 340px;
+    max-width: 450px !important;
+    overflow: visible;
+  }
+  @media #{$max-sm-h}{
+    width: 100%;
+    height: 340px;
+    max-width: 450px !important;
+    overflow: visible;
+  }
+
+  &[view=signup] {
+    height: 620px;
+  }
+  &[view=signup].no-select {
+    height: 550px;
+  }
+  > * {
+    box-sizing: border-box;
+  }
+
+  .form-zone {
+    width: 320px;
+    float: left;
+    padding: 30px;
+    height: 100%;
+    box-shadow: 0 0 20px rgba(black, .1);
+    position: relative;
+    @media #{$max-md}{
+      width: 100%;
+    }
+    @media #{$max-sm-h}{
+      width: 100%;
+    }
+    > * {
+      @include transition(opacity .2s);
+    }
+    &.in-transition {
+      > * {
+        opacity: 0;
+        @include transition(opacity 0s);
+      }
+    }
+    button {
+      width: 80%;
+    }
+    a.link {
+      margin: 10px 0 20px;
+      display: block;
+      color: #9EB1C6;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    span.text {
+      margin-bottom: 30px;
+      display: block;
+      text-align: left;
+      color: #9EB1C6;
+      font-size: 14px;
+    }
+
+    form {
+      padding: 60px 0 0;
+      &.small-padding {
+        padding-top: 40px;
+      }
+      @media #{$max-md}{
+        top: 0;
+        transform: none;
+      }
+      @media #{$max-sm-h}{
+        top: 0;
+        transform: none;
+      }
+    }
+  }
+
+  .form-title {
+    text-align: left;
+    font-weight: 600;
+    font-size: $base * 3;
+    margin-bottom: $base * 4;
+    color: rgba($color-primary, .8);
+    position: absolute;
+    z-index: 9;
+    small {
+      cursor: pointer;
+      @include transition(color, .2s);
+      font-size: $base * 2;
+      color: rgba($color-primary, .4);
+      &:hover {
+        color: rgba($color-primary, .6);
+      }
+      &.title-small {
+        display: block;
+      }
+    }
+  }
+
+  md-input-container {
+    width: 100%;
+    padding: 0;
+    label {
+      color: #9EB1C6;
+      -webkit-transition: all .2s;
+      -moz-transition: all .2s;
+      -o-transition: all .2s;
+      transition: all .2s;
+      padding-left: 0;
+      padding-bottom: 5px;
+    }
+  }
+
+  md-checkbox {
+    width: 100%;
+    text-align: left;
+    margin: 0 0 $base*2;
+    &.md-checked.md-focused .md-container:before {
+      background-color: rgba(35, 191, 118, .3) !important;
+    }
+    &.md-checked .md-ink-ripple {
+      color: #23BF76;
+    }
+    &.md-ripple, &.md-checked .md-icon {
+      background: #23BF76;
+      border-color: #23BF76;
+    }
+    .md-label {
+      text-align: left;
+    }
+    .md-container {
+      margin-top: 1px;
+    }
+    span {
+      font-size: 14px;
+      color: #9EB1C6;
+      a {
+        color: #23BF76;
+      }
+    }
+  }
+
+  .info-zone {
+    background: rgba(black, .05);
+    float: left;
+    width: 380px;
+    height: 100%;
+    padding: 30px;
+    text-align: center;
+    @media #{$max-md}{
+      display: none;
+    }
+    @media #{$max-sm-h}{
+      display: none;
+    }
+    button {
+      width: 70% !important;
+      box-shadow: 0 2px 7px rgba(0, 0, 0, 0.1) !important;
+      text-transform: uppercase;
+    }
+  }
+
+  .bubble-block {
+    height: 310px;
+  }
+
+  .info-bubble {
+    text-align: left;
+    margin-bottom: $base * 4;
+    > * {
+      vertical-align: middle;
+    }
+    .bubble-icon {
+      background: white;
+      width: 55px;
+      height: 55px;
+      border-radius: 100%;
+      display: inline-block;
+      line-height: 55px;
+      text-align: center;
+      margin-right: 20px;
+      box-shadow: 0 2px 10px rgba(black, .1);
+      &:hover {
+        //@include transform(scale(1.1));
+      }
+      md-icon {
+        color: $color-billy;
+      }
+    }
+    .bubble-text {
+      width: calc(100% - 90px);
+      font-size: 15px;
+      display: inline-block;
+    }
+  }
+
+  hr {
+    &.invisible {
+      opacity: 0 !important;
+      border: none !important;
+      overflow: auto;
+      height: 0;
+    }
+  }
+  .nvertical-align {
+    position: relative;
+    top: 52%;
+    transform: translateY(-52%);
+  }
+
+  md-select {
+    width: 100%;
+    height: 32px;
+    md-select-value span {
+      margin-top: -2px;
+      &.md-select-icon {
+        margin-top: -5px !important;
+      }
+    }
+  }
+}

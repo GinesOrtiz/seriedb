@@ -1,0 +1,80 @@
+<div id="billy-intercom">
+  <md-sidenav class="md-sidenav-right md-whiteframe-4dp intercom-panel"
+    md-component-id="billyIntercom">
+    <md-toolbar class="toolbar">
+      <h1 class="md-toolbar-tools">F.A.Q.</h1>
+      <md-icon ng-click="vm.close()"
+        class="material-icons close-icon">close
+      </md-icon>
+    </md-toolbar>
+    <md-content class="intercom-content"
+      layout-padding>
+      <div class="search-container">
+        <input type="text"
+          class="form-control"
+          ng-model="vm.intercomTopic"
+          ng-change="vm.faqFilter()"
+          placeholder="Search Topic">
+      </div>
+
+
+      <div class="questions-container"
+        ng-hide="!vm.filterQuestionsLeft">
+        <div class="questions-index"
+          ng-show="vm.filterQuestionsLeft">
+          <h2 class="block-title">Index</h2>
+          <h3 ng-click="vm.goToIndex($index)"
+            ng-repeat="qIndex in vm.questionsIndex[vm.lang]"
+            ng-show="vm.filterQuestions[qIndex].length">
+            <md-icon class="material-icons">keyboard_arrow_right</md-icon>
+            {{::qIndex}}
+          </h3>
+        </div>
+
+        <div ng-repeat="questBlock in vm.faq[vm.lang]"
+          class="question-block"
+          ng-show="vm.filterQuestions[questBlock.title].length">
+          <h2 class="block-title"
+            id="faq_{{$index}}">{{::questBlock.title}}</h2>
+          <div class="faq-block"
+            ng-repeat="quest in vm.filterQuestions[questBlock.title]">
+            <h3 ng-click="quest.open = !quest.open">
+              <md-icon class="material-icons">{{quest.open ? 'keyboard_arrow_up' : 'keyboard_arrow_down'}}</md-icon>
+              {{::quest.q}}
+            </h3>
+            <p class="faq-answer"
+              ng-class="{'is-open': quest.open}"
+              ng-bind-html="quest.a"></p>
+          </div>
+        </div>
+      </div>
+      <div class="questions-container layout-row"
+        ng-show="!vm.filterQuestionsLeft">
+        <div layout="row"
+          layout-align="center center"
+          ng-hide="vm.filterQuestionsLeft">
+          <div class="nothing-found">
+            <h2>{{ :: 'intercom.nothingFound' | translate }}</h2>
+            <p>{{ :: 'intercom.nothingFoundSubtitle' | translate }}</p>
+            <md-button ui-sref="billy.setup.creator"
+              class="button-new-tag btn-center btn-default btn-success"
+              ng-click="app.openIntercom()">
+              {{:: 'intercom.intercomButton' | translate}}
+            </md-button>
+          </div>
+        </div>
+      </div>
+
+      <div class="intercom-open"
+        layout="column">
+        <md-button flex
+          class="call-to-action"
+          ng-click="vm.openIntercom();">Chat with Billy support
+        </md-button>
+      </div>
+    </md-content>
+  </md-sidenav>
+  <!--<md-button class="md-fab intercom-fab" ng-click="vm.openBillyIntercom()">-->
+  <!--<md-icon class="material-icons">live_help</md-icon>-->
+  <!--</md-button>-->
+</div>

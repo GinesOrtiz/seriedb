@@ -81,9 +81,4 @@ class filtersComponentController {
 
 }
 
-filtersComponentController.$inject = [
-  '$filter',
-  '$timeout'
-];
-
-export {filtersComponentController};
+export default filtersComponentController;

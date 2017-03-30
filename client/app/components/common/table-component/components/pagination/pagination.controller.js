@@ -63,10 +63,4 @@ class paginationController {
   }
 }
 
-paginationController.$inject = [
-  'bmMixpanel',
-  '$state',
-  '$rootScope'
-];
-
-export {paginationController};
+export default paginationController;

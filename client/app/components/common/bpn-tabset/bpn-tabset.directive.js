@@ -1,9 +1,10 @@
 import template from './bpn-tabset.content.html';
-import {BPNTabsetController as controller} from './bpn-tabset.controller';
+import controller from './bpn-tabset.controller';
 import './bpn-tabset.scss';
 
-export const BPNTabsetDirective = () =>{
-  return{
+export default () => {
+  'use strict';
+  return {
     restrict: 'E',
     template,
     controller,
@@ -11,5 +12,5 @@ export const BPNTabsetDirective = () =>{
     bindToController: true,
     transclude: true,
     scope: {}
-  }
+  };
 };

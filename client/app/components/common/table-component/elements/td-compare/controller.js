@@ -1,5 +1,6 @@
 class controller {
   constructor() {
+
   }
 
   getIcon() {
@@ -26,6 +27,4 @@ class controller {
 
 }
 
-controller.$inject = [];
-
-export {controller};
+export default controller;

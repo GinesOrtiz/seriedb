@@ -1,4 +1,4 @@
-import {elements} from './elements';
+import elements from './elements';
 
 class dynamicFormController {
   constructor($scope) {
@@ -122,6 +122,4 @@ class dynamicFormController {
 
 }
 
-dynamicFormController.$inject = ['$scope'];
-
-export {dynamicFormController};
+export default dynamicFormController;

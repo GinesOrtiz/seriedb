@@ -37,13 +37,5 @@ class rememberPasswordController {
       });
   }
 }
-rememberPasswordController.$inject = [
-  'AuthService',
-  '$timeout',
-  '$window',
-  '$log',
-  'Notification',
-  '$filter'
-];
 
-export {rememberPasswordController};
+export default rememberPasswordController;

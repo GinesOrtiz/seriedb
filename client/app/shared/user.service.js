@@ -115,11 +115,4 @@ const UserService = (localStorage, translateService, $state, $injector) => {
   };
 };
 
-UserService.$inject = [
-  'localStorage',
-  'translateService',
-  '$state',
-  '$injector'
-];
-
-export {UserService};
+export default UserService;

@@ -7,6 +7,4 @@ class notificationController {
   }
 }
 
-notificationController.$inject = ['$scope'];
-
-export {notificationController};
+export default notificationController;

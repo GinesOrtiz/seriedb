@@ -1,8 +1,8 @@
-import {filtersComponentController as controller} from './filters-component.controller';
+import controller from './filters-component.controller';
 import template from './filters-component.content.html';
 import './filter-component.scss';
 
-export const filtersComponentComponent = {
+export default {
   template,
   controller,
   controllerAs: 'vm',

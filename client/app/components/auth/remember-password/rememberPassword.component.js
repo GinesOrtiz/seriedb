@@ -1,9 +1,9 @@
 import template from './rememberPassword.content.html';
 import './rememberPassword.scss';
-import {rememberPasswordController as controller} from './rememberPassword.controller';
+import controller from './rememberPassword.controller';
 
-export const authRememberPasswordComponent = {
+export default {
   template,
   controller,
-  controllerAs: 'vm',
+  controllerAs: 'vm'
 };

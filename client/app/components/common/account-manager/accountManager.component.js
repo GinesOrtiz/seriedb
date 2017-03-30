@@ -1,8 +1,8 @@
 import template from './accountManager.content.html';
-import {accountManagerController as controller} from './accountManager.controller';
+import controller from './accountManager.controller';
 import './accountManager.scss';
 
-export const accountManagerComponent = {
+export default {
   template,
   controller,
   controllerAs: 'vm'

@@ -2,7 +2,7 @@ import logo from './../../assets/logo_white.png';
 import miniBg from './../../assets/mini_bg.png';
 import bigBg from './../../assets/bg.jpg';
 
-class AuthController {
+class signController {
   constructor(localStorage, bmMixpanel, $location, $stateParams, $scope, $state, $timeout) {
     this.$stateParams = $stateParams;
     this.$location = $location;
@@ -30,7 +30,7 @@ class AuthController {
       let hb = new Image();
       hb.src = this.bigBg;
       hb.onload = () => {
-        this.$timeout(()=>{
+        this.$timeout(() => {
           this.bgLoaded = true;
         });
       };
@@ -38,14 +38,4 @@ class AuthController {
   }
 }
 
-AuthController.$inject = [
-  'localStorage',
-  'bmMixpanel',
-  '$location',
-  '$stateParams',
-  '$scope',
-  '$state',
-  '$timeout'
-];
-
-export {AuthController};
+export default signController;

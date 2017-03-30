@@ -1,5 +1,5 @@
-import angular from 'angular';
-import {listsSelectorComponent} from './listsSelector.component';
+
+import listsSelectorComponent from './listsSelector.component';
 
 import langES from './lang/es.json';
 import langEN from './lang/en.json';
@@ -22,7 +22,7 @@ const listsSelectorRun = (translateService) => {
   });
 };
 
-export const listsSelector =
-  angular.module('billy.common.listsSelector', [])
-    .component('listsSelector', listsSelectorComponent)
-    .run(listsSelectorRun);
+export default  angular
+  .module('billy.common.listsSelector', [])
+  .component('listsSelector', listsSelectorComponent)
+  .run(listsSelectorRun);

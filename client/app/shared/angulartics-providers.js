@@ -3,7 +3,7 @@
  * @name angulartics.providers
  * Enables analytics support for custom providers
  */
-export const angularticsProviders = angular
+export default angular
   .module('angulartics.providers', ['angulartics'])
   .config([
     '$analyticsProvider',

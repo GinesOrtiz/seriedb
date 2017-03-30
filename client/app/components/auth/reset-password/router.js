@@ -1,4 +1,4 @@
-const resetPasswordRouter = ($stateProvider) => {
+export default ($stateProvider) => {
   'use strict';
 
   $stateProvider.state('billy.auth.reset', {
@@ -7,7 +7,3 @@ const resetPasswordRouter = ($stateProvider) => {
     template: '<auth-reset-password></auth-reset-password>'
   });
 };
-
-resetPasswordRouter.$inject = ['$stateProvider'];
-
-export {resetPasswordRouter};

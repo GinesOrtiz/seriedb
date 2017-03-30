@@ -161,6 +161,4 @@ class pixelsController {
   }
 }
 
-pixelsController.$inject = ['$timeout'];
-
-export {pixelsController};
+export default pixelsController;

@@ -1,27 +1,17 @@
 class LoginPopupController {
-  constructor(bmMixpanel, AuthService, BigLoaderService, BackgroundUpdateService, Notification,
-              translateService, localStorage, $filter, $analytics, $state, $scope) {
-    this.AuthService = AuthService;
-    this.BackgroundUpdateService = BackgroundUpdateService;
-    this.BigLoaderService = BigLoaderService;
-    this.Notification = Notification;
-    this.translateService = translateService;
-    this.$filter = $filter;
-    this.localStorage = localStorage;
-    this.$analytics = $analytics;
-    this.$state = $state;
+  constructor(bmMixpanel, $scope) {
+
     this.bmMixpanel = bmMixpanel;
     this.view = 'signin';
-    this.origin = !!this.localStorage.getItem('origin', true);
 
     this.openPopup = this.openPopup ? this.openPopup : false;
     this.signup = this.signup ? this.signup : false;
 
-    $scope.$on('changeView', (event, view)=> {
+    $scope.$on('changeView', (event, view) => {
       this.view = view;
     });
 
-    $scope.$on('$loginPopup', (evt, params)=> {
+    $scope.$on('$loginPopup', (evt, params) => {
       this.view = params.view || 'signin';
       this.openPopup = true;
 
@@ -34,22 +24,6 @@ class LoginPopupController {
 
     });
   }
-
-
 }
 
-LoginPopupController.$inject = [
-  'bmMixpanel',
-  'AuthService',
-  'BigLoaderService',
-  'BackgroundUpdateService',
-  'Notification',
-  'translateService',
-  'localStorage',
-  '$filter',
-  '$analytics',
-  '$state',
-  '$scope'
-];
-
-export {LoginPopupController};
+export default LoginPopupController;

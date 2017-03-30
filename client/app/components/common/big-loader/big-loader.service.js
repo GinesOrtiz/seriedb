@@ -12,6 +12,4 @@ const BigLoaderService = ($rootScope) => {
   return {setState};
 };
 
-BigLoaderService.$inject = ['$rootScope'];
-
-export {BigLoaderService};
+export default BigLoaderService;

@@ -1,20 +1,20 @@
-import angular from 'angular';
+
 import moment from 'moment';
 
-import {angularticsProviders} from './angulartics-providers';
-import {httpInterceptor} from './http.interceptor';
-import {SharedApiService} from './shared.service';
-import {IntercomService} from './intercom';
-import {localStorageService} from './localStorage';
-import {daterange} from './daterange';
+import angularticsProviders from './angulartics-providers';
+import httpInterceptor from './http.interceptor';
+import SharedApiService from './shared.service';
+import IntercomService from './intercom';
+import localStorageService from './localStorage';
+import daterange from './daterange';
 import {TranslateService, TranslateFilter} from './translateService';
 import {featureFlagDirective, featureFlagService} from './featureFlag';
-import {userRoleDirective} from './userRole';
-import {UserService} from './user.service';
-import {WizardService} from './wizard.service';
-import {testingABDirective} from './testingAB';
-import {BackgroundUpdateService} from './backgroundUpdate';
-import {MixpanelFactory} from './mixpanel.factory';
+import userRoleDirective from './userRole';
+import UserService from './user.service';
+import WizardService from './wizard.service';
+import testingABDirective from './testingAB';
+import BackgroundUpdateService from './backgroundUpdate';
+import MixpanelFactory from './mixpanel.factory';
 
 import langES from './lang/es.json';
 import langEN from './lang/en.json';
@@ -40,13 +40,6 @@ const sharedConfig = ($locationProvider, $logProvider, $httpProvider, $mdDateLoc
     requireBase: false
   });
 };
-sharedConfig.$inject = [
-  '$locationProvider',
-  '$logProvider',
-  '$httpProvider',
-  '$mdDateLocaleProvider',
-  '$localStorageProvider'
-];
 
 const sharedRun = (translateService) => {
   'use strict';
@@ -56,11 +49,10 @@ const sharedRun = (translateService) => {
   });
 };
 
-sharedRun.$inject = ['translateService'];
-
-export const shared = angular.module('shared', [
-  angularticsProviders.name
-])
+export default angular
+  .module('shared', [
+    angularticsProviders.name
+  ])
   .factory('httpInterceptor', httpInterceptor)
   .factory('SharedApiService', SharedApiService)
   .factory('IntercomService', IntercomService)

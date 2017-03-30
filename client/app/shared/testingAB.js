@@ -23,8 +23,4 @@ const testingABDirective = (UserService) => {
   };
 };
 
-testingABDirective.$inject = ['UserService'];
-
-export {
-  testingABDirective
-};
+export default testingABDirective;

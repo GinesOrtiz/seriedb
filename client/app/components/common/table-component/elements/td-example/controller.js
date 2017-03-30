@@ -4,4 +4,4 @@ class controller {
   }
 }
 
-export {controller};
+export default controller;

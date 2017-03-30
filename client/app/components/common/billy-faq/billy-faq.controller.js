@@ -117,16 +117,4 @@ class billyFaqController {
 
 }
 
-billyFaqController.$inject = [
-  '$log',
-  'IntercomService',
-  'BigLoaderService',
-  'UserService',
-  'FaqService',
-  '$mdSidenav',
-  '$scope',
-  '$filter',
-  'localStorage'
-];
-
-export {billyFaqController};
+export default billyFaqController;

@@ -1,6 +1,6 @@
-import angular from 'angular';
-import {billyFaqComponent} from './billy-faq.component';
-import {FaqService} from './faq.service';
+
+import billyFaqComponent from './billy-faq.component';
+import FaqService from './faq.service';
 
 import langEN from './lang/en.json';
 import langES from './lang/es.json';
@@ -13,9 +13,7 @@ const billyFaqRun = (translateService) => {
   });
 };
 
-billyFaqRun.$inject = ['translateService'];
-
-export const billyFaq = angular
+export default angular
   .module('billy.common.billyFaq', [])
   .component('billyFaq', billyFaqComponent)
   .run(billyFaqRun)

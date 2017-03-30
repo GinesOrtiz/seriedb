@@ -1,6 +1,6 @@
-import angular from 'angular';
-import {dynamicFormComponent} from './dynamic-form.component';
-import {elements} from './elements';
+
+import dynamicFormComponent from './dynamic-form.component';
+import elements from './elements';
 
 const dynamicFormRun = ($templateCache) => {
   'use strict';
@@ -11,7 +11,7 @@ const dynamicFormRun = ($templateCache) => {
     });
 };
 
-export const dynamicForm = angular
+export default angular
   .module('billy.common.dynamicForm', [])
   .component('dynamicForm', dynamicFormComponent)
   .run(dynamicFormRun);

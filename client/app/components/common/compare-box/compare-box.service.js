@@ -30,10 +30,4 @@ const CompareBoxService = (UserService, $http, $q) => {
   };
 };
 
-CompareBoxService.$inject = [
-  'UserService',
-  '$http',
-  '$q',
-];
-
-export {CompareBoxService};
+export default CompareBoxService;

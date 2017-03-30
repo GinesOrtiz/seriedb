@@ -1,7 +1,7 @@
-import angular from 'angular';
 
-import {mainMenuComponent} from './main-menu.component';
 
-export const mainMenu = angular
+import mainMenuComponent from './main-menu.component';
+
+export default angular
   .module('billy.common.main-menu', [])
   .component('mainMenu', mainMenuComponent);

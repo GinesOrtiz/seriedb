@@ -5,8 +5,7 @@
     </md-icon>
     <p>{{:: 'sidebar.accountManager' | translate }}</p>
     <md-tooltip md-direction="right"
-      class="sidebar-tooltip account-manager"
-      ng-if="vm.showTooltip">
+      class="sidebar-tooltip account-manager">
       <p class="title">{{:: 'accountManager.accountManager' | translate}}</p>
       <img ng-src="{{ ::vm.accm.picture || 'http://cdn.billy.mobi/assets/billysupport.png' }}">
       <p class="name">{{ ::vm.accm.fullName || vm.default.fullName }}</p>

@@ -1,8 +1,8 @@
 import template from './resetPassword.content.html';
-import {resetPasswordController as controller} from './resetPassword.controller';
+import controller from './resetPassword.controller';
 
-export const resetPasswordComponent = {
+export default {
   template,
   controller,
-  controllerAs: 'vm',
+  controllerAs: 'vm'
 };

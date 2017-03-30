@@ -1,7 +1,7 @@
 import template from './auth-component.html';
-import {authComponentController as controller} from './auth-component.controller';
+import controller from './auth-component.controller';
 
-export const authComponent = {
+export default {
   controller,
   template,
   controllerAs: 'vm',

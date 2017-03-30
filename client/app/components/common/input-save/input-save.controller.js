@@ -53,10 +53,4 @@ class inputSaveController {
 
 }
 
-inputSaveController.$inject = [
-  '$injector',
-  'Notification',
-  '$filter'
-];
-
-export {inputSaveController};
+export default inputSaveController;

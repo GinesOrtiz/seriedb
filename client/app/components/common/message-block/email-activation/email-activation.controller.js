@@ -28,12 +28,4 @@ class emailActivationController {
   }
 }
 
-emailActivationController.$inject = [
-  'BigLoaderService',
-  'Notification',
-  'AuthService',
-  'UserService',
-  '$filter'
-];
-
-export {emailActivationController};
+export default emailActivationController;

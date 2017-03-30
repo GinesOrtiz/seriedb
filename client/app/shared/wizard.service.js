@@ -58,6 +58,4 @@ const WizardService = ($http) => {
   };
 };
 
-WizardService.$inject = ['$http'];
-
-export {WizardService};
+export default WizardService;

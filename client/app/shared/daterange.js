@@ -128,7 +128,8 @@ const daterange = () => {
     let d = new Date();
     d.setMonth(d.getMonth() - 1);
 
-    return moment(d).format('YYYY-MM-DD HH:mm:ss');
+    return moment(d)
+      .format('YYYY-MM-DD HH:mm:ss');
 
   };
 
@@ -148,4 +149,4 @@ const daterange = () => {
   };
 };
 
-export {daterange};
+export default daterange;

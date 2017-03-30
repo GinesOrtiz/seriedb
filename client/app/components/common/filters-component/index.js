@@ -1,7 +1,7 @@
-import {filtersComponentComponent} from './filters-component.component';
+import filtersComponentComponent from './filters-component.component';
 import langES from './lang/es.json';
 import langEN from './lang/en.json';
-import angular from 'angular';
+
 
 const filtersComponentRun = (translateService) => {
   'use strict';
@@ -12,7 +12,7 @@ const filtersComponentRun = (translateService) => {
   });
 };
 
-export const filtersComponent = angular
+export default angular
   .module('billy.common.filters', [])
   .component('filtersComponent', filtersComponentComponent)
   .run(filtersComponentRun);

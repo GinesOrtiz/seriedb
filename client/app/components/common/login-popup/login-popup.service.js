@@ -25,6 +25,4 @@ const LoginPopupService = ($rootScope) => {
   };
 };
 
-LoginPopupService.$inject = ['$rootScope'];
-
-export {LoginPopupService};
+export default LoginPopupService;

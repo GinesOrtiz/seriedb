@@ -78,10 +78,4 @@ const MixpanelFactory = (UserService, $q, localStorage) => {
   };
 };
 
-MixpanelFactory.$inject = [
-  'UserService',
-  '$q',
-  'localStorage'
-];
-
-export {MixpanelFactory};
+export default MixpanelFactory;

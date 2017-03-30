@@ -41,9 +41,4 @@ const FaqService = ($http, $q) => {
   return {getFaq};
 };
 
-FaqService.$inject = [
-  '$http',
-  '$q'
-];
-
-export {FaqService};
+export default FaqService;

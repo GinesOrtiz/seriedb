@@ -1,6 +1,6 @@
-import {pixelsController as controller} from './pixels.controller';
+import controller from './pixels.controller';
 
-export const pixelsComponent = angular
+export default angular
   .module('commonComponents.pixels', [])
   .component('pixels', {
     controller,

@@ -1,6 +1,6 @@
-import angular from 'angular';
-import {authRememberPasswordComponent} from './rememberPassword.component';
 
-export const rememberPassword = angular
+import authRememberPasswordComponent from './rememberPassword.component';
+
+export default angular
   .module('billy.auth.remember', [])
   .component('authRememberPassword', authRememberPasswordComponent);

@@ -93,13 +93,4 @@ const httpInterceptor = function (localStorage, BigLoaderService, $q, $injector,
   };
 };
 
-httpInterceptor.$inject = [
-  'localStorage',
-  'BigLoaderService',
-  '$q',
-  '$injector',
-  '$log',
-  '$filter'
-];
-
-export {httpInterceptor};
+export default httpInterceptor;

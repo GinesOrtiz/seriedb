@@ -84,8 +84,7 @@ const TranslateService = (localStorage) => {
     try {
       replace = translation.replace(/\n/g, '<br>');
     } catch (e) {
-      throw new TypeError('TypeError: Cannot read property \'replace\' of undefined for key: ' +
-        translationKey);
+      console.warn('Translation not found: ' + translationKey);
     }
     return replace;
   };

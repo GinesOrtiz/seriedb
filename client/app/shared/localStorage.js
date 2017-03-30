@@ -87,8 +87,4 @@ const localStorageService = ($localStorage) => {
   };
 };
 
-localStorageService.$inject = [
-  '$localStorage'
-];
-
-export {localStorageService};
+export default localStorageService;

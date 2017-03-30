@@ -51,6 +51,7 @@ Ex: auth component
 - auth.service.js
 - index.js
 - module.js
+- lang/ (optional)
 ```
 
 #### index.js

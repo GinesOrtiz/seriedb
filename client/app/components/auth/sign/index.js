@@ -1,4 +1,3 @@
-
 import authComponent from './sign.component';
 import './sign.scss';
 

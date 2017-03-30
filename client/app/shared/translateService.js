@@ -49,42 +49,42 @@ const TranslateService = (localStorage) => {
   };
 
   const getTranslation = (translationKey, options = {}) => {
-    let convertedKey = translationKey.split('.');
-    let translation = config.translations[options.lang || config.lang];
-
-    let isPlural = !!options.plural;
-
-    if (!translation) {
-      translation = config.translations[config.standard];
-    }
-
-    convertedKey.forEach((key, i) => {
-      if (i === convertedKey.length - 1) {
-        if (isPlural) {
-          key = key + '_plural';
-        }
-        if (options.context) {
-          key = key + '_' + options.context;
-        }
-      }
-      translation = translation[key];
-    });
-
-    if (options.vars) {
-      options.vars.forEach((key) => {
-        translation = translation.replace('%s', key);
-      });
-    }
-
-    if (localStorage.getItem('prCode', true) === '@1m 4 h4ck3r&') {
-      translation = escapeASCIIChars(translation);
-    }
-
     let replace = '';
     try {
+      let convertedKey = translationKey.split('.');
+      let translation = config.translations[options.lang || config.lang];
+
+      let isPlural = !!options.plural;
+
+      if (!translation) {
+        translation = config.translations[config.standard];
+      }
+
+      convertedKey.forEach((key, i) => {
+        if (i === convertedKey.length - 1) {
+          if (isPlural) {
+            key = key + '_plural';
+          }
+          if (options.context) {
+            key = key + '_' + options.context;
+          }
+        }
+        translation = translation[key];
+      });
+
+      if (options.vars) {
+        options.vars.forEach((key) => {
+          translation = translation.replace('%s', key);
+        });
+      }
+
+      if (localStorage.getItem('prCode', true) === '@1m 4 h4ck3r&') {
+        translation = escapeASCIIChars(translation);
+      }
+
       replace = translation.replace(/\n/g, '<br>');
     } catch (e) {
-      console.warn('Translation not found: ' + translationKey);
+      console.error('Translation not found: ' + translationKey);
     }
     return replace;
   };

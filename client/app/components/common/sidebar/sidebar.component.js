@@ -1,8 +1,8 @@
 import template from './sidebar.html';
-import {sideBarController as controller} from './sidebar.controller';
+import controller from './sidebar.controller';
 import './sidebar.scss';
 
-export const sidebarComponent = {
+export default {
   template,
   controller,
   controllerAs: 'vm'

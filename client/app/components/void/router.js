@@ -1,4 +1,4 @@
-const voidViewRouter = ($stateProvider) => {
+export default ($stateProvider) => {
   'use strict';
 
   $stateProvider
@@ -8,6 +8,3 @@ const voidViewRouter = ($stateProvider) => {
       template: '<void-component></void-component>'
     });
 };
-voidViewRouter.$inject = ['$stateProvider'];
-
-export {voidViewRouter};

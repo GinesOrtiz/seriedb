@@ -60,6 +60,4 @@ class compareBoxController {
   }
 }
 
-compareBoxController.$inject = [];
-
-export {compareBoxController};
+export default compareBoxController;

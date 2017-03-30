@@ -1,6 +1,6 @@
 import template from './message-block.html';
 
-export const messageBlockComponent = {
+export default {
   template,
   controllerAs: 'vm',
   bindings: {

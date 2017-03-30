@@ -1,10 +1,8 @@
 import template from './void.html';
-import {voidController as controller} from './void.controller';
+import controller from './void.controller';
 
-const voidComponent = {
+export default {
   controller,
   controllerAs: 'vm',
   template
 };
-
-export {voidComponent};

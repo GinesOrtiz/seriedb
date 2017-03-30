@@ -1,4 +1,4 @@
-const rememberPasswordRouter = ($stateProvider) => {
+export default ($stateProvider) => {
   'use strict';
 
   $stateProvider.state('billy.auth.remember', {
@@ -7,7 +7,3 @@ const rememberPasswordRouter = ($stateProvider) => {
     template: '<auth-remember-password></auth-remember-password>'
   });
 };
-
-rememberPasswordRouter.$inject = ['$stateProvider'];
-
-export {rememberPasswordRouter};

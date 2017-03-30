@@ -1,4 +1,3 @@
-import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import ngMaterial from 'angular-material';
 import ngAnimate from 'angular-animate';
@@ -14,12 +13,12 @@ import popover from 'angular-ui-bootstrap/src/popover/index-nocss';
 
 import {appComponent} from './app.component';
 
-import {auth} from './components/auth';
-import {voidView} from './components/void';
+import auth from './components/auth';
+import voidView from './components/void';
 
-import {common} from './components/common';
-import {config} from './app.config';
-import {shared} from './shared';
+import common from './components/common';
+import config from './app.config';
+import shared from './shared';
 
 import 'angular-material/angular-material.min.css';
 import './app.scss';

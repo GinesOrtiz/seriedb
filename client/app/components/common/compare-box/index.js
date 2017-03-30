@@ -1,6 +1,6 @@
-import angular from 'angular';
-import {compareBoxComponent} from './compare-box.component';
-import {CompareBoxService} from './compare-box.service';
+
+import compareBoxComponent from './compare-box.component';
+import CompareBoxService from './compare-box.service';
 
 import './compare-box.scss';
 
@@ -14,7 +14,7 @@ import './compare-box.scss';
       }
  * @type {any}
  */
-export const compareBox = angular
+export default angular
   .module('billy.common.compareBox', [])
   .factory('CompareBoxService', CompareBoxService)
   .component('compareBox', compareBoxComponent);

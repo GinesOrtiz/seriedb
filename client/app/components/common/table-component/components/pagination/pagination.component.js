@@ -1,7 +1,7 @@
-import {paginationController as controller} from './pagination.controller';
+import controller from './pagination.controller';
 import template from './pagination.html';
 
-export const paginationComponent = {
+export default {
   controller,
   controllerAs: 'vm',
   template,

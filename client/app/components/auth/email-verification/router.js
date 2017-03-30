@@ -1,4 +1,4 @@
-export const emailVerificationRouter = ($stateProvider) => {
+export default ($stateProvider) => {
   'use strict';
 
   $stateProvider.state('billy.email-verification', {

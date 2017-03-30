@@ -42,11 +42,4 @@ const BackgroundUpdateService = ($localStorage, $rootScope, $injector, $timeout)
   };
 };
 
-BackgroundUpdateService.$inject = [
-  '$localStorage',
-  '$rootScope',
-  '$injector',
-  '$timeout'
-];
-
-export {BackgroundUpdateService};
+export default BackgroundUpdateService;

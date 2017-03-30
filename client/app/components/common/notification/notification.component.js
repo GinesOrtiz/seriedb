@@ -1,8 +1,7 @@
 import template from './notification.content.html';
-import {notificationController as controller} from './notification.controller';
+import controller from './notification.controller';
 
-export const notificationComponent = {
+export default {
   template,
-  controller,
-  restrict: 'E',
+  controller
 };

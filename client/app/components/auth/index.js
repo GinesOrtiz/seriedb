@@ -1,10 +1,10 @@
-import angular from 'angular';
 
-import {AuthService} from './auth.service';
-import {signRouter} from './sign/router';
-import {resetPasswordRouter} from './reset-password/router';
-import {rememberPasswordRouter} from './remember-password/router';
-import {emailVerificationRouter} from './email-verification/router';
+
+import AuthService from './auth.service';
+import signRouter from './sign/router';
+import resetPasswordRouter from './reset-password/router';
+import rememberPasswordRouter from './remember-password/router';
+import emailVerificationRouter from './email-verification/router';
 
 const authRun = (PermRoleStore, AuthService, $urlRouter) => {
   'use strict';
@@ -31,12 +31,6 @@ const authRun = (PermRoleStore, AuthService, $urlRouter) => {
       $urlRouter.listen();
     });
 };
-
-authRun.$inject = [
-  'PermRoleStore',
-  'AuthService',
-  '$urlRouter'
-];
 
 const authConfig = ($stateProvider) => {
   'use strict';
@@ -67,9 +61,7 @@ const authConfig = ($stateProvider) => {
     });
 };
 
-authConfig.$inject = ['$stateProvider'];
-
-export const auth = angular
+export default angular
   .module('billy.auth', [])
   .factory('AuthService', AuthService)
   .run(authRun)

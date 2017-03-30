@@ -12,12 +12,9 @@ const SharedApiService = () => {
     ];
   };
 
-
   return {
     getChartColors
   };
 };
 
-SharedApiService.$inject = [];
-
-export {SharedApiService};
+export default SharedApiService;

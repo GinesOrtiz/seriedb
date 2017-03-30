@@ -1,8 +1,6 @@
-import angular from 'angular';
-import {authComponent} from './auth.component';
-import './auth.scss';
 
-const sign = angular.module('billy.auth.sign', [])
+import authComponent from './sign.component';
+import './sign.scss';
+
+export default angular.module('billy.auth.sign', [])
   .component('authSign', authComponent);
-
-export {sign};

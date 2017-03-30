@@ -99,22 +99,6 @@ class BMMainMenu {
       view: 'signup'
     });
   }
-
 }
 
-BMMainMenu.$inject = [
-  'LoginPopupService',
-  'AuthService',
-  'UserService',
-  'bmMixpanel',
-  'translateService',
-  'BigLoaderService',
-  'localStorage',
-  'BackgroundUpdateService',
-  '$timeout',
-  '$state',
-  '$mdSidenav',
-  '$rootScope'
-];
-
-export {BMMainMenu};
+export default BMMainMenu;

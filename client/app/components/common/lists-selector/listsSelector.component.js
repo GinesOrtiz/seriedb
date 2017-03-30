@@ -1,9 +1,9 @@
-import {listsSelectorController as controller} from './listsSelector.controller';
+import controller from './listsSelector.controller';
 import template from './listsSelector.html';
 
 import './listsSelector.scss';
 
-export const listsSelectorComponent = {
+export default {
   template,
   controller,
   controllerAs: 'vm',

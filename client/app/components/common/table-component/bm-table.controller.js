@@ -214,12 +214,4 @@ class bmTableController {
   }
 }
 
-bmTableController.$inject = [
-  '$injector',
-  '$interval',
-  '$timeout',
-  '$scope',
-  '$state'
-];
-
-export {bmTableController};
+export default bmTableController;

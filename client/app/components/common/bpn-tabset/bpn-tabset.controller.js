@@ -59,13 +59,4 @@ class BPNTabsetController {
   }
 }
 
-BPNTabsetController.$inject = [
-  'bmMixpanel',
-  'BigLoaderService',
-  'UserService',
-  '$scope',
-  '$timeout',
-  '$analytics'
-];
-
-export {BPNTabsetController};
+export default BPNTabsetController;

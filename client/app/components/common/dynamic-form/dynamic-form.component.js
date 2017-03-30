@@ -1,7 +1,7 @@
-import {dynamicFormController as controller} from './dynamic-form.controller';
+import controller from './dynamic-form.controller';
 import template from './dynamic-form.html';
 
-export const dynamicFormComponent = {
+export default {
   controller,
   controllerAs: 'vm',
   template,

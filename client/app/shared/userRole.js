@@ -20,8 +20,4 @@ const userRoleDirective = (UserService) => {
   };
 };
 
-userRoleDirective.$inject = ['UserService'];
-
-export {
-  userRoleDirective
-};
+export default userRoleDirective;

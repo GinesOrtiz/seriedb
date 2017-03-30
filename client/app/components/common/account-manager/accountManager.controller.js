@@ -1,5 +1,5 @@
 class accountManagerController {
-  constructor(IntercomService, UserService, $window, $timeout) {
+  constructor(IntercomService, UserService) {
     this.IntercomService = IntercomService;
     this.user = UserService.getState();
     this.accm = this.user ? this.user.accountManager : null;
@@ -8,17 +8,6 @@ class accountManagerController {
       fullName: 'Your Account Manager',
       skypeId: 'enric.sabater'
     };
-
-    let resizeTimeout;
-    this.showTooltip = $window.innerWidth > 959;
-
-    $(window)
-      .on('resize', () => {
-        $timeout.cancel(resizeTimeout);
-        resizeTimeout = $timeout(() => {
-          this.showTooltip = $window.innerWidth > 959;
-        }, 200);
-      });
   }
 
   openIntercom() {
@@ -26,11 +15,4 @@ class accountManagerController {
   }
 }
 
-accountManagerController.$inject = [
-  'IntercomService',
-  'UserService',
-  '$window',
-  '$timeout'
-];
-
-export {accountManagerController};
+export default accountManagerController;

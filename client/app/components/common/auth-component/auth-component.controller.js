@@ -413,21 +413,4 @@ class authComponentController {
   }
 }
 
-authComponentController.$inject = [
-  'UserService',
-  'AuthService',
-  'BackgroundUpdateService',
-  'BigLoaderService',
-  'Notification',
-  'translateService',
-  'localStorage',
-  '$filter',
-  '$analytics',
-  '$state',
-  '$stateParams',
-  '$scope',
-  '$timeout',
-  '$location'
-];
-
-export {authComponentController};
+export default authComponentController;

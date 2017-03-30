@@ -1,8 +1,8 @@
 import template from './big-loader.content.html';
-import {bigLoaderController as controller} from './big-loader.controller';
+import controller from './big-loader.controller';
 
-export const bigLoaderComponent = {
+export default {
   template,
   controller,
-  controllerAs: 'vm',
+  controllerAs: 'vm'
 };

@@ -1,4 +1,4 @@
-import angular from 'angular';
+
 import NGHighcharts from 'highcharts-ng';
 import ngMaterial from 'angular-material';
 import notifications from 'angular-ui-notification';
@@ -46,15 +46,7 @@ const appConfig = ($compileProvider, $urlRouterProvider, $mdThemingProvider, hig
 
 };
 
-appConfig.$inject = [
-  '$compileProvider',
-  '$urlRouterProvider',
-  '$mdThemingProvider',
-  'highchartsNGProvider',
-  'NotificationProvider'
-];
-
-export const config = angular
+export default angular
   .module('app.config', [
     ngMaterial,
     NGHighcharts,

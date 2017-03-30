@@ -268,23 +268,4 @@ const AuthService = (translateService, localStorage, UserService,
   };
 };
 
-AuthService.$inject = [
-  'translateService',
-  'localStorage',
-  'UserService',
-  'bmMixpanel',
-  'IntercomService',
-  'BigLoaderService',
-  'WizardService',
-  '$filter',
-  '$timeout',
-  '$window',
-  'Notification',
-  '$rootScope',
-  '$interval',
-  '$http',
-  '$q'
-];
-
-
-export {AuthService};
+export default AuthService;

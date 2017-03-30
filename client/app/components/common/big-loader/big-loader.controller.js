@@ -29,9 +29,4 @@ class bigLoaderController {
   }
 }
 
-bigLoaderController.$inject = [
-  '$scope',
-  '$filter'
-];
-
-export {bigLoaderController};
+export default bigLoaderController;

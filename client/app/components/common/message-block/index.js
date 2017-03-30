@@ -1,9 +1,8 @@
-import angular from 'angular';
+
 import langEN from './lang/en.json';
 import langES from './lang/es.json';
-import {messageBlockComponent} from './message-block.component';
-import {emailActivationComponent} from './email-activation';
-import {marketplaceAnonComponent} from './marketplace-anon';
+import messageBlockComponent from './message-block.component';
+import emailActivationComponent from './email-activation';
 
 import './message-block.scss';
 
@@ -15,11 +14,8 @@ const messageBlockRun = (translateService) => {
   });
 };
 
-messageBlockRun.$inject = ['translateService'];
-
-export const messageBlock = angular
+export default angular
   .module('billy.common.messageBlock', [])
   .component('messageBlock', messageBlockComponent)
   .component('emailActivation', emailActivationComponent)
-  .component('marketplaceAnon', marketplaceAnonComponent)
   .run(messageBlockRun);

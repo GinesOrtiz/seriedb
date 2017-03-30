@@ -1,4 +1,4 @@
-const signRouter = ($stateProvider) => {
+export default ($stateProvider) => {
   'use strict';
   $stateProvider
     .state('billy.auth.signin', {
@@ -7,7 +7,3 @@ const signRouter = ($stateProvider) => {
       template: '<auth-sign></auth-sign>'
     });
 };
-
-signRouter.$inject = ['$stateProvider'];
-
-export {signRouter};

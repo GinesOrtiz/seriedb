@@ -60,11 +60,4 @@ class controller {
   }
 }
 
-controller.$inject = [
-  'SharedApiService',
-  'UserService',
-  'Dates',
-  '$filter'
-];
-
-export {controller};
+export default controller;

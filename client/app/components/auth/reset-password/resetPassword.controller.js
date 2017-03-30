@@ -8,6 +8,4 @@ class resetPasswordController {
   }
 }
 
-resetPasswordController.$inject = [];
-
-export {resetPasswordController};
+export default resetPasswordController;

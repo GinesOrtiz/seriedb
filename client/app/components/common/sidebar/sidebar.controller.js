@@ -46,10 +46,4 @@ class sideBarController {
 
 }
 
-
-sideBarController.$inject = [
-  'UserService',
-  'LoginPopupService'
-];
-
-export {sideBarController};
+export default sideBarController;

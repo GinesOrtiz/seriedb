@@ -54,9 +54,4 @@ const IntercomService = ($interval, $q) => {
   };
 };
 
-IntercomService.$inject = [
-  '$interval',
-  '$q'
-];
-
-export {IntercomService};
+export default IntercomService;

@@ -1,5 +1,5 @@
-import angular from 'angular';
-import {sidebarComponent} from './sidebar.component';
+
+import sidebarComponent from './sidebar.component';
 
 import langEN from './lang/en.json';
 import langES from './lang/es.json';
@@ -12,9 +12,7 @@ const moduleRun = (translateService) => {
   });
 };
 
-moduleRun.$inject = ['translateService'];
-
-export const sidebar = angular
+export default angular
   .module('billy.common.sidebar', [])
   .component('sidebar', sidebarComponent)
   .run(moduleRun);

@@ -1,7 +1,7 @@
-import {bmTableController as controller} from './bm-table.controller';
+import controller from './bm-table.controller';
 import template from './bm-table.html';
 
-export const bmTableComponent = {
+export default {
   controller,
   controllerAs: 'vm',
   template,

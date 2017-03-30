@@ -133,6 +133,9 @@ sidebar {
 
 .sidebar-tooltip {
   overflow: visible;
+  @media #{$max-md}{
+    display: none;
+  }
   .md-content {
     border-radius: 3px;
     overflow: visible;

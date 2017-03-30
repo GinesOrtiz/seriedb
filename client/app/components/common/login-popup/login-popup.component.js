@@ -1,4 +1,4 @@
-import {LoginPopupController as controller} from './login-popup.controller';
+import controller from './login-popup.controller';
 import template from './login-popup.content.html';
 import './login-popup.scss';
 
@@ -7,7 +7,7 @@ import './login-popup.scss';
  * configurable login modal. A service is exposed in order to open/close/toggle or set the tittle
  * of the modal.
  */
-export const loginPopupComponent = {
+export default {
   template: template,
   controller,
   controllerAs: 'vm',

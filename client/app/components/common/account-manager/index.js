@@ -1,4 +1,4 @@
-import {accountManagerComponent} from './accountManager.component';
+import accountManagerComponent from './accountManager.component';
 
 import langEN from './lang/en.json';
 import langES from './lang/es.json';
@@ -11,9 +11,7 @@ const accountManagerRun = (translateService) => {
   });
 };
 
-accountManagerRun.$inject = ['translateService'];
-
-export const accountManager = angular
+export default angular
   .module('billy.common.accountManager', [])
   .component('accountManager', accountManagerComponent)
   .run(accountManagerRun);

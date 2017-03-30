@@ -1,7 +1,7 @@
-import {inputSaveController as controller} from './input-save.controller';
+import controller from './input-save.controller';
 import template from './input-save.html';
 
-export const inputSaveComponent = {
+export default {
   controller,
   controllerAs: 'vm',
   template,

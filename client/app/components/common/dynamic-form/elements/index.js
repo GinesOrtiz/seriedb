@@ -8,7 +8,7 @@ import toolbar from './toolbar.html';
 import select from './select.html';
 import selectAsync from './selectAsync.html';
 
-export const elements = {
+export default {
   input,
   hr,
   link,

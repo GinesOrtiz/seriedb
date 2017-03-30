@@ -74,6 +74,4 @@ class listsSelectorController {
   }
 }
 
-listsSelectorController.$inject = ['$filter'];
-
-export {listsSelectorController};
+export default listsSelectorController;

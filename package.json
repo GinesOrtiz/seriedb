@@ -2,10 +2,10 @@
   "name": "publishers-panel",
   "description": "Billymob Publishers panel",
   "main": "client/index.js",
-  "version": "1.9.12",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hhg2288/publishers-panel.git"
+    "url": "https://github.com/billyperformance/PanelsBase.git"
   },
   "scripts": {
     "test": "karma start",

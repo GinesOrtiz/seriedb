@@ -1,5 +1,3 @@
-
-
 import AuthService from './auth.service';
 import signRouter from './sign/router';
 import resetPasswordRouter from './reset-password/router';

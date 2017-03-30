@@ -46,7 +46,7 @@ class authComponentController {
           {
             label: 'forgotPassword',
             element: 'link',
-            href: '/remember'
+            href: '/auth/remember'
           }
         ]
       },

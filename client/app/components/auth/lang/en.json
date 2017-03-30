@@ -1,0 +1,61 @@
+{
+  "email": "Email",
+  "emailReq": "Email is required",
+  "error": "There was an error. Please try again later.",
+  "errorNoMatch": "Passwords do not match",
+  "loggingOut": "Logging out...",
+  "name": "Name",
+  "nameReq": "Name is required",
+  "password": "Password",
+  "passwordConfirm": "Confirm password",
+  "passwordReq": "Password is required",
+  "signIn": "Sign in",
+  "submit": "Submit",
+  "minlength": "Password should be minimum 6 characters long",
+  "changeSuccess": "Your information has been updated successfully",
+  "conflictPasswords": "The new password fields doesn't match",
+  "wrongPassword": "Your current password is wrong",
+  "typeWebsite": "Website",
+  "typeAffiliate": "Affiliate",
+  "whoareyou": "Who are you?",
+  "passwordRemember": {
+    "backTo": "Back to ",
+    "description": "Enter your email and we will send you a link where you can reset your password.",
+    "descriptionSuccess": "A password reset link was sent to your email address:",
+    "error": "There was a conflict with the params sent. Check the information and try again.",
+    "title": "Forgot password?",
+    "titleSuccess": "Reset link was sent"
+  },
+  "passwordReset": {
+    "password": "New password",
+    "success": "Password successfully changed.",
+    "title": "Reset password for ",
+    "titleSuccess": "Reset link was sent"
+  },
+  "sign": {
+    "auth": {
+      "forgotPassword": "Forgot password?",
+      "footerText": "No account? ",
+      "footerLink": "Sign up",
+      "message": "Don't have an account?",
+      "other": "Sign up",
+      "otherLink": "signup",
+      "title": "Sign in"
+    },
+    "errorCredentials": "Credentials are not correct",
+    "loginMsg": "Login...",
+    "signup": {
+      "terms": "By checking this, I agree to the <a href='http://www.billymob.com/terms-and-conditions.html' target='_blank'>Terms of Service</a>",
+      "error": "There's an error:",
+      "footerText": "Already have an account? ",
+      "footerLink": "Sign in",
+      "message": "Don't have an account?'",
+      "other": "Sign in",
+      "otherLink": "auth",
+      "success": "Sign up success! Remember to verify your email",
+      "title": "Sign up",
+      "newsletter": "I want to subscribe to the newsletter",
+      "phone": "Phone number"
+    }
+  }
+}

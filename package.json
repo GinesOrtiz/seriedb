@@ -2,10 +2,10 @@
   "name": "publishers-panel",
   "description": "Billymob Publishers panel",
   "main": "client/index.js",
-  "version": "1.9.12",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hhg2288/publishers-panel.git"
+    "url": "https://github.com/billyperformance/PanelsBase.git"
   },
   "scripts": {
     "test": "karma start",
@@ -22,6 +22,8 @@
   "author": "Horacio Herrera <horacio@billymob.com> (http://hherrerag.com)",
   "license": "MIT",
   "devDependencies": {
+    "angular-mocks": "1.5.7",
+    "angular-stub-changes": "^1.0.2",
     "autoprefixer": "^6.2.3",
     "babel": "6.5.1",
     "babel-core": "6.5.1",
@@ -37,10 +39,19 @@
     "file-loader": "^0.8.1",
     "html-minifier-loader": "^1.0.14",
     "html-webpack-plugin": "^2.8.1",
+    "jasmine": "^2.5.3",
+    "jasmine-core": "^2.5.2",
     "jshint": "^2.6.3",
     "jshint-loader": "^0.8.3",
+    "karma": "^0.13.7",
+    "karma-babel-preprocessor": "^6.0.1",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-jasmine": "^1.1.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "0.0.30",
+    "karma-webpack": "^1.5.0",
+    "lodash": "^3.10.1",
     "ng-annotate-loader": "^0.1.0",
-    "nib": "^1.1.0",
     "node-sass": "^3.4.2",
     "raw-loader": "^0.5.1",
     "sass-loader": "^3.2.0",
@@ -52,8 +63,7 @@
     "webpack-core": "^0.5.0",
     "webpack-create-vendor-chunk": "^0.1.1",
     "webpack-dev-server": "^1.7.0",
-    "webpack-version-file-plugin": "^0.2.2",
-    "webpack-version-hash-plugin": "0.0.2"
+    "webpack-version-file-plugin": "^0.2.2"
   },
   "dependencies": {
     "angular": "1.5.7",

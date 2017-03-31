@@ -3,7 +3,6 @@
   "emailReq": "El email es obligatorio",
   "error": "Ha ocurrido un error, inténtalo de nuevo más tarde.",
   "errorNoMatch": "Las contraseñas no coinciden",
-  "loggingOut": "Cerrando sesión ...",
   "name": "Nombre",
   "nameReq": "El nombre es obligatorio",
   "password": "Contraseña",

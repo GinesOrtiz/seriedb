@@ -3,9 +3,10 @@
   md-is-locked-open="$mdMedia('gt-sm')">
 
   <md-list flex>
-    <md-list-item ui-sref="{{::menu.state}}"
+    <md-list-item
       ng-repeat="menu in vm.sidebarConfig"
-      ui-sref-active="active">
+      ng-class="{'active': menu.state === vm.active}"
+      ng-click="vm.state(menu)">
 
       <md-icon aria-label="My tags Icon"
         class="md-avatar-icon material-icons">{{::menu.icon}}

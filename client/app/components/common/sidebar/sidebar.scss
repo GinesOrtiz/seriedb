@@ -22,8 +22,8 @@ sidebar {
         text-align: center !important;
       }
       md-icon {
-        margin: 8px 0 0 !important;
-        padding: 8px;
+        margin: $base 0 !important;
+        padding: $base;
         width: 100%;
       }
       p {

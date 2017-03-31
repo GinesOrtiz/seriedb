@@ -60,9 +60,8 @@ const UserService = (localStorage, translateService, $state, $injector) => {
 
   /**
    * Invalidates the user by cleaning localStorage and local variable. By default redirects to auth
-   * @param goToAuth {true} used to force or not the reload of the state and sending to 'auth'
    */
-  const invalidateUser = (goToAuth = true) => {
+  const invalidateUser = () => {
     user = {};
     localStorage.cleanAll();
     const bmMixpanel = $injector.get('bmMixpanel');
@@ -71,12 +70,9 @@ const UserService = (localStorage, translateService, $state, $injector) => {
         bmMixpanel.reset();
       });
 
-
-    if ($state.current.name !== 'billy.marketplaceDetail' &&
-      $state.current.name !== 'billy.auth' &&
-      goToAuth) {
+    setTimeout(() => {
       window.location = '/auth';
-    }
+    }, 500);
   };
 
   /**

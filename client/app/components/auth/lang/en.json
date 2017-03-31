@@ -3,7 +3,6 @@
   "emailReq": "Email is required",
   "error": "There was an error. Please try again later.",
   "errorNoMatch": "Passwords do not match",
-  "loggingOut": "Logging out...",
   "name": "Name",
   "nameReq": "Name is required",
   "password": "Password",

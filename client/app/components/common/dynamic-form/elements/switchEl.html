@@ -1,0 +1,13 @@
+<label class="input-label"
+  ng-if="::!field.hideLabel">
+  {{::field.label && (field.label | translate)}}</label>
+
+<md-switch ng-model="__MODEL__"
+  aria-label="switch">
+  <span ng-if="::!field.customLabel">
+    {{ ( 'shared.form.' + (__MODEL__ ? 'enabled' : 'disabled' )) | translate }}
+  </span>
+  <span ng-if="::field.customLabel">
+    {{ ( field.customLabel + (__MODEL__ ? '.enabled' : '.disabled' )) | translate }}
+  </span>
+</md-switch>

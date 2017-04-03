@@ -1,0 +1,7 @@
+<label class="input-label"
+  ng-if="::!field.hideLabel">
+  {{::field.label && (field.label | translate)}}</label>
+
+<ob-daypicker class="{{::field.class}}"
+  selected-day="__MODEL__"
+  on-apply="field.changeDateRange(day)"></ob-daypicker>

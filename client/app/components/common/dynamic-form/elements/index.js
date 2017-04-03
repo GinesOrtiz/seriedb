@@ -7,6 +7,12 @@ import radius from './radius.html';
 import toolbar from './toolbar.html';
 import select from './select.html';
 import selectAsync from './selectAsync.html';
+import toggle from './toggle.html';
+import button from './button.html';
+import date from './date.html';
+import chips from './chips.html';
+import switchEl from './switchEl.html';
+import textarea from './textarea.html';
 
 export default {
   input,
@@ -17,5 +23,11 @@ export default {
   radius,
   toolbar,
   select,
-  selectAsync
+  selectAsync,
+  toggle,
+  button,
+  date,
+  chips,
+  switchEl,
+  textarea
 };

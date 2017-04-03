@@ -1,6 +1,24 @@
-<md-checkbox ng-model="vm.vmodel[field.name]"
+<label class="input-label"
+  ng-if="::!field.hideLabel">
+  {{::field.label && (field.label | translate)}}</label>
+
+<md-checkbox ng-model="__MODEL__"
+  aria-label="check"
+  ng-if="!field.options"
   ng-required="{{::field.required}}"
   ng-disabled="field.disabled"
   name="{{::field.name}}">
   <span ng-bind-html="::field.label | translate"></span>
+</md-checkbox>
+
+<md-checkbox
+  aria-label="check"
+  ng-if="field.options"
+  ng-repeat="item in field.options"
+  ng-required="{{::field.required}}"
+  ng-disabled="item.disabled"
+  ng-checked="vm.checkboxExists(item, __MODEL__)"
+  ng-click="vm.checkboxToggle(item, __MODEL__)"
+  name="{{::item.name}}">
+  <span ng-bind-html="::item.label | translate"></span>
 </md-checkbox>

@@ -4,9 +4,9 @@
 
 <md-select placeholder="{{::field.placeholder && (field.placeholder | translate)}}"
   ng-required="{{::field.required}}"
-  ng-model="vm.vmodel[field.name]"
+  ng-model="__MODEL__"
   ng-disabled="field.disabled"
-  md-on-close="field.onClose(vm.vmodel[field.name], dynamicForm)"
+  md-on-close="field.onClose(__MODEL__, dynamicForm)"
   class="{{::field.class}}"
   aria-label="{{::option.label || option.name}}">
   <md-option ng-value="option[field.slug || 'value']"

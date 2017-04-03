@@ -8,6 +8,6 @@
   class="form-control {{::field.class}}"
   ng-blur="field.onBlur(vm.vmodel[field.name], dynamicForm)"
   id="{{::field.name}}_{{::$index}}"
-  ng-model="vm.vmodel[field.name]"
+  ng-model="__MODEL__"
   ng-disabled="field.disabled"
   placeholder="{{::field.placeholder && (field.placeholder | translate)}}">

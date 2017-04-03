@@ -1,0 +1,22 @@
+<label class="input-label"
+  ng-if="::!field.hideLabel">
+  {{::field.label && (field.label | translate)}}</label>
+
+<md-chips ng-model="__MODEL__"
+  md-autocomplete-snap="true"
+  md-require-match="true"
+  md-on-add="vm.mdOnAdd()"
+  readonly="field.readonly">
+  <md-autocomplete
+    md-autofocus="false"
+    md-autoselect="false"
+    md-no-cache="true"
+    md-min-length="0"
+    md-item-text="item.name"
+    md-search-text="vm.tmpFields[fieldKey]"
+    md-items="item in vm.querySearch(field.options, vm.tmpFields[fieldKey], __MODEL__)"
+    placeholder="{{::field.placeholder | translate }}">
+    <md-item-template>{{item.name}}</md-item-template>
+  </md-autocomplete>
+  <md-chip-template><span class="chip-text">{{$chip.name}}</span></md-chip-template>
+</md-chips>

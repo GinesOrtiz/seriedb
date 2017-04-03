@@ -1,0 +1,9 @@
+<label class="input-label"
+  ng-if="::!field.hideLabel">
+  {{::field.label && (field.label | translate)}}</label>
+
+<textarea rows="{{:: field.rows || 5}}"
+  class="{{::field.class}}"
+  ng-model="__MODEL__"
+  placeholder="{{::field.placeholder | translate}}">
+  </textarea>

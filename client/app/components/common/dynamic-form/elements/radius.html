@@ -1,9 +1,13 @@
-<md-radio-group ng-model="vm.vmodel[field.name]"
+<label class="input-label"
+  ng-if="::!field.hideLabel">
+  {{::field.label && (field.label | translate)}}</label>
+
+<md-radio-group ng-model="__MODEL__"
   ng-required="{{::field.required}}"
   ng-disabled="field.disabled"
-  class="{{::field.blockClass}}">
+  class="{{::field.class}}">
   <md-radio-button ng-repeat="option in field.options track by $index"
-    class="{{::field.class}}"
+    class="{{::option.class}}"
     ng-disabled="option.disabled || field.disabled"
     value="{{::option.value}}">{{::option.label | translate}}
   </md-radio-button>

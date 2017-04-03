@@ -2,10 +2,11 @@
   name="dynamicForm"
   class="{{::vm.options.class}}">
   <div class="{{::vm.options.blockClass}}">
-    <div ng-repeat="field in vm.fields"
+    <div ng-repeat="(fieldKey, field) in vm.fields"
       ng-if="!field.hide()"
       class="{{::field.blockClass}}">
-      <ng-include src="::vm.checkElement(field.element)"></ng-include>
+      <!--ng-include src="::vm.checkElement(field.element)"></ng-include-->
+      <ng-include src="::(field.element + '_' + fieldKey)"></ng-include>
     </div>
   </div>
 

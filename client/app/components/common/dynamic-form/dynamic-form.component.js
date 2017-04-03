@@ -6,8 +6,8 @@ export default {
   controllerAs: 'vm',
   template,
   bindings: {
-    model: '=',
-    fields: '=',
-    options: '='
+    model: '<',
+    fields: '<',
+    options: '<'
   }
 };

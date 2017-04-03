@@ -1,81 +1,31 @@
 import elements from './elements';
 
 class dynamicFormController {
-  constructor($scope) {
-    this.vmodel = this.iterate(this.model);
-    $scope.$watch(() => {
-      return this.vmodel;
-    }, (model) => {
-      if (model) {
-        this.convertModel(model);
-      }
-    }, true);
+  constructor($templateCache, $filter) {
+    this.$templateCache = $templateCache;
+    this.$filter = $filter;
+
+
   }
 
-  iterate(obj) {
-    let conv = {};
-    let walked = [];
-    let stack = [
-      {
-        obj: obj,
-        stack: ''
-      }
-    ];
-    while (stack.length > 0) {
-      let item = stack.pop();
-      let obj = item.obj;
-      for (var property in obj) {
-        if (obj.hasOwnProperty(property)) {
-          if (typeof obj[property] === 'object') {
-            var alreadyFound = false;
-            for (var i = 0; i < walked.length; i++) {
-              if (walked[i] === obj[property]) {
-                alreadyFound = true;
-                break;
-              }
-            }
-            if (!alreadyFound) {
-              walked.push(obj[property]);
-              stack.push({
-                obj: obj[property],
-                stack: item.stack + '.' + property
-              });
-            }
-          }
-          else {
-            conv[(item.stack + '.' + property).substr(1)] = obj[property];
-          }
-        }
-      }
-    }
+  $onInit() {
+    this.tmpFields = {};
+    this.fields.forEach((field, i) => {
+      let elementContent = this.checkElement(field.element);
 
-    return conv;
+      if (field.name) {
+        elementContent =
+          elementContent.replace(/__MODEL__/gi, this.bracket(field.name, 'vm.model'));
+      }
+
+      this.$templateCache.put(field.element + '_' + i, elementContent);
+
+    });
   }
 
-  convertModel(obj) {
-    let conv = {};
-
-    Object.keys(obj)
-      .forEach(function (kn) {
-        let keyName = kn.split('.');
-        let tmp = {};
-
-        keyName.forEach(function (n, i) {
-          let isLast = (keyName.length - 1) === i;
-          if (i === 0) {
-            conv[n] = !conv[n] ? {} : conv[n];
-            conv[n] = isLast ? obj[kn] : conv[n];
-            tmp = isLast ? conv : conv[n];
-          }
-          else {
-            tmp[n] = !tmp[n] ? {} : tmp[n];
-            tmp[n] = isLast ? obj[kn] : tmp[n];
-            tmp = isLast ? tmp : tmp[n];
-          }
-        });
-      });
-
-    this.model = conv;
+  bracket(model, base) {
+    let props = model.split('.');
+    return (base || props.shift()) + (props.length ? "['" + props.join("']['") + "']" : '');
   }
 
   buttonAction(button) {
@@ -102,7 +52,7 @@ class dynamicFormController {
     let elementExists = Object.keys(elements)
         .indexOf(element) > -1;
 
-    return elementExists ? element : 'invalidElement';
+    return elementExists ? elements[element] : 'invalidElement';
   }
 
   async(field) {
@@ -119,6 +69,54 @@ class dynamicFormController {
       }
     });
   }
+
+  querySearch(options, name, selected = []) {
+    let filterByName = this.$filter('filter')(options, {name: name});
+    let availableFilters = [];
+    let usedFilters = [];
+
+    selected.forEach((option) => {
+      usedFilters.push(option.id);
+    });
+
+    filterByName.forEach((option) => {
+      if (usedFilters.indexOf(option.id) < 0) {
+        availableFilters.push(option);
+      }
+    });
+
+    return availableFilters;
+  }
+
+  callOnAdd() {
+    /**
+     * IOS FIX: after closing the first md-menu with the fix in the constructor
+     */
+    $(document)
+      .on('touchend', '.md-scroll-mask', function () {
+        $('.md-menu-showing input')
+          .blur();
+        $('md-virtual-repeat-container:not(\'.ng-hide\')')
+          .addClass('ng-hide');
+        $('.md-scroll-mask')
+          .hide();
+      });
+
+  }
+
+  checkboxExists(item, list) {
+    return list.indexOf(item.name) > -1;
+  };
+
+  checkboxToggle(item, list) {
+    let idx = list.indexOf(item.name);
+    if (idx > -1) {
+      list.splice(idx, 1);
+    }
+    else {
+      list.push(item.name);
+    }
+  };
 
 }
 

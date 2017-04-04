@@ -24,6 +24,9 @@ auth-component {
     max-width: 450px !important;
     overflow: visible;
   }
+  &.form-only {
+    width: auto;
+  }
 
   &[view=signup] {
     height: 620px;

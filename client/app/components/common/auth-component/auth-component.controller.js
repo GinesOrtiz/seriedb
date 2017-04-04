@@ -1,6 +1,7 @@
 class authComponentController {
-  constructor(UserService, AuthService, BackgroundUpdateService, BigLoaderService, Notification,
-              translateService, localStorage, $filter, $analytics, $state, $stateParams, $scope,
+  constructor(UserService, AuthService, BackgroundUpdateService, BigLoaderService,
+              LoginPopupService, Notification, translateService, localStorage, $filter, $analytics,
+              $state, $stateParams, $scope,
               $timeout, $location) {
     this.UserService = UserService;
     this.$analytics = $analytics;
@@ -9,6 +10,7 @@ class authComponentController {
     this.BigLoaderService = BigLoaderService;
     this.Notification = Notification;
     this.translateService = translateService;
+    this.LoginPopupService = LoginPopupService;
     this.$filter = $filter;
     this.$timeout = $timeout;
     this.$state = $state;
@@ -406,6 +408,10 @@ class authComponentController {
       tw_order_quantity: 0
       /* jshint ignore:end */
     });
+  }
+
+  closeAuthComponent(link) {
+    this.LoginPopupService.close();
   }
 
   goToMarketplace() {

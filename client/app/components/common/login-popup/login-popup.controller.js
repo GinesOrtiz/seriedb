@@ -13,7 +13,7 @@ class LoginPopupController {
 
     $scope.$on('$loginPopup', (evt, params) => {
       this.view = params.view || 'signin';
-      this.openPopup = true;
+      this.openPopup = typeof params.openPopup !== 'undefined' ? params.openPopup : true;
 
       let popupOpened = this.openPopup ? 'Opened' : 'Closed';
       this.bmMixpanel.track('Event - ' + popupOpened + ' Popup');

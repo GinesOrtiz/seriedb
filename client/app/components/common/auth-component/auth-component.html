@@ -46,11 +46,12 @@
 
       <div ng-switch-when="link">
         <a class="link"
+          ng-click="vm.closeAuthComponent()"
           href="{{::field.href}}">{{:: ('authComponent.' + field.label) | translate}}</a>
       </div>
       <div ng-switch-when="text">
         <span class="text"
-          ng-bind-html=":: ('authComponent.' + field.label) | translate"></span>
+          ng-blnd-html=":: ('authComponent.' + field.label) | translate"></span>
       </div>
 
       <div ng-switch-when="hr">

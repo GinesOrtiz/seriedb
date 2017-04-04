@@ -107,5 +107,4 @@ const TranslateFilter = (translateService) => {
 };
 TranslateFilter.$inject = ['translateService'];
 
-
 export {TranslateService, TranslateFilter};

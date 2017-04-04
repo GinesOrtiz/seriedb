@@ -22,6 +22,10 @@ body {
   outline: none !important;
 }
 
+ui-view {
+  overflow: auto;
+}
+
 ui-view, [ui-view], layout {
   display: block;
   width: 100%;

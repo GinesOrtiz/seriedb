@@ -59,4 +59,4 @@ class BPNTabsetController {
   }
 }
 
-export default BPNTabsetController;
+export default /*@ngInject*/ BPNTabsetController;

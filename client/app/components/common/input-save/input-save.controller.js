@@ -53,4 +53,4 @@ class inputSaveController {
 
 }
 
-export default inputSaveController;
+export default /*@ngInject*/ inputSaveController;

@@ -74,4 +74,4 @@ class listsSelectorController {
   }
 }
 
-export default listsSelectorController;
+export default /*@ngInject*/ listsSelectorController;

@@ -117,4 +117,4 @@ class billyFaqController {
 
 }
 
-export default billyFaqController;
+export default /*@ngInject*/ billyFaqController;

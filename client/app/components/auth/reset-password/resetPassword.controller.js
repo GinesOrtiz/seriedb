@@ -8,4 +8,4 @@ class resetPasswordController {
   }
 }
 
-export default resetPasswordController;
+export default /*@ngInject*/ resetPasswordController;

@@ -20,4 +20,4 @@ const userRoleDirective = (UserService) => {
   };
 };
 
-export default userRoleDirective;
+export default /*@ngInject*/ userRoleDirective;

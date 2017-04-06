@@ -30,4 +30,4 @@ const CompareBoxService = (UserService, $http, $q) => {
   };
 };
 
-export default CompareBoxService;
+export default /*@ngInject*/ CompareBoxService;

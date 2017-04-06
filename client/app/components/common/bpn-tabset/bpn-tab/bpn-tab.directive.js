@@ -1,7 +1,7 @@
 import template from './bpn-tab.content.html';
 import './bpn-tab.scss';
 
-export default () => {
+export default /*@ngInject*/ () => {
   'use strict';
 
   return {

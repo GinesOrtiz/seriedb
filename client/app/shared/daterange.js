@@ -149,4 +149,4 @@ const daterange = () => {
   };
 };
 
-export default daterange;
+export default /*@ngInject*/ daterange;

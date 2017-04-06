@@ -12,4 +12,4 @@ const BigLoaderService = ($rootScope) => {
   return {setState};
 };
 
-export default BigLoaderService;
+export default /*@ngInject*/ BigLoaderService;

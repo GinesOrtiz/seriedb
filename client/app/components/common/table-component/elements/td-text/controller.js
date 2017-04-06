@@ -60,4 +60,4 @@ class controller {
   }
 }
 
-export default controller;
+export default /*@ngInject*/ controller;

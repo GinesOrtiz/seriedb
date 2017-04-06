@@ -161,4 +161,4 @@ class pixelsController {
   }
 }
 
-export default pixelsController;
+export default /*@ngInject*/ pixelsController;

@@ -63,4 +63,4 @@ class paginationController {
   }
 }
 
-export default paginationController;
+export default /*@ngInject*/ paginationController;

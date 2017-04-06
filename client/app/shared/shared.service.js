@@ -17,4 +17,4 @@ const SharedApiService = () => {
   };
 };
 
-export default SharedApiService;
+export default /*@ngInject*/ SharedApiService;

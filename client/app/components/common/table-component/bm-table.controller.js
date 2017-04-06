@@ -214,4 +214,4 @@ class bmTableController {
   }
 }
 
-export default bmTableController;
+export default /*@ngInject*/ bmTableController;

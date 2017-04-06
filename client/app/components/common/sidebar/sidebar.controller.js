@@ -62,4 +62,4 @@ class sideBarController {
 
 }
 
-export default sideBarController;
+export default /*@ngInject*/ sideBarController;

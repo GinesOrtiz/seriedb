@@ -58,4 +58,4 @@ const WizardService = ($http) => {
   };
 };
 
-export default WizardService;
+export default /*@ngInject*/ WizardService;

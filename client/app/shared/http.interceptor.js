@@ -93,4 +93,4 @@ const httpInterceptor = function (localStorage, BigLoaderService, $q, $injector,
   };
 };
 
-export default httpInterceptor;
+export default /*@ngInject*/ httpInterceptor;

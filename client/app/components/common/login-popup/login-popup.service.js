@@ -25,4 +25,4 @@ const LoginPopupService = ($rootScope) => {
   };
 };
 
-export default LoginPopupService;
+export default /*@ngInject*/ LoginPopupService;

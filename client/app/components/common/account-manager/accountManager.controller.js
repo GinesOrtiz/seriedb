@@ -15,4 +15,4 @@ class accountManagerController {
   }
 }
 
-export default accountManagerController;
+export default /*@ngInject*/ accountManagerController;

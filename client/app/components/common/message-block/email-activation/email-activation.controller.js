@@ -28,4 +28,4 @@ class emailActivationController {
   }
 }
 
-export default emailActivationController;
+export default /*@ngInject*/ emailActivationController;

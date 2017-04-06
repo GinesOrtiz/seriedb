@@ -1,4 +1,4 @@
-export default ($stateProvider) => {
+export default /*@ngInject*/ ($stateProvider) => {
   'use strict';
 
   $stateProvider.state('billy.auth.remember', {

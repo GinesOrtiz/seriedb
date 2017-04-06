@@ -54,4 +54,4 @@ const IntercomService = ($interval, $q) => {
   };
 };
 
-export default IntercomService;
+export default /*@ngInject*/ IntercomService;

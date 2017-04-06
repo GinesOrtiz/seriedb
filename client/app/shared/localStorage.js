@@ -87,4 +87,4 @@ const localStorageService = ($localStorage) => {
   };
 };
 
-export default localStorageService;
+export default /*@ngInject*/ localStorageService;

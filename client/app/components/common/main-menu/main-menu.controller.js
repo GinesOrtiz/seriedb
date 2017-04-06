@@ -101,4 +101,4 @@ class BMMainMenu {
   }
 }
 
-export default BMMainMenu;
+export default /*@ngInject*/ BMMainMenu;

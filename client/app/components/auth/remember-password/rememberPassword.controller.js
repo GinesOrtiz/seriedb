@@ -38,4 +38,4 @@ class rememberPasswordController {
   }
 }
 
-export default rememberPasswordController;
+export default /*@ngInject*/ rememberPasswordController;

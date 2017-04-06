@@ -42,4 +42,4 @@ const BackgroundUpdateService = ($localStorage, $rootScope, $injector, $timeout)
   };
 };
 
-export default BackgroundUpdateService;
+export default /*@ngInject*/ BackgroundUpdateService;

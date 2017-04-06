@@ -7,4 +7,4 @@ class notificationController {
   }
 }
 
-export default notificationController;
+export default /*@ngInject*/ notificationController;

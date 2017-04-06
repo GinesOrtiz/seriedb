@@ -419,4 +419,4 @@ class authComponentController {
   }
 }
 
-export default authComponentController;
+export default /*@ngInject*/ authComponentController;

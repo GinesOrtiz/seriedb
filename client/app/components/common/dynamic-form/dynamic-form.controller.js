@@ -120,4 +120,4 @@ class dynamicFormController {
 
 }
 
-export default dynamicFormController;
+export default /*@ngInject*/ dynamicFormController;

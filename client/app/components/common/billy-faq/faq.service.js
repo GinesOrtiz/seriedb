@@ -41,4 +41,4 @@ const FaqService = ($http, $q) => {
   return {getFaq};
 };
 
-export default FaqService;
+export default /*@ngInject*/ FaqService;

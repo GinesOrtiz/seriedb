@@ -60,4 +60,4 @@ class compareBoxController {
   }
 }
 
-export default compareBoxController;
+export default /*@ngInject*/ compareBoxController;

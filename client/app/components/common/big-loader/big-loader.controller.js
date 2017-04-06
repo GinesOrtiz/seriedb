@@ -29,4 +29,4 @@ class bigLoaderController {
   }
 }
 
-export default bigLoaderController;
+export default /*@ngInject*/ bigLoaderController;

@@ -81,4 +81,4 @@ class filtersComponentController {
 
 }
 
-export default filtersComponentController;
+export default /*@ngInject*/ filtersComponentController;

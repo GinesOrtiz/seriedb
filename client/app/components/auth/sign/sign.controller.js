@@ -38,4 +38,4 @@ class signController {
   }
 }
 
-export default signController;
+export default /*@ngInject*/ signController;

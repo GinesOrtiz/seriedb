@@ -26,4 +26,4 @@ class LoginPopupController {
   }
 }
 
-export default LoginPopupController;
+export default /*@ngInject*/ LoginPopupController;

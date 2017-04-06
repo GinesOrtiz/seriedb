@@ -23,4 +23,4 @@ const testingABDirective = (UserService) => {
   };
 };
 
-export default testingABDirective;
+export default /*@ngInject*/ testingABDirective;

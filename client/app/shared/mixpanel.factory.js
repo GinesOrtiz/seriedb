@@ -78,4 +78,4 @@ const MixpanelFactory = (UserService, $q, localStorage) => {
   };
 };
 
-export default MixpanelFactory;
+export default /*@ngInject*/ MixpanelFactory;

@@ -111,4 +111,4 @@ const UserService = (localStorage, translateService, $state, $injector) => {
   };
 };
 
-export default UserService;
+export default /*@ngInject*/ UserService;

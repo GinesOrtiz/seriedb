@@ -268,4 +268,4 @@ const AuthService = (translateService, localStorage, UserService,
   };
 };
 
-export default AuthService;
+export default /*@ngInject*/ AuthService;

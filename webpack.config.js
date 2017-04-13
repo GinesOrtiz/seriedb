@@ -19,12 +19,9 @@ var pathConfig = {
 var varPlugin = new webpack.DefinePlugin({
   __DEV__: JSON.stringify(JSON.parse(process.env.BUILD_DEV || 'true')),
   __ENV__: JSON.stringify(process.env.ENV),
-  __API_URL__: JSON.stringify(process.env.API_URL || 'http://api.billydomain.com'),
-  __VERSION__: JSON.stringify(require('./package.json').version),
-  __SENTRY_ID__: JSON.stringify(process.env.SENTRY_ID),
-  __INTERCOM_ID__: JSON.stringify(process.env.INTERCOM_ID),
-  __MIXPANEL_ID__: JSON.stringify(process.env.MIXPANEL),
-  __GA_ID__: JSON.stringify(process.env.GA)
+  __API_URL__: JSON.stringify('http://api.themoviedb.org/3'),
+  __TMDB__: JSON.stringify(process.env.TMDB || '54588ad726d554d3eb0bd527c9875958'),
+  __VERSION__: JSON.stringify(require('./package.json').version)
 });
 
 var config = [
@@ -32,8 +29,7 @@ var config = [
     context: pathConfig.context,
     devtool: 'source-map',
     entry: {
-      bundle: './index.js',
-      appShell: './appShell/index.js'
+      bundle: './index.js'
     },
     output: {
       publicPath: '/',
@@ -139,38 +135,6 @@ var config = [
       // set failOnHint to true
       failOnHint: false
     }
-  },
-  {
-    context: pathConfig.context,
-    devtool: 'source-map',
-    entry: {
-      worker: './worker.js'
-    },
-    output: {
-      publicPath: '/',
-      path: pathConfig.context,
-      filename: '[name].js'
-    },
-    plugins: [
-      new webpack.DefinePlugin({
-        __CACHE_VERSION__: JSON.stringify(Math.floor(Math.random() * 10000000)
-          .toString()),
-        __API_URL__: JSON.stringify(process.env.API_URL || 'http://api.billydomain.com'),
-        __DEV__: JSON.stringify(JSON.parse(process.env.BUILD_DEV || 'true'))
-      })
-    ],
-    module: {
-      loaders: [
-        {
-          test: /\.js$/,
-          loader: 'babel',
-          exclude: [
-            /dist/,
-            /node_modules/,
-          ],
-        },
-      ]
-    },
   }
 ];
 

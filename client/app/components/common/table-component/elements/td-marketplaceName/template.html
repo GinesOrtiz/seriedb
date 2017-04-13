@@ -1,9 +1,0 @@
-<label class="{{::vm.element.labelClass(vm.row)}}"
-  ng-if="vm.element.labelText(vm.row)">
-  {{::vm.element.labelText(vm.row) | translate}}</label>
-<div>
-  <span class="{{::vm.element.class}}"
-    popover-placement="top"
-    uib-popover="{{:: vm.row[vm.element.tooltipKey] }}"
-    popover-trigger="mouseenter">{{::vm.row[vm.element.key]}}</span>
-</div>

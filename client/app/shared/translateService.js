@@ -1,31 +1,24 @@
-const TranslateService = (localStorage) => {
+const TranslateService = ($localStorage) => {
   'use strict';
   let config = {
     available: [
-      'EN',
-      'ES'
+      'EN'
     ],
     standard: 'EN',
     translations: {}
   };
 
-  let localStorageLang = localStorage.getItem('language', true);
+  let localStorageLang = $localStorage.language;
   let navigatorLang = navigator.language || navigator.userLanguage;
-  // Get from navigator, if not English.
+
   let standardLang = navigatorLang ? navigatorLang.split('-')[0] : config.lang.standard;
 
   config.lang = localStorageLang || standardLang;
 
-  const escapeASCIIChars = (str) => {
-    return str.replace(/[a-z]/g, function f(a) {
-      return '4BCD3F6H1JKLMN0PQR57'[parseInt(a, 36) - 10] || a.replace(/[a-t]/gi, f);
-    });
-  };
-
   // methods
   const setLang = (lang = config.standard) => {
     config.lang = lang;
-    localStorage.setItem('language', lang);
+    $localStorage.language = lang;
   };
 
   const addLang = (moduleKey, translations) => {
@@ -54,21 +47,11 @@ const TranslateService = (localStorage) => {
       let convertedKey = translationKey.split('.');
       let translation = config.translations[options.lang || config.lang];
 
-      let isPlural = !!options.plural;
-
       if (!translation) {
         translation = config.translations[config.standard];
       }
 
       convertedKey.forEach((key, i) => {
-        if (i === convertedKey.length - 1) {
-          if (isPlural) {
-            key = key + '_plural';
-          }
-          if (options.context) {
-            key = key + '_' + options.context;
-          }
-        }
         translation = translation[key];
       });
 
@@ -76,10 +59,6 @@ const TranslateService = (localStorage) => {
         options.vars.forEach((key) => {
           translation = translation.replace('%s', key);
         });
-      }
-
-      if (localStorage.getItem('prCode', true) === '@1m 4 h4ck3r&') {
-        translation = escapeASCIIChars(translation);
       }
 
       replace = translation.replace(/\n/g, '<br>');
@@ -97,7 +76,6 @@ const TranslateService = (localStorage) => {
     getTranslation
   };
 };
-TranslateService.$inject = ['localStorage'];
 
 const TranslateFilter = (translateService) => {
   'use strict';
@@ -105,6 +83,5 @@ const TranslateFilter = (translateService) => {
     return translateService.getTranslation(input, options);
   };
 };
-TranslateFilter.$inject = ['translateService'];
 
 export {TranslateService, TranslateFilter};

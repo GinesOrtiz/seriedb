@@ -5,16 +5,11 @@ import uiNotification from 'angular-ui-notification';
 import ngMessages from 'angular-messages';
 import ngstorage from 'ngstorage';
 import ngSanitize from 'angular-sanitize';
-import angulartics from 'angulartics';
-import angularticsGA from 'angulartics-google-analytics';
-import {permission, uiPermission} from 'angular-permission';
-import 'oclazyload';
-import popover from 'angular-ui-bootstrap/src/popover/index-nocss';
 
-import {appComponent} from './app.component';
+import appComponent from './app.component';
 
-import auth from './components/auth';
-import voidView from './components/void';
+import discover from './components/discover';
+//import search from './components/search';
 
 import common from './components/common';
 import config from './app.config';
@@ -26,18 +21,14 @@ import './app.scss';
 window.jQuery = require('jquery');
 window.$ = window.jQuery;
 
-const appRun = (translateService, localStorage) => {
+const appRun = (translateService, $localStorage) => {
   'use strict';
-  if (!localStorage.getItem('language', true)) {
+  if (!$localStorage.language) {
     translateService.setLang();
   }
 };
-appRun.$inject = [
-  'translateService',
-  'localStorage'
-];
 
-export const app = angular
+export default angular
   .module('app', [
     ngMaterial,
     ngAnimate,
@@ -46,16 +37,8 @@ export const app = angular
     ngMessages,
     ngstorage.name,
     ngSanitize,
-    angulartics,
-    angularticsGA,
-    'angulartics.providers',
-    'oc.lazyLoad',
-    permission,
-    uiPermission,
-    popover,
 
-    auth.name,
-    voidView.name,
+    discover.name,
 
     common.name,
     config.name,
@@ -65,14 +48,9 @@ export const app = angular
   .config(($stateProvider) => {
     'use strict';
     $stateProvider
-      .state('billy', {
+      .state('seriedb', {
         abstract: true,
-        template: '<app></app>',
-        resolve: {
-          user: (AuthService) => {
-            return AuthService.whoami();
-          }
-        }
+        template: '<app></app>'
       });
   })
   .run(appRun);

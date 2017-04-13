@@ -1,7 +1,7 @@
 import template from './app.html';
-import {appController as controller} from './app.controller';
+import controller from './app.controller';
 
-export const appComponent = {
+export default {
   template,
   controller,
   controllerAs: 'vm',

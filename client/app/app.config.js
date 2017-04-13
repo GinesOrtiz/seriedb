@@ -1,13 +1,6 @@
-
-import NGHighcharts from 'highcharts-ng';
-import ngMaterial from 'angular-material';
-import notifications from 'angular-ui-notification';
-
-const appConfig = ($compileProvider, $urlRouterProvider, $mdThemingProvider, highchartsNGProvider,
+const appConfig = ($compileProvider, $urlRouterProvider, $mdThemingProvider,
                    NotificationProvider) => {
   'use strict';
-
-  $urlRouterProvider.deferIntercept();
 
   $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|skype|tel):/);
 
@@ -27,11 +20,8 @@ const appConfig = ($compileProvider, $urlRouterProvider, $mdThemingProvider, hig
     });
 
   $urlRouterProvider.otherwise(function () {
-    window.location.href = '/auth';
+    window.location.href = '/';
   });
-
-  //Highcharts
-  highchartsNGProvider.lazyLoad();
 
   NotificationProvider.setOptions({
     delay: 3000,
@@ -47,9 +37,5 @@ const appConfig = ($compileProvider, $urlRouterProvider, $mdThemingProvider, hig
 };
 
 export default angular
-  .module('app.config', [
-    ngMaterial,
-    NGHighcharts,
-    notifications
-  ])
+  .module('app.config', [])
   .config(appConfig);

@@ -8,23 +8,9 @@ $color-success: #4CAF50;
 
 $color-background: #eaeff5;
 
-$media-xs: '(max-width: 599px)';
-$media-sm: '(min-width: 600px)';
-$media-md: '(min-width: 960px)';
-$media-lg: '(min-width: 1280px)';
-
-$media-xs-h: '(max-width: 599px)';
-$media-sm-h: '(min-width: 600px)';
-$media-md-h: '(min-width: 960px)';
-$media-lg-h: '(min-width: 1280px)';
-
 $max-sm: '(max-width: 600px)';
 $max-md: '(max-width: 960px)';
 $max-lg: '(max-width: 1280px)';
-
-$max-sm-h: '(max-height: 600px)';
-$max-md-h: '(max-height: 960px)';
-$max-lg-h: '(max-height: 1280px)';
 
 @mixin transition($transition...) {
   -moz-transition: $transition;

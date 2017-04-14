@@ -11,7 +11,7 @@ const discoverRun = (translateService) => {
 const discoverConfig = ($stateProvider) => {
   $stateProvider
     .state('seriedb.discover', {
-      url: '/discover',
+      url: '/',
       template: '<seriedb-discover movies="movies" tv="tv"></seriedb-discover>',
       controller: ($scope, movies, tv) => {
         $scope.movies = movies;

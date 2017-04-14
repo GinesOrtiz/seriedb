@@ -22,6 +22,7 @@ var varPlugin = new webpack.DefinePlugin({
   __API_URL__: JSON.stringify('http://api.themoviedb.org/3'),
   __TMDB__: JSON.stringify(process.env.TMDB || '54588ad726d554d3eb0bd527c9875958'),
   __TMDB_IMG__: JSON.stringify('https://image.tmdb.org/t/p/'),
+  __SOCKET__: JSON.stringify('ws://51.254.205.30:3030'),
   __VERSION__: JSON.stringify(require('./package.json').version)
 });
 

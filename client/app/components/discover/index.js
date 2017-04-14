@@ -5,10 +5,12 @@ import './discover.scss';
 import langEN from './lang/en.json';
 
 const discoverRun = (translateService) => {
+  'use strict';
   translateService.addLang('discover', {EN: langEN});
 };
 
 const discoverConfig = ($stateProvider) => {
+  'use strict';
   $stateProvider
     .state('seriedb.discover', {
       url: '/',
@@ -25,7 +27,7 @@ const discoverConfig = ($stateProvider) => {
           return DiscoveryFactory.getDiscoverTV();
         }
       }
-    })
+    });
 };
 
 export default angular

@@ -22,6 +22,15 @@ ui-view {
   overflow: auto;
 }
 
+.main-view {
+
+}
+
+.app-container {
+  height: calc(100% - 56px) !important;
+  min-height: calc(100% - 56px) !important;
+}
+
 ui-view, [ui-view], layout {
   display: block;
   width: 100%;

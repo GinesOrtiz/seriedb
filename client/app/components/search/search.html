@@ -1,0 +1,8 @@
+Buscar
+
+<input ng-model="vm.searchText"></input>
+<button ng-click="vm.search(vm.searchText)"></button>
+<br>
+<div ng-repeat="item in vm.results">
+    <span>{{item.original_title}}{{item.name}} - {{item.media_type}}</span>
+</div>

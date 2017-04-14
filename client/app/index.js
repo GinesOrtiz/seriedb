@@ -9,7 +9,7 @@ import ngSanitize from 'angular-sanitize';
 import appComponent from './app.component';
 
 import discover from './components/discover';
-//import search from './components/search';
+import search from './components/search';
 
 import common from './components/common';
 import config from './app.config';
@@ -39,6 +39,7 @@ export default angular
     ngSanitize,
 
     discover.name,
+    search.name,
 
     common.name,
     config.name,

@@ -1,0 +1,33 @@
+@import "../../../shared/variables";
+
+media-card {
+  &:hover {
+    img {
+      opacity: .8;
+    }
+  }
+  img {
+    @include transition(all .2s);
+  }
+  md-card {
+    cursor: pointer;
+    background: $color-primary;
+    position: relative;
+  }
+  md-card-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+    .md-headline {
+      color: white;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+}

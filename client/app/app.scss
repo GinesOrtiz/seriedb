@@ -10,10 +10,11 @@ html, body {
 }
 
 body {
-  background: transparent !important;
+  background: $color-primary;
 }
 
 * {
+  font-family: 'Quicksand', sans-serif;
   outline: none !important;
 }
 

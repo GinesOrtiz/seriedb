@@ -18,6 +18,8 @@ class mediaCard {
         this.imgLoaded = true;
       });
     };
+
+    this.state = `seriedb.${this.info.title ? 'movie' : 'tvshow'}({id: ${this.info.id}})`;
   }
 
   $onChanges() {

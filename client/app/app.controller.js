@@ -36,9 +36,9 @@ class appController {
 
       if (pkgMem[info.mid].indexOf(info.atom) < 0) {
         pkgMem[info.mid].push(info.atom);
+        this.$rootScope.$broadcast('atomAppend', info);
       }
 
-      this.$rootScope.$broadcast('atomAppend', info);
     });
 
     this.$rootScope.$on('requestInfo', (event, mid) => {

@@ -1,12 +1,12 @@
 @import "../../../shared/variables";
 
-$sidebar-color: #32323a;
-
 sidebar {
   min-width: 60px;
   width: 60px;
   height: 100%;
-  background: $sidebar-color;
+  background: $color-sidebar;
+  box-shadow: 2px 0 10px rgba($color-primary, .5);
+  z-index: 9;
   md-list {
     padding: 0;
   }

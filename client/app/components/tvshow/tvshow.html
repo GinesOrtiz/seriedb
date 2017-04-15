@@ -1,0 +1,58 @@
+<div class="backdrop"
+  ng-style="{'background-image': 'url('+vm.backdrop+')'}">
+  <div class="title-section">
+    <h1>{{:: vm.tvshow.name }}</h1>
+  </div>
+</div>
+<md-content class="overview">
+  <div class="info-section"
+    layout="row"
+    layout-sm="column"
+    layout-xs="column">
+    <div layout="row"
+      flex-xs="100"
+      flex-sm="100"
+      flex="50">
+      <span class="genre-label"
+        ng-repeat="genre in vm.tvshow.genres">{{:: genre.name }}</span>
+    </div>
+    <div layout="row"
+      flex-xs="100"
+      flex-sm="100"
+      flex="50"
+      layout-align="end center">
+      <span class="popularity-label">{{::vm.tvshow.popularity | number : 2 }}%</span>
+    </div>
+  </div>
+  <p>{{:: vm.tvshow.overview }}</p>
+</md-content>
+
+<h1 class="seasons-title">{{:: 'tvshow.seasons' | translate : {vars: [vm.tvshow.number_of_seasons]} }}</h1>
+<md-list flex
+  class="seasons-section">
+  <div ng-repeat="season in vm.tvshow.seasons"
+    class="season-list">
+    <md-list-item ng-if="season.season_number > 0"
+      ng-click="vm.openSeason(season, season.season_number)"
+      layout="row">
+      <md-icon>{{ season.open ? 'keyboard_arrow_down' : 'keyboard_arrow_right' }}</md-icon>
+      <span flex="100">
+        {{:: 'tvshow.seasonNumber' | translate : {vars: [season.season_number, season.episode_count]} }}</span>
+    </md-list-item>
+    <div layout="column"
+      class="episodes-loading"
+      ng-if="season.loading">
+      <md-progress-circular></md-progress-circular>
+    </div>
+    <md-list flex
+      layout="column"
+      ng-if="season.open"
+      class="episodes-section">
+      <md-list-item ng-repeat="episode in vm.episodes[season.season_number]"
+        ng-click="vm.openEpisode(episode, vm.tvshow.id)">
+        <md-icon>keyboard_arrow_right</md-icon>
+        <span flex="100">{{:: episode.name }}</span>
+      </md-list-item>
+    </md-list>
+  </div>
+</md-list>

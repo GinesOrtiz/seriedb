@@ -10,6 +10,10 @@ class sidebarController {
         state: 'seriedb.discover'
       },
       {
+        icon: 'settings',
+        state: 'seriedb.settings'
+      },
+      {
         icon: 'info',
         state: 'seriedb.about'
       }

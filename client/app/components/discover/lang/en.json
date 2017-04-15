@@ -1,4 +1,6 @@
 {
-  "titleMovies": "Latest movies",
-  "titleTV": "Latest TV-Shows"
+  "title": {
+    "movies": "Latest movies",
+    "tv": "Latest TV-Shows"
+  }
 }

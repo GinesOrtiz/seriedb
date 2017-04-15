@@ -1,5 +1,5 @@
 import httpInterceptor from './http.interceptor';
-import Shared from './shared';
+import SharedFactory from './shared';
 import {TranslateService, TranslateFilter} from './translateService';
 
 import langEN from './lang/en.json';
@@ -29,7 +29,7 @@ const sharedRun = (translateService) => {
 export default angular
   .module('seriedb.shared', [])
   .factory('httpInterceptor', httpInterceptor)
-  .factory('Shared', Shared)
+  .factory('SharedFactory', SharedFactory)
   .factory('translateService', TranslateService)
   .filter('translate', TranslateFilter)
 

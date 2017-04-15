@@ -1,7 +1,7 @@
 const appConfig = ($compileProvider, $urlRouterProvider, $mdThemingProvider,
-                   NotificationProvider) => {
+                   NotificationProvider, cfpLoadingBarProvider) => {
   'use strict';
-
+  cfpLoadingBarProvider.includeSpinner = false;
   $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|skype|tel):/);
 
   $mdThemingProvider.definePalette('BMPallete', $mdThemingProvider.extendPalette('grey', {

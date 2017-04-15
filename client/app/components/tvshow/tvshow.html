@@ -1,0 +1,30 @@
+<overview info="vm.tvshow"></overview>
+<h1 class="seasons-title">{{:: 'tvshow.seasons' | translate : {vars: [vm.tvshow.number_of_seasons]} }}</h1>
+<md-list flex
+  class="seasons-section">
+  <div ng-repeat="season in vm.tvshow.seasons"
+    class="season-list">
+    <md-list-item ng-if="season.season_number > 0"
+      ng-click="vm.openSeason(season, season.season_number)"
+      layout="row">
+      <md-icon>{{ season.open ? 'keyboard_arrow_down' : 'keyboard_arrow_right' }}</md-icon>
+      <span flex="100">
+        {{:: 'tvshow.seasonNumber' | translate : {vars: [season.season_number, season.episode_count]} }}</span>
+    </md-list-item>
+    <div layout="column"
+      class="episodes-loading"
+      ng-if="season.loading">
+      <md-progress-circular></md-progress-circular>
+    </div>
+    <md-list flex
+      layout="column"
+      ng-if="season.open"
+      class="episodes-section">
+      <md-list-item ng-repeat="episode in vm.episodes[season.season_number]"
+        ng-click="vm.openEpisode(episode, vm.tvshow.id)">
+        <md-icon>keyboard_arrow_right</md-icon>
+        <span flex="100">{{:: episode.name }}</span>
+      </md-list-item>
+    </md-list>
+  </div>
+</md-list>

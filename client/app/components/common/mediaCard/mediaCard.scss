@@ -1,20 +1,41 @@
 @import "../../../shared/variables";
 
 media-card {
-  &:hover {
-    img {
-      opacity: .8;
-    }
-  }
-  img {
-    @include transition(all .2s);
-  }
+  position: relative;
   md-card {
     cursor: pointer;
     background: $color-primary;
     position: relative;
+    @include transition(all .2s);
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $color-primary;
+      opacity: 0;
+      @include transition(opacity .2s);
+    }
+    &:hover {
+      z-index: 99;
+      //@include transform(scale(1.1));
+      &:after {
+        opacity: .4;
+      }
+    }
+  }
+  .md-card-image {
+    position: absolute;
+    opacity: 0;
+    @include transition(opacity .2s);
+    &.img-ready {
+      opacity: 1;
+    }
   }
   md-card-title {
+    z-index: 9;
     position: absolute;
     left: 0;
     right: 0;

@@ -1,24 +1,24 @@
 export default ($http) => {
   'use strict';
+
   const API_URL = __API_URL__;
 
-  const getDiscoverMovies = () => {
-    return $http.get(`${API_URL}/discover/movie`)
+  const getTvshow = (id) => {
+    return $http.get(`${API_URL}/tv/${id}`)
       .then((res) => {
         return res.data;
       });
   };
 
-  const getDiscoverTV = () => {
-    return $http.get(`${API_URL}/discover/tv`)
+  const getSeason = (id, season) => {
+    return $http.get(`${API_URL}/tv/${id}/season/${season}`)
       .then((res) => {
         return res.data;
       });
   };
-
 
   return {
-    getDiscoverMovies,
-    getDiscoverTV
+    getTvshow,
+    getSeason
   };
 };

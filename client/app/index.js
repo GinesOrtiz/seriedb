@@ -5,11 +5,15 @@ import uiNotification from 'angular-ui-notification';
 import ngMessages from 'angular-messages';
 import ngstorage from 'ngstorage';
 import ngSanitize from 'angular-sanitize';
+import angularLoadingBar from 'angular-loading-bar';
 
 import appComponent from './app.component';
+import 'angular-loading-bar/build/loading-bar.min.css';
 
 import discover from './components/discover';
-import search from './components/search';
+//import search from './components/search';
+import tvshow from './components/tvshow';
+import movie from './components/movie';
 
 import common from './components/common';
 import config from './app.config';
@@ -17,9 +21,6 @@ import shared from './shared';
 
 import 'angular-material/angular-material.min.css';
 import './app.scss';
-
-window.jQuery = require('jquery');
-window.$ = window.jQuery;
 
 const appRun = (translateService, $localStorage) => {
   'use strict';
@@ -37,9 +38,11 @@ export default angular
     ngMessages,
     ngstorage.name,
     ngSanitize,
+    angularLoadingBar,
 
     discover.name,
-    search.name,
+    tvshow.name,
+    movie.name,
 
     common.name,
     config.name,

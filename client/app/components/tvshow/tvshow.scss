@@ -1,0 +1,94 @@
+@import "../../shared/variables";
+
+seriedb-tvshow {
+  .seasons-title {
+    color: white;
+    padding: 0 16px;
+  }
+
+  .seasons-section {
+    * {
+      color: white;
+    }
+    span {
+      font-weight: 500;
+    }
+    .season-list {
+      &:nth-child(even) md-list-item {
+        background: rgba($color-sidebar, .5);
+      }
+      md-icon {
+        margin-right: 16px !important;
+      }
+    }
+
+    .episodes-section md-list-item {
+      &:nth-child(odd) {
+        background: $color-primary;
+      }
+      &:nth-child(even) {
+        background: rgba($color-sidebar, .5);
+      }
+    }
+
+    .episodes-section {
+      padding: 0;
+      margin-bottom: 24px;
+      md-icon {
+        margin-right: 16px;
+        margin-left: 34px;
+      }
+    }
+
+    .episodes-loading {
+      md-progress-circular {
+        margin: 24px auto;
+        path {
+          stroke: rgba(white, .8) !important;
+        }
+      }
+    }
+  }
+}
+
+.episode-dialog {
+  @media #{$max-md} {
+    min-width: 80% !important;
+  }
+  .md-toolbar-tools {
+    background: $color-secondary;
+    h2 {
+      color: white;
+      font-weight: 500;
+    }
+  }
+  .loading-section {
+    md-progress-circular {
+      margin: 24px auto;
+      path {
+        stroke: rgba(white, .8) !important;
+      }
+    }
+  }
+  md-dialog-content {
+    background: $color-primary;
+    width: 600px;
+    position: relative;
+    display: block;
+    @media #{$max-md} {
+      width: auto;
+    }
+  }
+
+  .resources-info {
+    position: fixed;
+    top: 64px;
+    z-index: 9;
+    left: 0;
+    right: 0;
+  }
+
+  .resources-section {
+    margin-top: 52px;
+  }
+}

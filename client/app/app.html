@@ -1,1 +1,14 @@
-<ui-view></ui-view>
+<div layout="row"
+  flex
+  layout-fill>
+  <div layout="column"
+    layout-fill>
+    <search-bar layout="row"></search-bar>
+    <div layout="row"
+      layout-fill
+      class="app-container">
+      <sidebar></sidebar>
+      <ui-view></ui-view>
+    </div>
+  </div>
+</div>

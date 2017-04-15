@@ -1,0 +1,32 @@
+@import "../../../shared/variables";
+
+sidebar {
+  min-width: 60px;
+  width: 60px;
+  height: 100%;
+  background: $color-sidebar;
+  box-shadow: 2px 0 10px rgba($color-primary, .5);
+  z-index: 9;
+  md-list {
+    padding: 0;
+  }
+  md-icon {
+    color: white;
+    opacity: .7;
+    margin: 0 auto !important;
+  }
+  md-list-item {
+    &.active, &:hover {
+      md-icon {
+        opacity: 1 !important;
+      }
+    }
+    .md-button {
+      padding: 0 !important;
+    }
+    .md-list-item-inner, a, .md-button {
+      min-width: 60px !important;
+      width: 60px !important;
+    }
+  }
+}

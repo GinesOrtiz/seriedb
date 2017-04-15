@@ -13,13 +13,20 @@ const searchConfig = ($stateProvider) => {
   'use strict';
   $stateProvider
     .state('seriedb.search', {
-      url: '/search/:query',
-      template: '<seriedb-search></seriedb-search>',
+      url: '/search',
+      template: '<seriedb-search></seriedb-search>'/*,
       resolve: {
-        results: ($stateParams, SearchFactory) => {
-          return SearchFactory.getSearchMulti({query: $stateParams.query});
+        results: ($stateParams, SearchFactory, $q) => {
+          let dfd = $q.defer();
+          if ($stateParams.query) {
+            dfd.resolve(SearchFactory.getSearchMulti({query: $stateParams.query}));
+          } else{
+            dfd.resolve();
+          }
+
+          return dfd.promise;
         }
-      }
+      }*/
     });
 };
 

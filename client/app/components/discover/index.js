@@ -25,7 +25,7 @@ const discoverConfig = ($stateProvider) => {
           return DiscoveryFactory.getDiscoverTV();
         }
       }
-    })
+    });
 };
 
 export default angular

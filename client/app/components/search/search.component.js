@@ -6,7 +6,6 @@ export default {
   controllerAs: 'vm',
   template,
   bindings: {
-    movies: '<',
-    tv: '<'
+    search: '<'
   }
 }

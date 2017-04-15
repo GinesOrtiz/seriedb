@@ -1,8 +1,22 @@
 Buscar
 
 <input ng-model="vm.searchText"></input>
-<button ng-click="vm.search(vm.searchText)"></button>
+<button ng-click="vm.search(vm.searchText)">{{:: 'search.search' | translate }}</button>
 <br>
-<div ng-repeat="item in vm.results">
-    <span>{{item.original_title}}{{item.name}} - {{item.media_type}}</span>
+
+<div class="md-padding"
+     layout="row"
+     layout-wrap>
+    <h1 class="md-padding"
+        flex="100">{{:: 'search.results' | translate }}</h1>
+    <div
+            flex-xs="100"
+            flex-sm="50"
+            flex-md="33"
+            flex-lg="20"
+            flex-xl="20"
+            layout="column"
+            ng-repeat="result in vm.results">
+        <media-card info="result"></media-card>
+    </div>
 </div>

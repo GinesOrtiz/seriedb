@@ -1,13 +1,15 @@
 class episodeController {
-  constructor(episode, tvshowID, $mdDialog, $rootScope, $timeout) {
+  constructor(episode, tvshowID, SharedFactory, $mdDialog, $rootScope, $timeout) {
     this.episode = episode;
     this.tvshowID = tvshowID;
+    this.SharedFactory = SharedFactory;
     this.$mdDialog = $mdDialog;
     this.$rootScope = $rootScope;
     this.$timeout = $timeout;
-    this.resources = [];
+    let pkgID = `T${this.tvshowID}E${this.episode.id}`;
+    this.resources = this.loadLocalResources(pkgID);
 
-    this.$rootScope.$broadcast('requestInfo', `T${this.tvshowID}E${this.episode.id}`);
+    this.$rootScope.$broadcast('requestInfo', pkgID);
     this.$rootScope.$on('atomAppend', this.atomAppend.bind(this));
   }
 
@@ -22,9 +24,18 @@ class episodeController {
     });
   }
 
-  openResource(resource) {
+  loadLocalResources(pkgID) {
+    let resources = [];
+    let pkgMem = this.SharedFactory.getPkgMem()[pkgID] || [];
 
+    pkgMem.forEach((resource) => {
+      let jsonRes = JSON.parse(atob(resource.split('.')[1]));
+      resources.push(jsonRes);
+    });
+
+    return resources;
   }
+
 }
 
 export default episodeController;

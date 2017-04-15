@@ -1,13 +1,13 @@
 import io from 'socket.io-client';
 
 class appController {
-  constructor($rootScope, $localStorage) {
+  constructor(SharedFactory, $rootScope, $localStorage) {
+    this.SharedFactory = SharedFactory;
     this.$rootScope = $rootScope;
     this.$localStorage = $localStorage;
   }
 
   $onInit() {
-    let pkgMem = {};
     let socket = io('ws://51.254.205.30:3030');
 
     socket.on('askingInfoUpdate', (info) => {
@@ -30,20 +30,15 @@ class appController {
     });
 
     socket.on('atomAppend', (info) => {
-      this.nerdLog(`New resource added to package #${info.mid}.`);
+      this.nerdLog(`New resource received for package #${info.mid}.`);
 
-      pkgMem[info.mid] = pkgMem[info.mid] || [];
-
-      if (pkgMem[info.mid].indexOf(info.atom) < 0) {
-        pkgMem[info.mid].push(info.atom);
-        this.$rootScope.$broadcast('atomAppend', info);
-      }
-
+      this.SharedFactory.addPkgMem(info);
     });
 
     this.$rootScope.$on('requestInfo', (event, mid) => {
       this.nerdLog(`Request for package #${mid} sent.`);
 
+      this.$rootScope.$broadcast('appendLocalResources', this.SharedFactory.getPkgMem()[mid] || []);
       socket.emit('requestInfo', {
         mid
       });

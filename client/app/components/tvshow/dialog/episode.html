@@ -1,7 +1,9 @@
+
 <md-dialog class="episode-dialog"
   aria-label="Episode dialog">
   <md-toolbar>
     <div class="md-toolbar-tools">
+{{vm.demo}}
       <h2>{{:: vm.episode.name }} ({{:: 'S' + vm.episode.season_number + 'E' + vm.episode.episode_number}})</h2>
       <span flex></span>
       <md-button class="md-icon-button"

@@ -1,32 +1,4 @@
-<div class="backdrop"
-  ng-style="{'background-image': 'url('+vm.backdrop+')'}">
-  <div class="title-section">
-    <h1>{{:: vm.tvshow.name }}</h1>
-  </div>
-</div>
-<md-content class="overview">
-  <div class="info-section"
-    layout="row"
-    layout-sm="column"
-    layout-xs="column">
-    <div layout="row"
-      flex-xs="100"
-      flex-sm="100"
-      flex="50">
-      <span class="genre-label"
-        ng-repeat="genre in vm.tvshow.genres">{{:: genre.name }}</span>
-    </div>
-    <div layout="row"
-      flex-xs="100"
-      flex-sm="100"
-      flex="50"
-      layout-align="end center">
-      <span class="popularity-label">{{::vm.tvshow.popularity | number : 2 }}%</span>
-    </div>
-  </div>
-  <p>{{:: vm.tvshow.overview }}</p>
-</md-content>
-
+<overview info="vm.tvshow"></overview>
 <h1 class="seasons-title">{{:: 'tvshow.seasons' | translate : {vars: [vm.tvshow.number_of_seasons]} }}</h1>
 <md-list flex
   class="seasons-section">

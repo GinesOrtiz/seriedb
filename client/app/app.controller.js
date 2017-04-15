@@ -13,10 +13,12 @@ class appController {
     socket.on('askingInfoUpdate', (info) => {
       this.nerdLog(`New request asking for package: #${info.mid}.`);
 
-      if (pkgMem[info.mid]) {
-        this.nerdLog(`Package #${info.mid} found. Resources inside: ${pkgMem[info.mid].length}.`);
+      let pkg = this.SharedFactory.findPkgMem(info.mid);
 
-        pkgMem[info.mid].forEach((atom) => {
+      if (pkg) {
+        this.nerdLog(`Package #${info.mid} found. Resources inside: ${pkg.length}.`);
+
+        pkg.forEach((atom) => {
           socket.emit('atomicUpdate', {
             mid: info.mid,
             atom: atom,

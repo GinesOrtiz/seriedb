@@ -13,6 +13,7 @@ import 'angular-loading-bar/build/loading-bar.min.css';
 import discover from './components/discover';
 //import search from './components/search';
 import tvshow from './components/tvshow';
+import movie from './components/movie';
 
 import common from './components/common';
 import config from './app.config';
@@ -41,6 +42,7 @@ export default angular
 
     discover.name,
     tvshow.name,
+    movie.name,
 
     common.name,
     config.name,

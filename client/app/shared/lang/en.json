@@ -1,5 +1,9 @@
 {
   "searchBar": {
     "placeholder": "Search for a movie or TV-show"
+  },
+  "resources" : {
+    "totalFound": "Total resources found: %s",
+    "addResource": "Add resource"
   }
 }

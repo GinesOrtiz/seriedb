@@ -1,5 +1,3 @@
-/* globals __TMDB_IMG__ */
-
 import episodeController from './dialog/episode.controller';
 import episodeTemplate from './dialog/episode.html';
 
@@ -11,9 +9,6 @@ class tvshowController {
   }
 
   $onInit() {
-    let backdropBase = `${__TMDB_IMG__}w1400_and_h450_bestv2/`;
-    this.backdrop = backdropBase + this.tvshow.backdrop_path; // jshint ignore: line
-
     this.episodes = {};
   }
 

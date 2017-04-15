@@ -1,0 +1,35 @@
+@import "../../../shared/variables";
+
+resources {
+  .resources-info {
+    min-height: 52px;
+    background: $color-sidebar;
+    .resources-total span {
+      padding: 16px;
+      color: white;
+      font-weight: 500;
+    }
+    .resources-add {
+      button span {
+        padding: 0 8px;
+        color: white !important;
+      }
+    }
+  }
+  .resources-section {
+    padding: 0;
+    width: 100%;
+    md-list-item {
+      &:nth-child(odd) {
+        background: $color-primary;
+      }
+      &:nth-child(even) {
+        background: rgba($color-sidebar, .5);
+      }
+      .md-list-item-inner * {
+        font-weight: 500;
+        color: white !important;
+      }
+    }
+  }
+}

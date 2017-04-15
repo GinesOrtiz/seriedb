@@ -1,8 +1,4 @@
 {
   "seasons": "Seasons: (%s)",
-  "seasonNumber": "Season %s: (%s episodes)",
-  "dialog": {
-    "totalFound": "Total resources found: %s",
-    "addResource": "Add resource"
-  }
+  "seasonNumber": "Season %s: (%s episodes)"
 }

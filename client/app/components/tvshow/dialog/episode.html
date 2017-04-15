@@ -1,9 +1,7 @@
-
 <md-dialog class="episode-dialog"
   aria-label="Episode dialog">
   <md-toolbar>
     <div class="md-toolbar-tools">
-{{vm.demo}}
       <h2>{{:: vm.episode.name }} ({{:: 'S' + vm.episode.season_number + 'E' + vm.episode.episode_number}})</h2>
       <span flex></span>
       <md-button class="md-icon-button"
@@ -12,33 +10,7 @@
       </md-button>
     </div>
   </md-toolbar>
-
-  <div layout="row"
-    class="resources-info">
-    <div layout="row"
-      flex="50"
-      flex-xs="100"
-      flex-sm="100"
-      class="resources-total">
-      <span>{{ 'tvshow.dialog.totalFound' | translate : {vars: [vm.resources.length]} }}</span>
-    </div>
-    <div layout="row"
-      flex="50"
-      hide-xs
-      hide-sm
-      class="resources-add"
-      layout-align="end center">
-      <md-button>{{:: 'tvshow.dialog.addResource' | translate }}</md-button>
-    </div>
-  </div>
   <md-dialog-content>
-    <md-list flex
-      layout="column"
-      class="resources-section">
-      <md-list-item ng-repeat="resource in vm.resources"
-        ng-click="vm.openResource(resource)">
-        <span flex="100">{{:: resource.s }}</span>
-      </md-list-item>
-    </md-list>
+    <resources mid="vm.pkgID"></resources>
   </md-dialog-content>
 </md-dialog>

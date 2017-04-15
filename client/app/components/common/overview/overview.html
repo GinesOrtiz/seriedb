@@ -1,0 +1,28 @@
+<div class="backdrop"
+  ng-style="{'background-image': 'url('+vm.backdrop+')'}">
+  <div class="title-section">
+    <h1>{{:: vm.info.name || vm.info.title }}</h1>
+  </div>
+</div>
+<md-content class="overview">
+  <div class="info-section"
+    layout="row"
+    layout-sm="column"
+    layout-xs="column">
+    <div layout="row"
+      flex-xs="100"
+      flex-sm="100"
+      flex="50">
+      <span class="genre-label"
+        ng-repeat="genre in vm.info.genres">{{:: genre.name }}</span>
+    </div>
+    <div layout="row"
+      flex-xs="100"
+      flex-sm="100"
+      flex="50"
+      layout-align="end center">
+      <span class="popularity-label">{{:: vm.info.vote_average }}/10</span>
+    </div>
+  </div>
+  <p>{{:: vm.info.overview }}</p>
+</md-content>

@@ -16,8 +16,13 @@ export default /*@ngInject*/  ($rootScope) => {
     }
   };
 
+  const findPkgMem = (mid) => {
+    return pkgMem[mid];
+  };
+
   return {
     getPkgMem,
-    addPkgMem
+    addPkgMem,
+    findPkgMem
   };
 };

@@ -3,7 +3,8 @@ const TranslateFactory = /*@ngInject*/ ($localStorage) => {
   let config = {
     available: [
       'EN',
-      'ES'
+      'ES',
+      'CA'
     ],
     standard: 'EN',
     translations: {}

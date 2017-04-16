@@ -128,6 +128,10 @@ if (process.env.NODE_ENV === 'production') {
       {
         from: pathConfig.context + '/app/assets/app.png',
         to: pathConfig.distPath
+      },
+      {
+        from: pathConfig.context + '/.htaccess',
+        to: pathConfig.distPath
       }
     ]),
     new HtmlWebpackPlugin({

@@ -1,0 +1,74 @@
+@import "../../../shared/variables";
+
+console {
+  .console-button {
+    cursor: pointer;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    border-radius: 100%;
+    width: 56px;
+    height: 56px;
+    background: $color-secondary;
+    margin: 0;
+    min-width: 56px;
+    padding: 0;
+    @include transition(all .2s);
+    &:hover {
+      background: darken($color-secondary, 10) !important;
+    }
+    &.open {
+      bottom: 256px;
+    }
+    md-icon {
+      width: 56px;
+      height: 56px;
+      line-height: 56px;
+      text-align: center;
+      font-size: 28px;
+      color: white;
+    }
+  }
+
+  .console-terminal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: -240px;
+    z-index: 9;
+    background: #0a0a0a;
+    height: 240px;
+    overflow: auto;
+    padding: 8px 0 0;
+    box-sizing: border-box;
+    @include transition(all .2s);
+    &.open {
+      bottom: 0;
+    }
+  }
+
+  md-list {
+    md-list-item {
+      cursor: default;
+      min-height: 28px;
+      height: 28px;
+      opacity: 0.5;
+      @include transition(all .2s);
+      &:hover {
+        opacity: 1;
+      }
+    }
+    md-icon {
+      color: white;
+      font-size: 18px !important;
+      height: 20px !important;
+      min-height: 20px;
+    }
+    span {
+      font-size: 14px;
+      font-weight: 500;
+      color: white;
+      font-family: 'Share Tech Mono', monospace;
+    }
+  }
+}

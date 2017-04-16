@@ -1,7 +1,5 @@
 import uiRouter from 'angular-ui-router';
 import ngMaterial from 'angular-material';
-import ngAnimate from 'angular-animate';
-import uiNotification from 'angular-ui-notification';
 import ngMessages from 'angular-messages';
 import ngstorage from 'ngstorage';
 import ngSanitize from 'angular-sanitize';
@@ -14,6 +12,7 @@ import discover from './components/discover';
 //import search from './components/search';
 import tvshow from './components/tvshow';
 import movie from './components/movie';
+import settings from './components/settings';
 
 import common from './components/common';
 import config from './app.config';
@@ -32,9 +31,7 @@ const appRun = (translateService, $localStorage) => {
 export default angular
   .module('app', [
     ngMaterial,
-    ngAnimate,
     uiRouter,
-    uiNotification,
     ngMessages,
     ngstorage.name,
     ngSanitize,
@@ -43,6 +40,7 @@ export default angular
     discover.name,
     tvshow.name,
     movie.name,
+    settings.name,
 
     common.name,
     config.name,

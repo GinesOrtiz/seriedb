@@ -11,4 +11,4 @@ class overviewController {
   }
 }
 
-export default overviewController;
+export default /*@ngInject*/ overviewController;

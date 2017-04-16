@@ -15,4 +15,4 @@ const MovieFactory = ($http) => {
   };
 };
 
-export default MovieFactory;
+export default /*@ngInject*/ MovieFactory;

@@ -1,4 +1,4 @@
-export default ($http) => {
+export default /*@ngInject*/ ($http) => {
   'use strict';
   const API_URL = __API_URL__;
 

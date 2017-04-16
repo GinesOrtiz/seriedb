@@ -39,4 +39,4 @@ class tvshowController {
   }
 }
 
-export default tvshowController;
+export default /*@ngInject*/ tvshowController;

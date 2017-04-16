@@ -8,4 +8,4 @@ class searchBarController {
   }
 }
 
-export default  searchBarController;
+export default /*@ngInject*/ searchBarController;

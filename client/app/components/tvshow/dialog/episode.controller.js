@@ -11,4 +11,4 @@ class episodeController {
   }
 }
 
-export default episodeController;
+export default /*@ngInject*/ episodeController;

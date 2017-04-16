@@ -10,8 +10,7 @@
   "scripts": {
     "test": "karma start",
     "start": "NODE_ENV=development node node_modules/.bin/webpack-dev-server --devtool eval --progress --colors --hot --content-base client ",
-    "build": "rm -rf dist && mkdir dist && NODE_ENV=production node node_modules/.bin/webpack",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "build": "rm -rf dist && mkdir dist && NODE_ENV=production node node_modules/.bin/webpack"
   },
   "keywords": [
     "webpack",
@@ -19,7 +18,7 @@
     "postcss",
     "es6"
   ],
-  "author": "Horacio Herrera <horacio@billymob.com> (http://hherrerag.com)",
+  "author": "Ginés Ortiz <gines.o.saez@gmail.com> (http://ginesortiz.com)",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.2.3",
@@ -55,15 +54,13 @@
     "angular": "1.5.7",
     "angular-animate": "1.5.7",
     "angular-aria": "1.5.7",
-    "angular-highlightjs": "^0.6.2",
     "angular-loading-bar": "^0.9.0",
     "angular-material": "^1.0.9",
     "angular-messages": "1.5.7",
-    "angular-permission": "^4.1.2",
     "angular-sanitize": "1.5.7",
     "angular-ui-router": "^0.2.15",
-    "jquery": "^3.1.1",
     "ngstorage": "^0.3.10",
+    "object-assign": "^4.1.1",
     "socket.io-client": "^1.7.3"
   },
   "czConfig": {

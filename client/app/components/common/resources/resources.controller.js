@@ -13,10 +13,12 @@ class resourcesController {
   }
 
   atomAppend(event, data) {
-    this.$timeout(() => {
-      let resource = JSON.parse(atob(data.atom.split('.')[1]));
-      this.resources.push(resource);
-    });
+    if (data.mid === this.mid) {
+      this.$timeout(() => {
+        let resource = JSON.parse(atob(data.atom.split('.')[1]));
+        this.resources.push(resource);
+      });
+    }
   }
 
   loadLocalResources(pkgID) {

@@ -1,6 +1,8 @@
 @import "../../../shared/variables";
 
 console {
+  position: relative;
+  z-index: 999999;
   .console-button {
     cursor: pointer;
     position: fixed;

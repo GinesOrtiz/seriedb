@@ -42,7 +42,6 @@ class appController {
     this.$rootScope.$on('requestInfo', (event, mid) => {
       this.nerdLog(`Request for package #${mid} sent.`);
 
-      this.$rootScope.$broadcast('appendLocalResources', this.SharedFactory.getPkgMem()[mid] || []);
       socket.emit('requestInfo', {
         mid
       });

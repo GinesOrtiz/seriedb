@@ -60,6 +60,7 @@
     "angular-sanitize": "1.5.7",
     "angular-ui-router": "^0.2.15",
     "ngstorage": "^0.3.10",
+    "object-assign": "^4.1.1",
     "socket.io-client": "^1.7.3"
   },
   "czConfig": {

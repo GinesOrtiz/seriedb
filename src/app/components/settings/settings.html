@@ -1,0 +1,75 @@
+<h1 class="main-title">{{:: 'settings.title' | translate }}</h1>
+<md-list>
+  <!-- Nerd mode -->
+  <md-list-item flex="100"
+    layout="row"
+    ng-click="vm.changeNerdMode()">
+    <div layout="row">
+      <md-icon>swap_vert</md-icon>
+      <span class="list-text">{{:: 'settings.nerdMode' | translate }}</span>
+    </div>
+    <span flex></span>
+    <div layout="row">
+      <md-switch ng-model="vm.nerdMode"
+        class="md-primary"
+        aria-label="Nerd mode">
+      </md-switch>
+    </div>
+  </md-list-item>
+
+  <!-- Custom Socket -->
+  <md-list-item flex="100"
+    layout="row"
+    ng-click="vm.enableCustomSocket()">
+    <div layout="row">
+      <md-icon>storage</md-icon>
+      <span class="list-text">{{:: 'settings.server' | translate }}</span>
+    </div>
+    <span flex></span>
+    <div layout="row">
+      <md-switch ng-model="vm.socketURL"
+        class="md-primary"
+        ng-click="vm.enableCustomSocket()"
+        aria-label="Custom socket">
+      </md-switch>
+    </div>
+  </md-list-item>
+  <md-list-item flex="100"
+    ng-if="vm.socketURL"
+    class="custom-socket"
+    layout="row">
+    <div layout="row"
+      flex="80">
+      <md-input-container md-no-float
+        flex="100">
+        <input ng-model="vm.customSocket"
+          placeholder="{{:: 'settings.customSocket' | translate }}">
+      </md-input-container>
+    </div>
+    <span flex></span>
+    <div layout="row">
+      <md-button ng-click="vm.saveSocket()">{{:: 'settings.update' | translate }}</md-button>
+    </div>
+  </md-list-item>
+
+  <!-- Custom Socket -->
+  <md-list-item flex="100"
+    layout="row">
+    <div layout="row">
+      <md-icon>translate</md-icon>
+      <span class="list-text">{{:: 'settings.language' | translate }}</span>
+    </div>
+    <span flex></span>
+    <div layout="row">
+      <md-select ng-model="vm.language"
+        class="language-selector"
+        ng-change="vm.changeLanguage()">
+        <md-option ng-repeat="lang in vm.languagesAvailable"
+          ng-value="lang">
+          {{:: lang }}
+        </md-option>
+      </md-select>
+    </div>
+  </md-list-item>
+
+</md-list>

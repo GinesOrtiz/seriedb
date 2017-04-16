@@ -1,0 +1,9 @@
+{
+  "searchBar": {
+    "placeholder": "Buscar películas o series de televisión"
+  },
+  "resources" : {
+    "totalFound": "Recursos encontrados: %s",
+    "addResource": "Añadir recurso"
+  }
+}

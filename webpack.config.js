@@ -1,15 +1,13 @@
 var webpack = require('webpack');
 var path = require('path');
-var pkg = require('./package.json');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var modRewrite = require('connect-modrewrite');
-var VersionFile = require('webpack-version-file-plugin');
 
 // Path Config
 var pathConfig = {
-  context: path.join(__dirname, 'client'),
+  context: path.join(__dirname, 'src'),
   distPath: path.join(__dirname, 'dist'),
   assetsPath: path.join(__dirname, 'dist/assets')
 };
@@ -21,8 +19,8 @@ var varPlugin = new webpack.DefinePlugin({
   __API_URL__: JSON.stringify('http://api.themoviedb.org/3'),
   __TMDB__: JSON.stringify(process.env.TMDB || '54588ad726d554d3eb0bd527c9875958'),
   __TMDB_IMG__: JSON.stringify('https://image.tmdb.org/t/p/'),
-  __SOCKET__: JSON.stringify('ws://51.254.205.30:3030'),
-  __VERSION__: JSON.stringify(require('./package.json').version)
+  __SOCKET__: JSON.stringify(process.env.socket || 'ws://51.254.205.30:3030'),
+  __PROJECT_NAME__: JSON.stringify(process.env.projectName || 'serieDB')
 });
 
 var config = {
@@ -36,13 +34,11 @@ var config = {
     path: pathConfig.context,
     filename: '[name]-[hash:6].js'
   },
-
   plugins: [
     new ExtractTextPlugin('styles-[hash:6].css'),
     varPlugin,
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      pkg: pkg,
       inject: 'head',
       template: 'index.html'
     }),
@@ -60,10 +56,8 @@ var config = {
           '!\\.\\w+$ /index.html [L]'
         ])
       ]
-
     })
   ],
-
   module: {
     loaders: [
       {
@@ -119,12 +113,6 @@ if (process.env.NODE_ENV === 'production') {
   config.output.path = pathConfig.distPath;
   config.plugins = [
     varPlugin,
-    new webpack.ContextReplacementPlugin(/moment[\\\/]lang$/, /^\.\/(en-gb|es)$/),
-    new VersionFile({
-      packageFile: path.join(__dirname, 'package.json'),
-      templateString: '<%= package.version %>',
-      outputFile: path.join(pathConfig.distPath, 'version.txt')
-    }),
     new ExtractTextPlugin('styles-[hash:6].css'),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
@@ -133,7 +121,6 @@ if (process.env.NODE_ENV === 'production') {
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      pkg: pkg,
       template: 'index.html',
       inject: 'head',
       minify: {

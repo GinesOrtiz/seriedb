@@ -1,0 +1,40 @@
+@import "../../shared/variables";
+
+seriedb-settings {
+  md-list-item {
+    min-height: 62px;
+    &:nth-child(odd) {
+      background: rgba($color-sidebar, .5);
+    }
+    &:nth-child(even) {
+      background: $color-primary;
+    }
+    * {
+      font-weight: 500;
+      color: white !important;
+    }
+    .list-text {
+      line-height: 32px;
+      padding-left: 16px;
+    }
+  }
+  md-input-container {
+    .md-errors-spacer {
+      display: none;
+    }
+  }
+
+  .custom-socket {
+    padding-left: 56px;
+    md-input-container {
+      margin: 12px 0;
+      input::placeholder {
+        color: rgba(white, .5) !important;
+      }
+    }
+  }
+
+  .language-selector {
+    margin: 0;
+  }
+}

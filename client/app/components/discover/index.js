@@ -4,9 +4,9 @@ import './discover.scss';
 
 import langEN from './lang/en.json';
 
-const discoverRun = (translateService) => {
+const discoverRun = (TranslateFactory) => {
   'use strict';
-  translateService.addLang('discover', {EN: langEN});
+  TranslateFactory.addLang('discover', {EN: langEN});
 };
 
 const discoverConfig = ($stateProvider) => {
@@ -15,7 +15,7 @@ const discoverConfig = ($stateProvider) => {
     .state('seriedb.discover', {
       url: '/',
       template: '<seriedb-discover movies="movies" tv="tv"></seriedb-discover>',
-      controller: ($scope, movies, tv) => {
+      controller: (movies, tv, $scope) => {
         $scope.movies = movies;
         $scope.tv = tv;
       },

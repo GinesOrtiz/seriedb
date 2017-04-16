@@ -21,10 +21,10 @@ import shared from './shared';
 import 'angular-material/angular-material.min.css';
 import './app.scss';
 
-const appRun = (translateService, $localStorage) => {
+const appRun = (TranslateFactory, $localStorage) => {
   'use strict';
   if (!$localStorage.language) {
-    translateService.setLang();
+    TranslateFactory.setLang();
   }
 };
 

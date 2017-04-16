@@ -5,9 +5,9 @@ import './tvshow.scss';
 
 import langEN from './lang/en.json';
 
-const tvshowRun = (translateService) => {
+const tvshowRun = (TranslateFactory) => {
   'use strict';
-  translateService.addLang('tvshow', {EN: langEN});
+  TranslateFactory.addLang('tvshow', {EN: langEN});
 };
 
 const tvshowConfig = ($stateProvider) => {
@@ -16,7 +16,7 @@ const tvshowConfig = ($stateProvider) => {
     .state('seriedb.tvshow', {
       url: '/tv/:id',
       template: '<seriedb-tvshow tvshow="tvshow"></seriedb-tvshow>',
-      controller: ($scope, tvshow) => {
+      controller: (tvshow, $scope) => {
         $scope.tvshow = tvshow;
       },
       resolve: {

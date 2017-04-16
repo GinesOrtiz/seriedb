@@ -70,3 +70,7 @@ md-backdrop.md-sidenav-backdrop {
 #loading-bar .bar {
   background: $color-warning;
 }
+
+md-select-menu md-option {
+  font-weight: 500 !important;
+}

@@ -3,5 +3,6 @@
   "nerdMode": "Nerd mode - Enables a console where you can see all the information transactions that are happening",
   "server": "Custom socket - IP or server URL for socket connection",
   "customSocket": "Custom socket IP or server URL",
-  "update": "Update"
+  "update": "Update",
+  "language": "Language - App and media language. (It will change movies and series names)"
 }

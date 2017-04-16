@@ -5,10 +5,10 @@ import './movie.scss';
 
 import langEN from './lang/en.json';
 
-const movieRun = (translateService) => {
+const movieRun = (TranslateFactory) => {
   'use strict';
 
-  translateService.addLang('movie', {EN: langEN});
+  TranslateFactory.addLang('movie', {EN: langEN});
 };
 
 const movieConfig = ($stateProvider) => {

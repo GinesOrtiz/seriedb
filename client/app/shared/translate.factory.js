@@ -1,8 +1,9 @@
-const TranslateService = ($localStorage) => {
+const TranslateFactory = /*@ngInject*/ ($localStorage) => {
   'use strict';
   let config = {
     available: [
-      'EN'
+      'EN',
+      'ES'
     ],
     standard: 'EN',
     translations: {}
@@ -12,13 +13,12 @@ const TranslateService = ($localStorage) => {
   let navigatorLang = navigator.language || navigator.userLanguage;
 
   let standardLang = navigatorLang ? navigatorLang.split('-')[0] : config.lang.standard;
-
   config.lang = localStorageLang || standardLang;
 
-  // methods
   const setLang = (lang = config.standard) => {
     config.lang = lang;
     $localStorage.language = lang;
+    window.location.reload();
   };
 
   const addLang = (moduleKey, translations) => {
@@ -43,6 +43,7 @@ const TranslateService = ($localStorage) => {
 
   const getTranslation = (translationKey, options = {}) => {
     let replace = '';
+
     try {
       let convertedKey = translationKey.split('.');
       let translation = config.translations[options.lang || config.lang];
@@ -51,7 +52,7 @@ const TranslateService = ($localStorage) => {
         translation = config.translations[config.standard];
       }
 
-      convertedKey.forEach((key, i) => {
+      convertedKey.forEach((key) => {
         translation = translation[key];
       });
 
@@ -77,15 +78,13 @@ const TranslateService = ($localStorage) => {
   };
 };
 
-TranslateService.$inject = ['$localStorage'];
-
-const TranslateFilter = (translateService) => {
+const TranslateFilter = /*@ngInject*/ (TranslateFactory) => {
   'use strict';
   return (input, options) => {
-    return translateService.getTranslation(input, options);
+    return TranslateFactory.getTranslation(input, options);
   };
 };
 
 TranslateFilter.$inject = ['translateService'];
 
-export {TranslateService, TranslateFilter};
+export {TranslateFactory, TranslateFilter};

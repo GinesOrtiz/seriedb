@@ -4,10 +4,10 @@ import './settings.scss';
 
 import langEN from './lang/en.json';
 
-const settingsRun = (translateService) => {
+const settingsRun = (TranslateFactory) => {
   'use strict';
 
-  translateService.addLang('settings', {EN: langEN});
+  TranslateFactory.addLang('settings', {EN: langEN});
 };
 
 const settingsConfig = ($stateProvider) => {

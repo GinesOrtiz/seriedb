@@ -1,5 +1,6 @@
 class settingsController {
-  constructor($localStorage, $rootScope) {
+  constructor(TranslateFactory, $localStorage, $rootScope) {
+    this.TranslateFactory = TranslateFactory;
     this.$localStorage = $localStorage;
     this.$rootScope = $rootScope;
   }
@@ -8,6 +9,8 @@ class settingsController {
     this.nerdMode = this.$localStorage.nerdMode;
     this.customSocket = this.$localStorage.socketURL;
     this.socketURL = !!this.$localStorage.socketURL;
+    this.language = this.$localStorage.language || 'en';
+    this.languagesAvailable = this.TranslateFactory.available;
   }
 
   changeNerdMode() {
@@ -33,6 +36,10 @@ class settingsController {
     setTimeout(() => {
       window.location.reload();
     }, 250);
+  }
+
+  changeLanguage() {
+    this.TranslateFactory.setLang(this.language);
   }
 }
 

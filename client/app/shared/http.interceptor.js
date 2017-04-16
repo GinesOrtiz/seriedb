@@ -1,9 +1,23 @@
-const httpInterceptor = function ($q, $injector) {
+/* globals __API_URL__, __TMDB__ */
+
+const httpInterceptor = function ($q, $localStorage) {
   'use strict';
+
+  const API_URL = __API_URL__;
+  const TMDB = __TMDB__;
+
   return {
     'request': function (config) {
-      if (config.url.indexOf(__API_URL__) > -1) {
-        config.url += '?api_key=' + __TMDB__;
+      if (config.url.indexOf(API_URL) > -1) {
+        let language = $localStorage.language ? $localStorage.language.toLowerCase() : 'en';
+
+        // Language selector fix
+        switch (language) {
+          case 'ca':
+            language = 'es';
+        }
+
+        config.url += `?api_key=${TMDB}&language=${language}`;
       }
       config.timeout = 30000;
       return config;
@@ -14,7 +28,6 @@ const httpInterceptor = function ($q, $injector) {
     },
 
     'responseError': function (rejection) {
-      let Notification = $injector.get('Notification');
 
       switch (rejection.status) {
         default:

@@ -2,6 +2,7 @@
 
 seriedb-settings {
   md-list-item {
+    min-height: 62px;
     &:nth-child(odd) {
       background: rgba($color-sidebar, .5);
     }
@@ -31,5 +32,9 @@ seriedb-settings {
         color: rgba(white, .5) !important;
       }
     }
+  }
+
+  .language-selector {
+    margin: 0;
   }
 }

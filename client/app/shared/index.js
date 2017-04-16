@@ -1,6 +1,6 @@
 import httpInterceptor from './http.interceptor';
 import SharedFactory from './shared';
-import {TranslateService, TranslateFilter} from './translateService';
+import {TranslateFactory, TranslateFilter} from './translate.factory';
 
 import langEN from './lang/en.json';
 
@@ -19,9 +19,9 @@ const sharedConfig = ($locationProvider, $logProvider, $httpProvider, $mdDateLoc
   });
 };
 
-const sharedRun = (translateService) => {
+const sharedRun = (TranslateFactory) => {
   'use strict';
-  translateService.addLang('shared', {
+  TranslateFactory.addLang('shared', {
     EN: langEN
   });
 };
@@ -30,7 +30,7 @@ export default angular
   .module('seriedb.shared', [])
   .factory('httpInterceptor', httpInterceptor)
   .factory('SharedFactory', SharedFactory)
-  .factory('translateService', TranslateService)
+  .factory('TranslateFactory', TranslateFactory)
   .filter('translate', TranslateFilter)
 
   .config(sharedConfig)

@@ -13,4 +13,7 @@
             ng-repeat="result in vm.results">
         <media-card info="result"></media-card>
     </div>
+    <div layout="row" flex="100">
+        <md-button ng-click="vm.searchMore()">{{:: 'search.searchMore' | translate }}</md-button>
+    </div>
 </div>

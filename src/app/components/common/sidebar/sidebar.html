@@ -3,4 +3,13 @@
     ui-sref="{{:: action.state }}">
     <md-icon>{{:: action.icon }}</md-icon>
   </md-list-item>
+  <md-list-item class="favorite-menu" flex>
+    <md-icon class="favorite">favorite</md-icon>
+    <md-tooltip md-direction="right"
+      class="favorite-tooltip">
+      <span>Made with</span>
+      <md-icon class="favorite">favorite</md-icon>
+      <span>in Barcelona</span>
+    </md-tooltip>
+  </md-list-item>
 </md-list>

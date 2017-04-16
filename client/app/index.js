@@ -1,7 +1,5 @@
 import uiRouter from 'angular-ui-router';
 import ngMaterial from 'angular-material';
-import ngAnimate from 'angular-animate';
-import uiNotification from 'angular-ui-notification';
 import ngMessages from 'angular-messages';
 import ngstorage from 'ngstorage';
 import ngSanitize from 'angular-sanitize';
@@ -33,9 +31,7 @@ const appRun = (translateService, $localStorage) => {
 export default angular
   .module('app', [
     ngMaterial,
-    ngAnimate,
     uiRouter,
-    uiNotification,
     ngMessages,
     ngstorage.name,
     ngSanitize,

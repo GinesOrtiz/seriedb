@@ -1,5 +1,5 @@
 const appConfig = ($compileProvider, $urlRouterProvider, $mdThemingProvider,
-                   NotificationProvider, cfpLoadingBarProvider) => {
+                   cfpLoadingBarProvider) => {
   'use strict';
   cfpLoadingBarProvider.includeSpinner = false;
   $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|skype|tel):/);
@@ -16,17 +16,6 @@ const appConfig = ($compileProvider, $urlRouterProvider, $mdThemingProvider,
 
   $urlRouterProvider.otherwise(function () {
     window.location.href = '/';
-  });
-
-  NotificationProvider.setOptions({
-    delay: 3000,
-    startTop: 0,
-    startRight: 0,
-    verticalSpacing: 0,
-    horizontalSpacing: 0,
-    positionX: 'left',
-    positionY: 'top',
-    templateUrl: '/notification.html'
   });
 
 };

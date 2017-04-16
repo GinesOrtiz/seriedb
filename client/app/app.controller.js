@@ -1,3 +1,4 @@
+/* globals __SOCKET__ */
 import io from 'socket.io-client';
 
 class appController {
@@ -8,7 +9,7 @@ class appController {
   }
 
   $onInit() {
-    let socket = io('ws://51.254.205.30:3030');
+    let socket = io(this.$localStorage.socketURL || __SOCKET__);
     this.nerdMode = this.$localStorage.nerdMode;
 
     socket.on('askingInfoUpdate', (info) => {

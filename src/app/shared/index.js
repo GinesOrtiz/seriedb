@@ -3,6 +3,17 @@ import SharedFactory from './shared';
 import {TranslateFactory, TranslateFilter} from './translate.factory';
 
 import langEN from './lang/en.json';
+import langES from './lang/es.json';
+import langCA from './lang/ca.json';
+
+const sharedRun = (TranslateFactory) => {
+  'use strict';
+  TranslateFactory.addLang('shared', {
+    EN: langEN,
+    ES: langES,
+    CA: langCA
+  });
+};
 
 const sharedConfig = ($locationProvider, $logProvider, $httpProvider, $mdDateLocaleProvider,
                       $localStorageProvider) => {
@@ -16,13 +27,6 @@ const sharedConfig = ($locationProvider, $logProvider, $httpProvider, $mdDateLoc
   $locationProvider.html5Mode({
     enabled: true,
     requireBase: false
-  });
-};
-
-const sharedRun = (TranslateFactory) => {
-  'use strict';
-  TranslateFactory.addLang('shared', {
-    EN: langEN
   });
 };
 

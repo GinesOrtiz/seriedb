@@ -1,0 +1,13 @@
+{
+  "title": "Configuració",
+  "nerdMode": "Nerd mode - Habilita una consola on podràs trobar les transaccions dels recursos",
+  "server": "Socket personalitzat - IP o URL del servidor del socket a conectar",
+  "customSocket": "IP o URL del socket",
+  "update": "Actualitzar",
+  "language": "Idioma - Idioma de la aplicació y contingut. (Cambiarà l'idioma del contingut)",
+  "languages": {
+    "EN": "Anglés",
+    "ES": "Espanyol",
+    "CA": "Català"
+  }
+}

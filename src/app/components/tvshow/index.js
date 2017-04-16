@@ -4,10 +4,16 @@ import TvshowFactory from './tvshow.factory';
 import './tvshow.scss';
 
 import langEN from './lang/en.json';
+import langES from './lang/es.json';
+import langCA from './lang/ca.json';
 
 const tvshowRun = (TranslateFactory) => {
   'use strict';
-  TranslateFactory.addLang('tvshow', {EN: langEN});
+  TranslateFactory.addLang('tvshow', {
+    EN: langEN,
+    ES: langES,
+    CA: langCA
+  });
 };
 
 const tvshowConfig = ($stateProvider) => {

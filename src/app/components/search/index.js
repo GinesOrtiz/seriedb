@@ -3,10 +3,16 @@ import SearchFactory from './search.factory';
 import './search.scss';
 
 import langEN from './lang/en.json';
+import langES from './lang/es.json';
+import langCA from './lang/ca.json';
 
 const searchRun = (TranslateFactory) => {
   'use strict';
-  TranslateFactory.addLang('search', {EN: langEN});
+  TranslateFactory.addLang('search', {
+    EN: langEN,
+    ES: langES,
+    CA: langCA
+  });
 };
 
 const searchConfig = ($stateProvider) => {

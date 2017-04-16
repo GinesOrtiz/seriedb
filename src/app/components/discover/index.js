@@ -3,10 +3,16 @@ import DiscoveryFactory from './discover.factory';
 import './discover.scss';
 
 import langEN from './lang/en.json';
+import langES from './lang/es.json';
+import langCA from './lang/ca.json';
 
 const discoverRun = (TranslateFactory) => {
   'use strict';
-  TranslateFactory.addLang('discover', {EN: langEN});
+  TranslateFactory.addLang('discover', {
+    EN: langEN,
+    ES: langES,
+    CA: langCA
+  });
 };
 
 const discoverConfig = ($stateProvider) => {

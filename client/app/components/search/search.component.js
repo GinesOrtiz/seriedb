@@ -6,6 +6,6 @@ export default {
   controllerAs: 'vm',
   template,
   bindings: {
-    search: '<'
+    results: '<'
   }
 }

@@ -1,17 +1,20 @@
 <md-toolbar class="md-hue-2">
   <div class="md-toolbar-tools"
-    layout="row">
+      layout="row">
     <div layout="row"
-      flex-xs="100"
-      ui-sref="seriedb.discover"
-      class="logo">
+        flex-xs="100"
+        ui-sref="seriedb.discover"
+        class="logo">
       <h1>serieDB</h1>
     </div>
-    <div layout="row" class="form-search" flex="100">
+    <div layout="row"
+        class="form-search"
+        flex="100">
       <md-icon layout="row">search</md-icon>
       <form ng-submit="vm.search()"
-        layout="row">
-        <input ng-model="vm.query" placeholder="{{:: 'shared.searchBar.placeholder' | translate }}">
+          layout="row">
+        <input ng-model="vm.searchText"
+            placeholder="{{:: 'shared.searchBar.placeholder' | translate }}">
       </form>
     </div>
   </div>

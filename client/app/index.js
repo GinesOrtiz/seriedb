@@ -9,7 +9,7 @@ import appComponent from './app.component';
 import 'angular-loading-bar/build/loading-bar.min.css';
 
 import discover from './components/discover';
-//import search from './components/search';
+import search from './components/search';
 import tvshow from './components/tvshow';
 import movie from './components/movie';
 import settings from './components/settings';
@@ -41,7 +41,7 @@ export default angular
     tvshow.name,
     movie.name,
     settings.name,
-
+    search.name,
     common.name,
     config.name,
     shared.name

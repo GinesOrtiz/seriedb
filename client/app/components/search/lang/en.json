@@ -1,4 +1,5 @@
 {
-  "results": "Results:",
-  "search": "Search"
+  "title": {
+    "results": "Search results"
+  }
 }

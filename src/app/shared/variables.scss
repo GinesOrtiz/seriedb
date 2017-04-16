@@ -13,10 +13,10 @@ $max-md: '(max-width: 960px)';
 $max-lg: '(max-width: 1280px)';
 
 @mixin transition($transition...) {
-  -moz-transition: $transition;
-  -o-transition: $transition;
-  -webkit-transition: $transition;
-  transition: $transition;
+  -moz-transition: $transition cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: $transition cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition: $transition cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: $transition cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 @mixin transform($transforms) {

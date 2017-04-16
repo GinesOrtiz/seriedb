@@ -1,24 +1,29 @@
 <div class="md-padding"
-     layout="row"
-     layout-wrap>
-    <h1 class="md-padding collection-title"
-        flex="100">{{:: 'search.title.results' | translate }}</h1>
-    <div
-            flex-xs="100"
-            flex-sm="50"
-            flex-md="33"
-            flex-lg="20"
-            flex-xl="20"
-            layout="column"
-            ng-repeat="result in vm.results.results">
-        <media-card info="result"></media-card>
+  layout="row"
+  layout-wrap>
+  <h1 class="md-padding collection-title"
+    flex="100">{{:: 'search.title.results' | translate }}</h1>
+  <div
+    flex-xs="100"
+    flex-sm="50"
+    flex-md="33"
+    flex-lg="20"
+    flex-xl="20"
+    layout="column"
+    ng-repeat="result in vm.results.results">
+    <media-card info="result"></media-card>
+  </div>
+  <div ng-show="vm.results.page<vm.results.totalPages"
+    layout="row"
+    flex="100"
+    class="load-more">
+    <md-button ng-if="!vm.loading"
+      ng-click="vm.searchMore()">{{:: 'search.searchMore' | translate }}
+    </md-button>
+    <div layout="column"
+      class="loading"
+      ng-if="vm.loading">
+      <md-progress-circular></md-progress-circular>
     </div>
-    <div ng-show="vm.results.page<vm.results.totalPages" layout="row" flex="100" class="load-more">
-        <md-button ng-if="!vm.loading" ng-click="vm.searchMore()">{{:: 'search.searchMore' | translate }}</md-button>
-        <div layout="column"
-            class="loading"
-            ng-if="vm.loading">
-            <md-progress-circular></md-progress-circular>
-        </div>
-    </div>
+  </div>
 </div>

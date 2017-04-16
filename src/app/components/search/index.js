@@ -21,7 +21,7 @@ const searchConfig = ($stateProvider) => {
     .state('seriedb.search', {
       url: '/search?query',
       template: '<seriedb-search results="results"></seriedb-search>',
-      controller: (results,$scope)=>{
+      controller: (results, $scope) => {
         $scope.results = results;
       },
       resolve: {

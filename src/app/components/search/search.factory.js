@@ -1,4 +1,4 @@
-export default ($http, $state) => {
+export default /*@ngInject*/ ($http) => {
   'use strict';
 
   const API_URL = __API_URL__;
@@ -9,12 +9,12 @@ export default ($http, $state) => {
 
         let filteredResult = {
           page: res.data.page,
-          totalPages: res.data.total_pages,
-          results : []
+          totalPages: res.data.total_pages, //jshint ignore:line
+          results: []
         };
 
         res.data.results.forEach((item) => {
-          if (item.media_type === 'movie' || item.media_type === 'tv') {
+          if (item.media_type === 'movie' || item.media_type === 'tv') {  //jshint ignore:line
             filteredResult.results.push(item);
           }
         });

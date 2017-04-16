@@ -29,4 +29,33 @@ sidebar {
       width: 60px !important;
     }
   }
+  .favorite-menu {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    &:hover {
+      .favorite {
+        color: $color-danger;
+      }
+    }
+    .favorite {
+      color: white;
+      margin-left: 2px !important;
+      @include transition(all .2s);
+    }
+  }
+}
+
+.favorite-tooltip {
+  background: white !important;
+  opacity: 1 !important;
+  border-radius: 3px;
+  padding: 2px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  .favorite {
+    color: $color-danger;
+  }
 }

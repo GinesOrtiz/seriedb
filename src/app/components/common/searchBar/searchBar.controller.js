@@ -1,3 +1,4 @@
+/* globals __PROJECT_NAME__ */
 class searchBarController {
   constructor($location, $state, $scope) {
     this.$location = $location;
@@ -6,6 +7,8 @@ class searchBarController {
   }
 
   $onInit() {
+    this.brand = __PROJECT_NAME__;
+    this.query = this.$location.search().query;
     this.searchText = this.$location.search().query;
     this.$scope.$on('$stateChangeSuccess', (event, toState) => {
 

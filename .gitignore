@@ -2,15 +2,7 @@
 .DS_Store
 source/.idea
 .idea
-.editorconfig
 node_modules
-bower_components
 npm-debug.log
-goDaddy.txt
 .envrc
-.envrc.mine
-envs.sh
 dist
-bundle.js
-*.mp4
-coverage

@@ -1,0 +1,16 @@
+{
+  "name": "serieDB",
+  "short_name": "serieDB",
+  "lang": "en-EN",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#4583d4",
+  "icons": [
+    {
+      "src": "http://seriedb.com/app.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
+}

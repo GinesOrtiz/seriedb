@@ -11,11 +11,7 @@ class searchBarController {
     this.query = this.$location.search().query;
     this.searchText = this.$location.search().query;
     this.$scope.$on('$stateChangeSuccess', (event, toState) => {
-
-      if (toState.name !== 'seriedb.search') {
-        this.searchText = '';
-      }
-
+      this.searchText = toState.name === 'seriedb.search' ? this.$location.search().query : '';
     });
   }
 

@@ -9,4 +9,4 @@ class movieController {
   }
 }
 
-export default movieController;
+export default /*@ngInject*/ movieController;

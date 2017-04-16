@@ -5,12 +5,7 @@ const appConfig = ($compileProvider, $urlRouterProvider, $mdThemingProvider,
   $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|skype|tel):/);
 
   $mdThemingProvider.definePalette('BMPallete', $mdThemingProvider.extendPalette('grey', {
-    '50': 'F2F6F9',
-    '100': 'EAEFF5',
-    '200': 'D0DBE9',
-    '300': '94A9C1',
-    '400': '2E3E51', //default
-    '500': '2B3135', //darker
+    '400': '#4583d4',
     'contrastDefaultColor': 'light'
   }));
 

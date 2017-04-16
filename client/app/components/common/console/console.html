@@ -1,0 +1,20 @@
+<md-button class="console-button"
+  ng-click="vm.openConsole = !vm.openConsole"
+  ng-class="{'open': vm.openConsole}">
+  <md-icon>swap_vert</md-icon>
+</md-button>
+
+<div class="console-terminal"
+  ng-class="{'open': vm.openConsole}">
+  <md-list>
+    <md-list-item ng-repeat="log in vm.logs track by $index">
+      <div flex="100">
+        <md-icon>info</md-icon>
+        <span>{{:: log[0] }}</span>
+      </div>
+      <span flex>{{:: log[1] }}</span>
+    </md-list-item>
+  </md-list>
+</div>
+
+<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">

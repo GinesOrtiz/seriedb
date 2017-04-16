@@ -77,11 +77,15 @@ const TranslateService = ($localStorage) => {
   };
 };
 
+TranslateService.$inject = ['$localStorage'];
+
 const TranslateFilter = (translateService) => {
   'use strict';
   return (input, options) => {
     return translateService.getTranslation(input, options);
   };
 };
+
+TranslateFilter.$inject = ['translateService'];
 
 export {TranslateService, TranslateFilter};

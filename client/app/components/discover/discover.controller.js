@@ -8,4 +8,4 @@ class discoverController {
   }
 }
 
-export default discoverController;
+export default /*@ngInject*/ discoverController;

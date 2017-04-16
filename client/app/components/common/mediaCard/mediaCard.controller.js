@@ -27,4 +27,4 @@ class mediaCard {
   }
 }
 
-export default mediaCard;
+export default /*@ngInject*/ mediaCard;

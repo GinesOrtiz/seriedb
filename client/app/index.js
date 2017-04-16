@@ -14,6 +14,7 @@ import discover from './components/discover';
 //import search from './components/search';
 import tvshow from './components/tvshow';
 import movie from './components/movie';
+import settings from './components/settings';
 
 import common from './components/common';
 import config from './app.config';
@@ -43,6 +44,7 @@ export default angular
     discover.name,
     tvshow.name,
     movie.name,
+    settings.name,
 
     common.name,
     config.name,

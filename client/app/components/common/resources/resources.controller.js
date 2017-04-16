@@ -36,4 +36,4 @@ class resourcesController {
   }
 }
 
-export default resourcesController;
+export default /*@ngInject*/ resourcesController;

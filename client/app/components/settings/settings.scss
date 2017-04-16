@@ -1,0 +1,20 @@
+@import "../../shared/variables";
+
+seriedb-settings {
+  md-list-item {
+    &:nth-child(odd) {
+      background: rgba($color-sidebar, .5);
+    }
+    &:nth-child(even) {
+      background: $color-primary;
+    }
+    .md-list-item-inner * {
+      font-weight: 500;
+      color: white !important;
+    }
+    .list-text {
+      line-height: 32px;
+      padding-left: 16px;
+    }
+  }
+}

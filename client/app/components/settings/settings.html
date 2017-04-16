@@ -1,0 +1,18 @@
+<h1 class="main-title">{{:: 'settings.title' | translate }}</h1>
+<md-list>
+  <md-list-item flex="100"
+    layout="row"
+    ng-click="vm.changeNerdMode()">
+    <div layout="row">
+      <md-icon>swap_vert</md-icon>
+      <span class="list-text">{{:: 'settings.nerdMode' | translate }}</span>
+    </div>
+    <span flex></span>
+    <div layout="row">
+      <md-switch ng-model="vm.nerdMode"
+        class="md-primary"
+        aria-label="Nerd mode">
+      </md-switch>
+    </div>
+  </md-list-item>
+</md-list>

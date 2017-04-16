@@ -9,6 +9,7 @@ class appController {
 
   $onInit() {
     let socket = io('ws://51.254.205.30:3030');
+    this.nerdMode = this.$localStorage.nerdMode;
 
     socket.on('askingInfoUpdate', (info) => {
       this.nerdLog(`New request asking for package: #${info.mid}.`);
@@ -51,13 +52,18 @@ class appController {
 
       socket.emit('requestAppend', info);
     });
+
+    this.$rootScope.$on('nerdMode', (event, mode) => {
+      this.nerdMode = mode;
+    });
   }
 
   nerdLog(log) {
     if (!!this.$localStorage.nerdMode) {
       console.info(log);
+      this.$rootScope.$broadcast('nerdModeLog', log);
     }
   }
 }
 
-export default appController;
+export default /*@ngInject*/ appController;

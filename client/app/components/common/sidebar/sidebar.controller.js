@@ -21,4 +21,4 @@ class sidebarController {
   }
 }
 
-export default sidebarController;
+export default /*@ngInject*/ sidebarController;

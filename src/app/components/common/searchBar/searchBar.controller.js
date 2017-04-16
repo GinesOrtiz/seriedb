@@ -6,7 +6,7 @@ class searchBarController {
   }
 
   $onInit() {
-    this.query = this.$location.search().query;
+    this.searchText = this.$location.search().query;
     this.$scope.$on('$stateChangeSuccess', (event, toState) => {
 
       if (toState.name !== 'seriedb.search') {

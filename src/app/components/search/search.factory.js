@@ -1,18 +1,23 @@
-export default ($http, $state, filterFilter) => {
+export default ($http, $state) => {
   'use strict';
 
   const API_URL = __API_URL__;
 
   const getSearchMulti = (params) => {
-    console.log('search:', params);
     return $http.get(`${API_URL}/search/multi`, {params})
       .then((res) => {
-        console.log('res', res);
 
-        let filteredResult = filterFilter(res.data.results, {
-          media_type: 'movie' //jshint ignore:line
+        let filteredResult = {
+          page: res.data.page,
+          totalPages: res.data.total_pages,
+          results : []
+        };
+
+        res.data.results.forEach((item) => {
+          if (item.media_type === 'movie' || item.media_type === 'tv') {
+            filteredResult.results.push(item);
+          }
         });
-        console.log('res filtered', filteredResult);
 
         return filteredResult;
       });

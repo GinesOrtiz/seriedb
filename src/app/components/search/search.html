@@ -10,10 +10,15 @@
             flex-lg="20"
             flex-xl="20"
             layout="column"
-            ng-repeat="result in vm.results">
+            ng-repeat="result in vm.results.results">
         <media-card info="result"></media-card>
     </div>
-    <div layout="row" flex="100">
-        <md-button ng-click="vm.searchMore()">{{:: 'search.searchMore' | translate }}</md-button>
+    <div ng-show="vm.results.page<vm.results.totalPages" layout="row" flex="100" class="load-more">
+        <md-button ng-if="!vm.loading" ng-click="vm.searchMore()">{{:: 'search.searchMore' | translate }}</md-button>
+        <div layout="column"
+            class="loading"
+            ng-if="vm.loading">
+            <md-progress-circular></md-progress-circular>
+        </div>
     </div>
 </div>

@@ -1,5 +1,33 @@
+@import "../../shared/variables";
+
 seriedb-search {
-  .md-button span{
-    color: white;
+
+  .load-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .loading {
+    md-progress-circular {
+      align: center;
+      margin: 24px auto;
+      path {
+        stroke: rgba(white, .8) !important;
+      }
+    }
+  }
+
+  .md-button {
+
+    background: $color-secondary;
+    @include transition(all .2s);
+    &:hover {
+      background: darken($color-secondary, 10) !important;
+    }
+
+    span{
+      color: white;
+    }
   }
 }

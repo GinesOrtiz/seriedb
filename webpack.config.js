@@ -4,6 +4,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var modRewrite = require('connect-modrewrite');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 // Path Config
 var pathConfig = {
@@ -119,6 +120,16 @@ if (process.env.NODE_ENV === 'production') {
         warnings: false
       }
     }),
+    new CopyWebpackPlugin([
+      {
+        from: pathConfig.context + '/manifest.json',
+        to: pathConfig.distPath
+      },
+      {
+        from: pathConfig.context + '/app/assets/app.png',
+        to: pathConfig.distPath
+      }
+    ]),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html',

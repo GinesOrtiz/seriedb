@@ -85,6 +85,4 @@ const TranslateFilter = /*@ngInject*/ (TranslateFactory) => {
   };
 };
 
-TranslateFilter.$inject = ['translateService'];
-
 export {TranslateFactory, TranslateFilter};

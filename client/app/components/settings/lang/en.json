@@ -4,5 +4,10 @@
   "server": "Custom socket - IP or server URL for socket connection",
   "customSocket": "Custom socket IP or server URL",
   "update": "Update",
-  "language": "Language - App and media language. (It will change movies and series names)"
+  "language": "Language - App and media language. (It will change movies and series names)",
+  "languages": {
+    "EN": "English",
+    "ES": "Spanish",
+    "CA": "Catalan"
+  }
 }

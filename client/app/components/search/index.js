@@ -4,9 +4,9 @@ import './search.scss';
 
 import langEN from './lang/en.json';
 
-const searchRun = (translateService) => {
+const searchRun = (TranslateFactory) => {
   'use strict';
-  translateService.addLang('search', {EN: langEN});
+  TranslateFactory.addLang('search', {EN: langEN});
 };
 
 const searchConfig = ($stateProvider) => {

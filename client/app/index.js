@@ -43,6 +43,7 @@ export default angular
     settings.name,
     search.name,
     common.name,
+
     config.name,
     shared.name
   ])

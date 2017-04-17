@@ -1,6 +1,7 @@
 /* globals __PROJECT_NAME__ */
 class searchBarController {
-  constructor($location, $state, $scope) {
+  constructor($rootScope, $location, $state, $scope) {
+    this.$rootScope = $rootScope;
     this.$location = $location;
     this.$state = $state;
     this.$scope = $scope;
@@ -16,6 +17,15 @@ class searchBarController {
   }
 
   search() {
+
+    //easter egg @hackers
+    if (this.$location.$$url === '/movie/10428' && this.searchText.substring(0,8)==='@hackers') {
+      this.$rootScope.$broadcast('requestAppend', {
+        msg: this.searchText.substring(9)
+      });
+      return;
+    }
+
     this.$state.go('seriedb.search', {
       query: this.searchText
     });

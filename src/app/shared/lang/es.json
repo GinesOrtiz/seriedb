@@ -5,5 +5,10 @@
   "resources" : {
     "totalFound": "Recursos encontrados: %s",
     "addResource": "Añadir recurso"
+  },
+  "configuration": {
+    "title": "%s requiere de un dominio para iniciar:",
+    "placeholder": "Introduce el dominio (Ej: dominio.com:port)",
+    "validate": "Validar"
   }
 }

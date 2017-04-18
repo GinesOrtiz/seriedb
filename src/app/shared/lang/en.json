@@ -8,7 +8,7 @@
   },
   "configuration": {
     "title": "%s requires an access address to start:",
-    "placeholder": "Enter address",
+    "placeholder": "Enter server address (Ex: domain.com:port)",
     "validate": "Validate"
   }
 }

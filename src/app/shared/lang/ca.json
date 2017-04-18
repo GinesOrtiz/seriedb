@@ -5,5 +5,10 @@
   "resources" : {
     "totalFound": "Recursos trobats: %s",
     "addResource": "Afegir recurs"
+  },
+  "configuration": {
+    "title": "%s requereix d'un domini per iniciar:",
+    "placeholder": "Introdueix el dominio (Ej: domini.cat:port)",
+    "validate": "Validar"
   }
 }

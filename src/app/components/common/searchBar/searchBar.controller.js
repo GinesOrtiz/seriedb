@@ -17,15 +17,6 @@ class searchBarController {
   }
 
   search() {
-
-    //easter egg @hackers
-    if (this.$location.$$url === '/movie/10428' && this.searchText.substring(0,8)==='@hackers') {
-      this.$rootScope.$broadcast('requestAppend', {
-        msg: this.searchText.substring(9)
-      });
-      return;
-    }
-
     this.$state.go('seriedb.search', {
       query: this.searchText
     });

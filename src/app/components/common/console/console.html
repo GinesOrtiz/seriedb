@@ -5,8 +5,9 @@
 </md-button>
 
 <div class="console-terminal"
+  layout="column"
   ng-class="{'open': vm.openConsole}">
-  <md-list>
+  <md-list flex="100">
     <md-list-item ng-repeat="log in vm.logs track by $index">
       <div flex="100">
         <md-icon>info</md-icon>
@@ -15,6 +16,12 @@
       <span flex>{{:: log[1] }}</span>
     </md-list-item>
   </md-list>
+  <div class="console-input"
+    ng-if="vm.enableConsoleInput">
+    <input ng-model="vm.consoleInput"
+      ng-keydown="vm.consoleSend($event)">
+  </div>
 </div>
 
-<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono"
+  rel="stylesheet">

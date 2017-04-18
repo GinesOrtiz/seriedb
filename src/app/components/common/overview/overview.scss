@@ -4,6 +4,7 @@ overview {
   .backdrop {
     width: 100%;
     height: 40%;
+    background-position: top center;
     background-size: cover;
     position: relative;
     @media #{$max-md} {

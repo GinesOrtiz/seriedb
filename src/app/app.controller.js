@@ -19,17 +19,18 @@ class appController {
       this.socketURL = __SOCKET__;
     }
     this.projectName = __PROJECT_NAME__;
+
+    if (this.socketURL) {
+      this.socketConnect();
+    }
   }
 
   socketConnect() {
-    if (!this.address) {
-      return;
-    }
-    let socket = io(this.address);
+    let socket = io(this.socketURL);
 
     socket.on('connect', () => {
       this.$timeout(() => {
-        this.socketURL = this.$localStorage.socketURL = this.address;
+        this.$localStorage.socketURL = this.socketURL;
       });
     });
 
@@ -81,6 +82,11 @@ class appController {
       console.info(log);
       this.$rootScope.$broadcast('nerdModeLog', log);
     }
+  }
+
+  insertSocket() {
+    this.socketURL = this.address;
+    this.socketConnect();
   }
 }
 

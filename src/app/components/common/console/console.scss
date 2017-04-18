@@ -40,7 +40,6 @@ console {
     z-index: 9;
     background: #0a0a0a;
     height: 240px;
-    overflow: auto;
     padding: 8px 0 0;
     box-sizing: border-box;
     @include transition(all .3s);
@@ -49,7 +48,21 @@ console {
     }
   }
 
+  .console-input {
+    input {
+      padding: 8px 16px;
+      border: none;
+      width: 100%;
+      background: $color-primary;
+      color: white;
+      font-size: 14px;
+      font-family: 'Share Tech Mono', monospace;
+      font-weight: 500;
+    }
+  }
+
   md-list {
+    overflow: auto;
     md-list-item {
       cursor: default;
       min-height: 28px;

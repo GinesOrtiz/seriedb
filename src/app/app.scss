@@ -74,3 +74,27 @@ md-backdrop.md-sidenav-backdrop {
 md-select-menu md-option {
   font-weight: 500 !important;
 }
+
+.socket-configuration {
+  background: $color-sidebar;
+  padding: 16px 32px;
+  border-radius: 3px;
+  * {
+    color: white;
+  }
+  input {
+    color: white;
+    &::placeholder {
+      color: rgba(white, .4) !important;
+    }
+  }
+  .md-button {
+    background: $color-secondary;
+    &:hover {
+      background: darken($color-secondary, 10);
+    }
+    span {
+      color: white;
+    }
+  }
+}

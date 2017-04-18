@@ -1,7 +1,9 @@
 <div layout="row"
   flex
   layout-fill>
+
   <div layout="column"
+    ng-if="vm.socketURL"
     layout-fill>
     <search-bar></search-bar>
     <div layout="row"
@@ -11,5 +13,32 @@
       <ui-view></ui-view>
     </div>
   </div>
+
+  <div layout="column"
+    ng-if="!vm.socketURL"
+    layout-align="center center"
+    layout-fill>
+    <div layout="column"
+      class="socket-configuration">
+      <h1>{{:: 'shared.configuration.title' | translate : {vars:[vm.projectName]} }}</h1>
+      <form ng-submit="vm.socketConnect()"
+        layout="column">
+
+        <md-input-container md-no-float>
+          <input ng-model="vm.address"
+            placeholder="{{:: 'shared.configuration.placeholder' | translate }}">
+        </md-input-container>
+
+        <div layout-align="center center"
+          layout="row">
+          <md-button flex="25"
+            ng-click="vm.socketConnect()">{{:: 'shared.configuration.validate'| translate }}
+          </md-button>
+        </div>
+      </form>
+    </div>
+  </div>
+
 </div>
+
 <console ng-if="vm.nerdMode"></console>

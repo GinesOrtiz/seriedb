@@ -1,16 +1,37 @@
-/* globals __SOCKET__ */
+/* globals __SOCKET__, __PROJECT_NAME__ */
 import io from 'socket.io-client';
 
 class appController {
-  constructor(SharedFactory, $rootScope, $localStorage) {
+  constructor(SharedFactory, $rootScope, $localStorage, $timeout) {
     this.SharedFactory = SharedFactory;
     this.$rootScope = $rootScope;
     this.$localStorage = $localStorage;
+    this.$timeout = $timeout;
   }
 
   $onInit() {
-    let socket = io(this.$localStorage.socketURL || __SOCKET__);
     this.nerdMode = this.$localStorage.nerdMode;
+    this.$rootScope.$on('nerdMode', (event, mode) => {
+      this.nerdMode = mode;
+    });
+    this.socketURL = this.$localStorage.socketURL;
+    if (__SOCKET__) {
+      this.socketURL = __SOCKET__;
+    }
+    this.projectName = __PROJECT_NAME__;
+  }
+
+  socketConnect() {
+    if (!this.address) {
+      return;
+    }
+    let socket = io(this.address);
+
+    socket.on('connect', () => {
+      this.$timeout(() => {
+        this.socketURL = this.$localStorage.socketURL = this.address;
+      });
+    });
 
     socket.on('askingInfoUpdate', (info) => {
       this.nerdLog(`New request asking for package: #${info.mid}.`);
@@ -53,9 +74,6 @@ class appController {
       socket.emit('requestAppend', info);
     });
 
-    this.$rootScope.$on('nerdMode', (event, mode) => {
-      this.nerdMode = mode;
-    });
   }
 
   nerdLog(log) {

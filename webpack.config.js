@@ -20,7 +20,7 @@ var varPlugin = new webpack.DefinePlugin({
   __API_URL__: JSON.stringify('http://api.themoviedb.org/3'),
   __TMDB__: JSON.stringify(process.env.TMDB || '54588ad726d554d3eb0bd527c9875958'),
   __TMDB_IMG__: JSON.stringify('https://image.tmdb.org/t/p/'),
-  __SOCKET__: JSON.stringify(process.env.socket || 'ws://51.254.205.30:3030'),
+  __SOCKET__: process.env.SOCKET ? JSON.stringify(process.env.SOCKET) : false,
   __PROJECT_NAME__: JSON.stringify(process.env.projectName || 'serieDB')
 });
 

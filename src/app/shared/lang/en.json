@@ -5,5 +5,10 @@
   "resources" : {
     "totalFound": "Total resources found: %s",
     "addResource": "Add resource"
+  },
+  "configuration": {
+    "title": "%s requires an access address to start:",
+    "placeholder": "Enter address",
+    "validate": "Validate"
   }
 }

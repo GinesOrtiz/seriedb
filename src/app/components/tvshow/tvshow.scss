@@ -47,31 +47,12 @@ seriedb-tvshow {
 }
 
 .episode-dialog {
-  @media #{$max-md} {
-    min-width: 80% !important;
-  }
-  .md-toolbar-tools {
-    background: $color-secondary;
-    h2 {
-      color: white;
-      font-weight: 500;
-    }
-  }
   .loading-section {
     md-progress-circular {
       margin: 24px auto;
       path {
         stroke: rgba(white, .8) !important;
       }
-    }
-  }
-  md-dialog-content {
-    background: $color-primary;
-    width: 600px;
-    position: relative;
-    display: block;
-    @media #{$max-md} {
-      width: auto;
     }
   }
 

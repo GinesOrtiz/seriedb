@@ -10,5 +10,22 @@
     "title": "%s requires an access address to start:",
     "placeholder": "Enter server address (Ex: domain.com:port)",
     "validate": "Validate"
+  },
+  "atomAppender": {
+    "title": "Add a resource to package #%s",
+    "disclaimer": "Fill the following fields in order to add a new resource for the package #%s:",
+    "link": "Link to resource",
+    "lang": "Language of the resource",
+    "subs": "Does it have subtitles?",
+    "quality": "Quality of the resource",
+    "serversHelp": "List of server that you can use:",
+    "addResource": "Add resource",
+    "selector": {
+      "l": "Select a language",
+      "s": "Select a subtitles",
+      "q": "Select a quality"
+    },
+    "invalidUrl": "The URL is invalid",
+    "invalidServer": "The server is invalid. Check the list of valid servers."
   }
 }

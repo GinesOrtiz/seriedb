@@ -12,6 +12,7 @@
     hide-xs
     hide-sm
     class="resources-add"
+    ng-click="vm.atomAppender()"
     layout-align="end center">
     <md-button>{{:: 'shared.resources.addResource' | translate }}</md-button>
   </div>
@@ -21,6 +22,7 @@
   class="resources-section">
   <md-list-item ng-repeat="resource in vm.resources"
     ng-click="vm.openResource(resource)">
-    <span flex="100">{{:: resource.s }}</span>
+    <span flex="100">{{:: resource.h }}</span>
+    <md-icon ng-if="resource.open">remove_red_eye</md-icon>
   </md-list-item>
 </md-list>

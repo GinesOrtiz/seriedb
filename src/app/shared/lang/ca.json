@@ -10,5 +10,22 @@
     "title": "%s requereix d'un domini per iniciar:",
     "placeholder": "Introdueix el dominio (Ej: domini.cat:port)",
     "validate": "Validar"
+  },
+  "atomAppender": {
+    "title": "Afeguir un recurs al paquet #%s",
+    "disclaimer": "Ompli el seguent formulari per poder afegir un recurs al paquet #%s:",
+    "link": "Enllaç del recurs",
+    "lang": "Idioma del recurs",
+    "subs": "Te subtitols?",
+    "quality": "Qualitat del recurs",
+    "serversHelp": "Llistat de server que es poden fer servir:",
+    "addResource": "Afegir recurs",
+    "selector": {
+      "l": "Selecciona un idioma",
+      "s": "Selecciona un subtitol",
+      "q": "Selecciona una qualitat"
+    },
+    "invalidUrl": "La URL és invàlida",
+    "invalidServer": "El servidor és invalid. Comproba la lista de servidors disponibles."
   }
 }

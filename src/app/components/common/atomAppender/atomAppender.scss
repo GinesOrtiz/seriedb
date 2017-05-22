@@ -1,0 +1,63 @@
+@import "../../../shared/variables";
+
+.atomAppender-dialog {
+  md-dialog-content {
+    padding: $base * 2;
+  }
+
+  md-toolbar {
+    .md-button {
+      margin: 0;
+    }
+    md-icon {
+      color: white;
+    }
+  }
+
+  md-input-container {
+    padding: 0;
+    width: 100%;
+  }
+
+  .md-errors-spacer {
+    display: none;
+  }
+
+  .link-help {
+    min-width: 40px;
+    text-align: center;
+    margin-bottom: $base * 2;
+    .help-container {
+      cursor: help;
+    }
+  }
+  .md-button {
+    margin: 8px 0 0;
+    background: $color-secondary;
+    @include transition(all .2s);
+    &:hover {
+      background: darken($color-secondary, 10) !important;
+    }
+    &:disabled {
+      background: rgba(white, .05);
+      &:hover {
+        background: rgba(white, .05) !important;
+      }
+    }
+
+    span {
+      color: white;
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+  }
+}
+
+.server-tooltip {
+  padding: $base;
+  .server-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+}

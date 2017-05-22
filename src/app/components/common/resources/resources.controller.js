@@ -1,8 +1,12 @@
+import dialogController from './dialog/dialog.controller';
+import dialogTemplate from './dialog/dialog.html';
+
 class resourcesController {
-  constructor(SharedFactory, $rootScope, $timeout) {
+  constructor(SharedFactory, $rootScope, $timeout, $mdDialog) {
     this.SharedFactory = SharedFactory;
     this.$rootScope = $rootScope;
     this.$timeout = $timeout;
+    this.$mdDialog = $mdDialog;
   }
 
   $onInit() {
@@ -33,8 +37,21 @@ class resourcesController {
     return resources;
   }
 
-  openResource() {
-    console.log('open res');
+  openResource(resource) {
+    resource.open = true;
+    window.open(resource.u, '_blank');
+  }
+
+  atomAppender() {
+    this.$mdDialog.show({
+      controller: dialogController,
+      controllerAs: 'vm',
+      template: dialogTemplate,
+      clickOutsideToClose: true,
+      locals: {
+        mid: this.mid
+      }
+    });
   }
 }
 

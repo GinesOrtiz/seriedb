@@ -10,5 +10,22 @@
     "title": "%s requiere de un dominio para iniciar:",
     "placeholder": "Introduce el dominio (Ej: dominio.com:port)",
     "validate": "Validar"
+  },
+  "atomAppender": {
+    "title": "Añadir un recurso al paquete #%s",
+    "disclaimer": "Rellene el siguiente formulario para añadir un recurso al paquete #%s:",
+    "link": "Enlace del recurso",
+    "lang": "Idioma del recurso",
+    "subs": "¿Tiene subtítulos?",
+    "quality": "Calidad del recurso",
+    "serversHelp": "Lista de servidores que puedes utilizar:",
+    "addResource": "Añadir recurso",
+    "selector": {
+      "l": "Selecciona un idioma",
+      "s": "Selecciona un subtítulo",
+      "q": "Selecciona una calidad"
+    },
+    "invalidUrl": "La URL es inválida",
+    "invalidServer": "El servidor es invalido. Compruébalo en la lista de servidores disponibles."
   }
 }

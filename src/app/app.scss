@@ -15,7 +15,6 @@ body {
 * {
   font-family: 'Quicksand', sans-serif;
   outline: none !important;
-  color: $color-primary;
 }
 
 ui-view {
@@ -97,4 +96,32 @@ md-select-menu md-option {
       color: white;
     }
   }
+}
+
+md-dialog {
+  color: white;
+  @media #{$max-md} {
+    min-width: 80% !important;
+  }
+  .md-toolbar-tools {
+    background: $color-secondary;
+    h2 {
+      color: white;
+      font-weight: 500;
+    }
+  }
+  md-dialog-content {
+    background: $color-primary;
+    width: 600px;
+    position: relative;
+    display: block;
+    @media #{$max-md} {
+      width: auto;
+    }
+  }
+}
+
+md-tooltip {
+  height: auto !important;
+  font-size: 12px !important;
 }

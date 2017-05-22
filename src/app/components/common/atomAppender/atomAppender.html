@@ -1,0 +1,60 @@
+<form name="atomAppender">
+  <div layout="row">
+    <md-input-container flex="100">
+      <input placeholder="{{:: 'shared.atomAppender.link' | translate }}"
+        name="link"
+        ng-model="vm.resource.u"
+        type="url"
+        required="required"
+        ng-change="vm.validateLink(atomAppender)">
+      <div ng-messages="atomAppender.link.$error"
+        ng-show="atomAppender.link.$error">
+        <div ng-message="url">{{:: 'shared.atomAppender.invalidUrl' | translate }}</div>
+        <div ng-message="invalidServer">{{:: 'shared.atomAppender.invalidServer' | translate }}</div>
+      </div>
+    </md-input-container>
+    <div flex
+      class="link-help"
+      layout="column"
+      layout-align="center center">
+      <div class="help-container">
+        <md-icon>help</md-icon>
+        <md-tooltip md-direction="top"
+          class="server-tooltip">
+          <span>{{:: 'shared.atomAppender.serversHelp' | translate }}</span>
+          <ul class="server-list">
+            <li ng-repeat="server in vm.serverList">{{:: server.name }}</li>
+          </ul>
+        </md-tooltip>
+      </div>
+    </div>
+  </div>
+
+  <div layout="row"
+    layout-fill
+    flex="100">
+    <div ng-repeat="selector in ['l', 's', 'q']"
+      flex="33">
+      <md-input-container flex="{{:: !$last ? 90 : 100}}"
+        class="atom-selector">
+        <label>{{:: ('shared.atomAppender.selector.' + selector) | translate }}</label>
+        <md-select ng-model="vm.resource[selector]"
+          required="required">
+          <md-option ng-repeat="option in vm.selectors[selector]"
+            ng-value="option.slug">
+            {{option.name}}
+          </md-option>
+        </md-select>
+      </md-input-container>
+      <span flex ng-if="!$last"></span>
+    </div>
+  </div>
+
+
+  <div layout="row">
+    <md-button ng-click="vm.addResource()"
+      ng-disabled="atomAppender.$invalid">
+      {{:: 'shared.atomAppender.addResource' | translate }}
+    </md-button>
+  </div>
+</form>

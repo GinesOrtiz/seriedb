@@ -5,14 +5,14 @@ const appConfig = ($compileProvider, $urlRouterProvider, $mdThemingProvider,
   $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|skype|tel):/);
 
   $mdThemingProvider.definePalette('BMPallete', $mdThemingProvider.extendPalette('grey', {
-    '400': '#4583d4',
-    'contrastDefaultColor': 'light'
+    '400': '#4583d4'
   }));
 
   $mdThemingProvider.theme('default')
     .primaryPalette('BMPallete', {
       'default': '400'
-    });
+    })
+    .dark();
 
   $urlRouterProvider.otherwise(function () {
     window.location.href = '/';

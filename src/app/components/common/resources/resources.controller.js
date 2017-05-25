@@ -18,8 +18,11 @@ class resourcesController {
   atomAppend(event, data) {
     if (data.mid === this.mid) {
       this.$timeout(() => {
-        let resource = JSON.parse(atob(data.atom.split('.')[1]));
-        this.resources.push(resource);
+        try {
+          let resource = JSON.parse(atob(data.atom.split('.')[1]));
+          this.resources.push(resource);
+        } catch (e) {
+        }
       });
     }
   }

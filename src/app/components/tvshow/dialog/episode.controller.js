@@ -3,7 +3,9 @@ class episodeController {
     this.episode = episode;
     this.tvshowID = tvshowID;
     this.$mdDialog = $mdDialog;
-    this.pkgID = `T${this.tvshowID}E${this.episode.id}`;
+    // jshint ignore:start
+    this.pkgID = `T${this.tvshowID}S${this.episode.season_number}E${this.episode.episode_number}`;
+    // jshint ignore:end
   }
 
   close() {

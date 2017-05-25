@@ -17,7 +17,7 @@ var pathConfig = {
 var varPlugin = new webpack.DefinePlugin({
   __DEV__: JSON.stringify(JSON.parse(process.env.BUILD_DEV || 'true')),
   __ENV__: JSON.stringify(process.env.ENV),
-  __API_URL__: JSON.stringify('http://api.themoviedb.org/3'),
+  __API_URL__: JSON.stringify('https://api.themoviedb.org/3'),
   __TMDB__: JSON.stringify(process.env.TMDB || '54588ad726d554d3eb0bd527c9875958'),
   __TMDB_IMG__: JSON.stringify('https://image.tmdb.org/t/p/'),
   __SOCKET__: process.env.SOCKET ? JSON.stringify(process.env.SOCKET) : false,

@@ -55,7 +55,7 @@ sidebar {
   padding: 2px 12px;
   font-size: 12px;
   font-weight: 500;
-  color: $color-primary;
+  color: $color-primary !important;
   .favorite {
     color: $color-danger;
   }

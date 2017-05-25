@@ -11,7 +11,6 @@ class resourcesController {
 
   $onInit() {
     this.resources = this.loadLocalResources(this.mid);
-
     this.$rootScope.$broadcast('requestInfo', this.mid);
     this.$rootScope.$on('atomAppend', this.atomAppend.bind(this));
   }

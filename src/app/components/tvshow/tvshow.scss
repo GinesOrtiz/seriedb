@@ -56,6 +56,15 @@ seriedb-tvshow {
     }
   }
 
+  md-toolbar {
+    .md-button {
+      margin: 0;
+    }
+    md-icon {
+      color: white;
+    }
+  }
+
   .resources-info {
     position: fixed;
     top: 64px;

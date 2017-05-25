@@ -4,7 +4,11 @@
   },
   "resources" : {
     "totalFound": "Total resources found: %s",
-    "addResource": "Add resource"
+    "addResource": "Add resource",
+    "server": "Server",
+    "quality": "Quality",
+    "lang": "Lang",
+    "subs": "Subs"
   },
   "configuration": {
     "title": "%s requires an access address to start:",

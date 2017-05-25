@@ -4,7 +4,11 @@
   },
   "resources" : {
     "totalFound": "Recursos encontrados: %s",
-    "addResource": "Añadir recurso"
+    "addResource": "Añadir recurso",
+    "server": "Servidor",
+    "quality": "Calidad",
+    "lang": "Idioma",
+    "subs": "Subtítulos"
   },
   "configuration": {
     "title": "%s requiere de un dominio para iniciar:",

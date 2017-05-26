@@ -1,6 +1,6 @@
-# seriedb
+# serieDB
 Distributed database across all clients using NodeJS and Socket.io
-[Seriedb.com](http://seriedb.com) front project
+[seriedb.com](http://seriedb.com) front project
 
 # Chrome extension
 With this Chrome extension you can help Seriedb.com by being a base node. 

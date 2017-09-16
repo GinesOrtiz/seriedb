@@ -1,14 +1,13 @@
 {
-  "name": "publishers-panel",
-  "description": "Billymob Publishers panel",
+  "name": "seriedb",
+  "description": "Seriedb.com",
   "main": "client/index.js",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/billyperformance/PanelsBase.git"
+    "url": "https://github.com/GinesOrtiz/seriedb.git"
   },
   "scripts": {
-    "test": "karma start",
     "start": "NODE_ENV=development node node_modules/.bin/webpack-dev-server --devtool eval --progress --colors --hot --content-base client ",
     "build": "rm -rf dist && mkdir dist && NODE_ENV=production node node_modules/.bin/webpack"
   },
